@@ -571,15 +571,46 @@ function setupGalleryLightbox() {
     const closeButton = document.querySelector('.close-modal');
     if (!modal || !modalImg || !closeButton) return;
 
-    const galleryItems = document.querySelectorAll('.galeri-item img, .galeri-tenda-main-photo, .gallery-link img, .aktivitas-card img');
+    const galleryItems = document.querySelectorAll('.galeri-item img, .galeri-tenda-main-photo, .gallery-link img, .aktivitas-card img, [data-area-photo]');
+    const prevButton = document.querySelector('.image-modal-prev');
+    const nextButton = document.querySelector('.image-modal-next');
+    const counter = document.getElementById('image-modal-counter');
+    let photos = [];
+    let currentIndex = 0;
+    let touchStartX = 0;
+
+    const showPhoto = (index) => {
+        if (!photos.length) return;
+        currentIndex = (index + photos.length) % photos.length;
+        modalImg.src = photos[currentIndex].src;
+        modalImg.alt = photos[currentIndex].alt || '';
+        if (counter) counter.textContent = `${currentIndex + 1} / ${photos.length}`;
+        const single = photos.length <= 1;
+        if (prevButton) prevButton.style.display = single ? 'none' : 'flex';
+        if (nextButton) nextButton.style.display = single ? 'none' : 'flex';
+        if (counter) counter.style.display = single ? 'none' : 'block';
+    };
 
     galleryItems.forEach((image) => {
         image.addEventListener('click', () => {
-            modalImg.src = image.src;
+            const card = image.closest('.area-card, .galeri-tenda-item, figure, .aktivitas-card');
+            const templates = card ? card.querySelectorAll('template[data-photo-src]') : [];
+            photos = [{ src: image.currentSrc || image.src, alt: image.alt }];
+            templates.forEach((photo) => photos.push({ src: photo.dataset.photoSrc, alt: photo.dataset.photoAlt || '' }));
+            currentIndex = 0;
+            showPhoto(0);
             modal.classList.add('active');
             modal.setAttribute('aria-hidden', 'false');
         });
     });
+
+    prevButton?.addEventListener('click', (event) => { event.stopPropagation(); showPhoto(currentIndex - 1); });
+    nextButton?.addEventListener('click', (event) => { event.stopPropagation(); showPhoto(currentIndex + 1); });
+    modal.addEventListener('touchstart', (event) => { touchStartX = event.touches[0].clientX; }, { passive: true });
+    modal.addEventListener('touchend', (event) => {
+        const deltaX = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > 50) showPhoto(currentIndex + (deltaX < 0 ? 1 : -1));
+    }, { passive: true });
 
     const closeModal = () => {
         modal.classList.remove('active');
