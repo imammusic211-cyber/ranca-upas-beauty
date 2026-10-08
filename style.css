@@ -368,7 +368,7 @@ ul { list-style: none; }
     overflow: hidden;
     background:
         linear-gradient(180deg, rgba(12, 18, 14, 0.48), rgba(12, 18, 14, 0.68)),
-        url('foto-hero2.png') center center / cover no-repeat;
+        url('images/hero/foto-hero2.png') center center / cover no-repeat;
 }
 
 .hero-bg-overlay {
