@@ -1,6 +1,6 @@
 const packageData = {
     'alas-matras': [
-        { name: 'Alas Matras Premium', price: 'Rp 120.000', capacity: '2 Orang', note: 'Cocok untuk pengalaman camping ringan dengan tidur lebih nyaman.', photo: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80', features: ['Matras tebal 2 cm', 'Bahan anti lembab', 'Portabel & mudah dibawa'] },
+        { name: 'Alas Matras Premium', price: 'Rp 100.000', capacity: '2 Orang', note: 'Cocok untuk pengalaman camping ringan dengan tidur lebih nyaman.', photo: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80', features: ['Matras tebal 2 cm', 'Bahan anti lembab', 'Portabel & mudah dibawa'] },
         { name: 'Alas Matras Deluxe', price: 'Rp 150.000', capacity: '4 Orang', note: 'Tingginya kenyamanan untuk rombongan kecil dan keluarga.', photo: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80', features: ['Lapisan lembut premium', 'Nyaman untuk malam dingin', 'Desain praktis'] },
         { name: 'Alas Matras Family', price: 'Rp 180.000', capacity: '6 Orang', note: 'Ideal untuk trip bersama keluarga dan teman dekat.', photo: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80', features: ['Ukuran lebih luas', 'Ramah untuk semua usia', 'Dukungan tidur maksimal'] }
     ],
