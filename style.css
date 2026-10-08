@@ -829,6 +829,11 @@ ul { list-style: none; }
     padding: 24px 18px 20px;
     opacity: 0;
     transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.area-overlay a {
+    pointer-events: auto;
 }
 
 .area-card:hover .area-overlay {
