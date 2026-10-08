@@ -1,23 +1,23 @@
-$ErrorActionPreference = "SilentlyContinue"
-$r = "C:\Users\Administrator\Documents\ranca upas"
-Set-Location $r
-
-Write-Host "Auto-deploy aktif. Edit file lalu save otomatis ter-push." -ForegroundColor Green
+Set-Location "C:\Users\Administrator\Documents\ranca upas"
+$Host.UI.RawUI.WindowTitle = "Auto-Deploy Ranca Upas"
+Write-Host "Auto-deploy aktif!" -ForegroundColor Green
 Write-Host "Link: https://imammusic211-cyber.github.io/ranca-upas-beauty/" -ForegroundColor Cyan
-Write-Host "Tekan Ctrl+C untuk berhenti." -ForegroundColor Yellow
+Write-Host "Edit file -> save -> otomatis push" -ForegroundColor Yellow
+Write-Host "Tekan Ctrl+C untuk berhenti" -ForegroundColor Yellow
+Write-Host ""
 
-$lastHash = ""
+$last = ""
 while ($true) {
     Start-Sleep -Seconds 3
-    $status = git status --porcelain
-    if ($status) {
-        $hash = $status | Out-String
-        if ($hash -ne $lastHash) {
-            $lastHash = $hash
-            git add -A
-            git commit -m "auto: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
-            git push origin main
-            Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Pushed update!" -ForegroundColor Green
+    $st = git status --porcelain 2>$null
+    if ($st) {
+        $h = $st -join "`n"
+        if ($h -ne $last) {
+            $last = $h
+            git add -A 2>$null
+            git commit -m "auto: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" 2>$null
+            git push origin main 2>$null
+            Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Pushed!" -ForegroundColor Green
         }
     }
 }
