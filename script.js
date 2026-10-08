@@ -671,16 +671,39 @@ function setupComplaintForm() {
         const email = document.getElementById('complaint-email').value.trim();
         const complaint = document.getElementById('complaint-message').value.trim();
         const subject = localizedText('Keluhan dan Masukan Ranca Upas');
-        const body = [
-            `${localizedText('Nama')}: ${name}`,
-            `${localizedText('Email untuk balasan:')} ${email}`,
-            '',
-            localizedText('Keluhan atau masukan:'),
-            complaint
-        ].join('\n');
-        const mailtoUrl = `mailto:info@rancaupasbeauty.id?cc=reservasi@rancaupasbeauty.id&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const statusEl = document.getElementById('complaint-status');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+        if (statusEl) { statusEl.textContent = localizedText('Mengirim...'); statusEl.style.color = ''; }
 
-        window.location.href = mailtoUrl;
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('message', complaint);
+        formData.append('_subject', subject);
+        formData.append('_template', 'table');
+        formData.append('_captcha', 'false');
+
+        fetch('https://formsubmit.co/ajax/info@rancaupasbeauty.id', {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' }
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.success === 'true' || data.success === true) {
+                    if (statusEl) { statusEl.textContent = localizedText('Terima kasih, keluhan Anda sudah terkirim.'); statusEl.style.color = '#1b5e20'; }
+                    form.reset();
+                } else {
+                    throw new Error('send failed');
+                }
+            })
+            .catch(() => {
+                if (statusEl) { statusEl.textContent = localizedText('Gagal mengirim. Coba lagi atau hubungi kami via WhatsApp.'); statusEl.style.color = '#b3261e'; }
+            })
+            .finally(() => {
+                if (submitBtn) submitBtn.disabled = false;
+            });
     });
 }
 
