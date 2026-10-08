@@ -626,6 +626,8 @@ function setupGalleryLightbox() {
         if (event.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }
+        if (modal.classList.contains('active') && event.key === 'ArrowLeft') showPhoto(currentIndex - 1);
+        if (modal.classList.contains('active') && event.key === 'ArrowRight') showPhoto(currentIndex + 1);
     });
 }
 
