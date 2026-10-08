@@ -687,7 +687,7 @@ function setupComplaintForm() {
         formData.append('_template', 'table');
         formData.append('_captcha', 'false');
 
-        fetch('https://formsubmit.co/ajax/info@rancaupasbeauty.id', {
+        fetch('https://formsubmit.co/ajax/0borak033@gmail.com', {
             method: 'POST',
             body: formData,
             headers: { Accept: 'application/json' }
