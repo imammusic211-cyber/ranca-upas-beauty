@@ -1890,6 +1890,14 @@ ul { list-style: none; }
     transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
+[data-area-photo],
+.galeri-tenda-main-photo,
+.aktivitas-card img,
+.galeri-item img,
+.gallery-link img {
+    cursor: pointer;
+}
+
 .image-modal.active {
     opacity: 1;
     visibility: visible;
