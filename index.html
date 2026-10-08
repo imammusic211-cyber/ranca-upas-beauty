@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ranca Upas Beauty - Destinasi camping terbaik di Ciwidey, Bandung. Nikmati pengalaman 2 Hari 1 Malam di alam terbuka dengan penangkaran rusa, pemandian air panas, dan berbagai aktivitas outdoor.">
+    <meta name="keywords" content="ranca upas, camping, ciwidey, bandung, glamping, tenda, outdoor, penangkaran rusa, wisata alam">
+    <title>Ranca Upas Beauty — Pengalaman Camping & Wisata Alam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" id="nav-logo" aria-label="Ranca Upas, kembali ke beranda">
+                <span class="nav-logo-symbol" aria-hidden="true">
+                    <img src="Rancaupas-Logo-Hijau.png" alt="">
+                </span>
+                <span class="nav-logo-wordmark" aria-hidden="true">
+                    <img src="Rancaupas-Logo-Hijau.png" alt="">
+                </span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#tentang" class="nav-link" data-section="tentang">Tentang</a></li>
+                <li><a href="#aktivitas" class="nav-link" data-section="aktivitas">Aktivitas</a></li>
+                <li><a href="#galeri-tenda" class="nav-link" data-section="galeri-tenda">Galeri Tenda</a></li>
+                <li><a href="#paket" class="nav-link" data-section="paket">Paket & Reservasi</a></li>
+                <li><a href="#kontak" class="nav-link" data-section="kontak">Kontak</a></li>
+                <li class="language-switch-item">
+                    <div class="language-switch" role="group" aria-label="Pilih bahasa">
+                        <button type="button" class="language-option" data-language="id" aria-pressed="true">ID</button>
+                        <button type="button" class="language-option" data-language="en" aria-pressed="false">EN</button>
+                    </div>
+                </li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo-mark" aria-hidden="true">
+                <img src="Rancaupas-Logo-Hijau.png" alt="">
+            </div>
+            <h1 class="hero-title" data-animate="fade-up">
+                <span class="title-line title-main">RANCAUPAS BEAUTY</span>
+            </h1>
+            <p class="hero-description" data-animate="fade-up" data-delay="150">Kami melayani penyewaan perlengkapan camping: tenda, matras, kasur, dan kebutuhan lainnya untuk berkemah lebih nyaman.</p>
+            <p class="hero-tagline" data-animate="fade-up" data-delay="200">2 Hari 1 Malam Experience</p>
+            <p class="hero-tags" data-animate="fade-up" data-delay="300">Nature • Adventure • Team Building</p>
+            <div class="hero-cta" data-animate="fade-up" data-delay="400">
+                <a href="#paket" class="btn btn-primary" id="hero-reserve-btn">
+                    <span>Reservasi Sekarang</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator" id="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="tentang-section">
+        <div class="container">
+            <div class="tentang-grid">
+                <div class="tentang-content" data-animate="fade-right">
+                    <span class="section-tag">Tentang Kami</span>
+                    <h2 class="section-title">Kenapa <span class="text-accent">Ranca Upas?</span></h2>
+                    <p class="tentang-text">
+                        Nikmati pengalaman camping terbaik di tengah hamparan alam hijau, udara pegunungan yang sejuk, serta suasana yang menenangkan. Ranca Upas menjadi destinasi favorit untuk gathering, family outing, outbound, dan team building perusahaan.
+                    </p>
+                    <p class="tentang-text">
+                        Area camping luas, penangkaran rusa, pemandian air panas, dan berbagai aktivitas seru siap memberikan pengalaman yang tak terlupakan.
+                    </p>
+                </div>
+                <div class="tentang-image" data-animate="fade-left">
+                    <div class="tentang-img-wrapper">
+                        <div class="img-placeholder nature-placeholder">
+    <img src="rancaupas.jpg" alt="Pemandangan Ranca Upas dari atas saat matahari terbit" class="placeholder-photo">
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area Camping Section -->
+    <section id="area-camping" class="area-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag-center">Area Kami</span>
+                <h2 class="section-title-center">Pilihan <span class="text-accent">Area Camping</span></h2>
+            </div>
+            <div class="area-grid" data-animate="fade-up" data-delay="200">
+                <div class="area-card">
+                    <div class="area-image">
+                       <div class="area-placeholder">
+    <img src="galery3.jpg.jpeg" alt="Area camping Rasamala" class="placeholder-photo" data-area-photo>
+</div>
+                        <div class="area-overlay">
+                            <h3>RASAMALA</h3>
+                            <p>Area camping teduh di bawah pohon Rasamala</p>
+                            <a href="#paket" class="btn btn-small">Lihat Paket</a>
+                        </div>
+                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto Rasamala">
+                            <template data-photo-src="rasmala.jpg" data-photo-alt="Pemandangan area Rasamala dari atas"></template>
+                            <template data-photo-src="galery4.jpg.jpeg" data-photo-alt="Deretan tenda di area camping Rasamala"></template>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto Rasamala sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 03</span>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto Rasamala berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-image">
+                        <div class="area-placeholder">
+    <img src="foto-savana.jpg.jpeg" alt="Area camping Savana" class="placeholder-photo" data-area-photo>
+</div>
+                        <div class="area-overlay">
+                            <h3>SAVANA</h3>
+                            <p>Padang rumput luas dengan pemandangan gunung</p>
+                            <a href="#paket" class="btn btn-small">Lihat Paket</a>
+                        </div>
+                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto Savana">
+                            <template data-photo-src="savana bagus.jpg" data-photo-alt="Pemandangan lapang dan tenda di Savana"></template>
+                            <template data-photo-src="foto-hero2.png" data-photo-alt="Suasana camping di area Savana"></template>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto Savana sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 03</span>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto Savana berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-image">
+                        <div class="area-placeholder">
+    <img src="foto-puspa.jpg.jpeg" alt="Area camping Pinus" class="placeholder-photo" data-area-photo>
+</div>
+                        <div class="area-overlay">
+                            <h3>PINUS</h3>
+                            <p>Camping di tengah hutan pinus yang menyejukkan</p>
+                            <a href="#paket" class="btn btn-small">Lihat Paket</a>
+                        </div>
+                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto Pinus">
+                            <template data-photo-src="galery8.jpg.jpeg" data-photo-alt="Tenda di antara pepohonan Pinus"></template>
+                            <template data-photo-src="foto-api.jpg.jpeg" data-photo-alt="Suasana malam dan api unggun di area camping"></template>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto Pinus sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 03</span>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto Pinus berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aktivitas Section -->
+    <section id="aktivitas" class="aktivitas-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag-center">Yang Bisa Dilakukan</span>
+                <h2 class="section-title-center" data-language-id="Aktivitas <span class=&quot;text-accent&quot;>Seru</span>" data-language-en="Fun <span class=&quot;text-accent&quot;>Activities</span>">Aktivitas <span class="text-accent">Seru</span></h2>
+            </div>
+            <div class="aktivitas-grid" data-animate="fade-up" data-delay="200">
+                <div class="aktivitas-card">
+                    <div class="aktivitas-image">
+    <img src="foto-tentang.jpg.jpeg" alt="Penangkaran Rusa" class="placeholder-photo">
+</div>
+                    <div class="aktivitas-label">PENANGKARAN RUSA</div>
+                </div>
+                <div class="aktivitas-card">
+                    <div class="aktivitas-image">
+    <img src="foto-berenang.jpg.jpeg" alt="Penangkaran Rusa" class="placeholder-photo">
+</div>
+                    <div class="aktivitas-label">BERENANG</div>
+                </div>
+                <div class="aktivitas-card">
+                    <div class="aktivitas-image">
+    <img src="foto-api.jpg.jpeg" alt="Penangkaran Rusa" class="placeholder-photo">
+</div>
+                    <div class="aktivitas-label">API UNGGUN</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Foto Tenda Section (10 Kotak) -->
+    <section id="galeri-tenda" class="galeri-tenda-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag-center">Lihat Lebih Dekat</span>
+                <h2 class="section-title-center" data-language-id="⛺ Galeri <span class=&quot;text-accent&quot;>Foto Tenda</span>" data-language-en="⛺ Tent Photo <span class=&quot;text-accent&quot;>Gallery</span>">⛺ Galeri <span class="text-accent">Foto Tenda</span></h2>
+                <p class="section-desc">Koleksi foto tenda camping kami — dari interior, eksterior, hingga suasana malam di area camp.</p>
+            </div>
+
+            <div class="galeri-tenda-grid" data-animate="fade-up" data-delay="200">
+                <figure class="galeri-tenda-item">
+                    <div class="galeri-tenda-image">
+                        <img class="galeri-tenda-main-photo" data-tent-photo src="galery10.jpg.jpeg" alt="Tenda dome kapasitas 2 orang di area camping" loading="lazy">
+                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto kapasitas 2 orang">
+                            <template data-photo-src="kapasitas%202%20orang.jpeg" data-photo-alt="Dua tenda biru di area camping hijau"></template>
+                            <template data-photo-src="kapasitas%202%20orang..jpeg" data-photo-alt="Tenda di bawah pepohonan area camping"></template>
+                            <template data-photo-src="kapasitas%202%20orang...jpeg" data-photo-alt="Tenda Eiger di antara pepohonan"></template>
+                            <template data-photo-src="kapasitas%202%20orang.....jpeg" data-photo-alt="Deretan tenda camping di lapangan terbuka"></template>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto kapasitas 2 orang sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 05</span>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto kapasitas 2 orang berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+                        </div>
+                    </div>
+                    <figcaption class="galeri-tenda-caption"><span>Kapasitas</span><h3>2 Orang</h3></figcaption>
+                </figure>
+                <figure class="galeri-tenda-item">
+                    <div class="galeri-tenda-image">
+                        <img class="galeri-tenda-main-photo" data-tent-photo src="galery8.jpg.jpeg" alt="Tenda kapasitas 4 orang di area camping" loading="lazy">
+                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto kapasitas 4 orang">
+                            <template data-photo-src="kapasitas%204%20orang.jpeg" data-photo-alt="Tenda kapasitas 4 orang di lapangan camping"></template>
+                            <template data-photo-src="kapasitas%204%20orang..jpeg" data-photo-alt="Tenda kapasitas 4 orang di area pepohonan"></template>
+                            <template data-photo-src="kapasitas%204%20orang...jpeg" data-photo-alt="Deretan tenda camping kapasitas 4 orang"></template>
+                            <template data-photo-src="kapasitas%204%20orang.....jpeg" data-photo-alt="Tenda kapasitas 4 orang di area camping"></template>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto kapasitas 4 orang sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 05</span>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto kapasitas 4 orang berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+                        </div>
+                    </div>
+                    <figcaption class="galeri-tenda-caption"><span>Kapasitas</span><h3>4 Orang</h3></figcaption>
+                </figure>
+                <figure class="galeri-tenda-item">
+                    <div class="galeri-tenda-image">
+                        <img class="galeri-tenda-main-photo" data-tent-photo src="galery6.jpg.jpeg" alt="Tenda lorong kapasitas 12 orang" loading="lazy">
+                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto kapasitas 12 orang">
+                            <template data-photo-src="kapasitas%2012%20orang.jpeg" data-photo-alt="Area tenda luas untuk kapasitas 12 orang"></template>
+                            <template data-photo-src="kapasitas%2012%20orang....jpeg" data-photo-alt="Tenda besar untuk kapasitas 12 orang"></template>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto kapasitas 12 orang sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 03</span>
+                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto kapasitas 12 orang berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+                        </div>
+                    </div>
+                    <figcaption class="galeri-tenda-caption"><span>Kapasitas</span><h3>12 Orang</h3></figcaption>
+                </figure>
+                <figure class="galeri-tenda-item">
+                    <img class="galeri-tenda-main-photo" src="arpenaaz%204.2.webp" alt="Tenda Arpenaz 4.2" loading="lazy">
+                    <figcaption class="galeri-tenda-caption"><span>Model Tenda</span><h3>Arpenaz 4.2</h3></figcaption>
+                </figure>
+                <figure class="galeri-tenda-item">
+                    <img class="galeri-tenda-main-photo" src="tenda%20mandala.jpg.jpeg" alt="Tenda Mandala" loading="lazy">
+                    <figcaption class="galeri-tenda-caption"><span>Model Tenda</span><h3>Tenda Mandala</h3></figcaption>
+                </figure>
+                <figure class="galeri-tenda-item">
+                    <img class="galeri-tenda-main-photo" src="arpenaz%204.1.jpg.jpeg" alt="Tenda Arpenaz 4.1" loading="lazy">
+                    <figcaption class="galeri-tenda-caption"><span>Model Tenda</span><h3>Arpenaz 4.1</h3></figcaption>
+                </figure>
+                <figure class="galeri-tenda-item">
+                    <img class="galeri-tenda-main-photo" src="arpenaz%204.0.jpg.jpeg" alt="Tenda Arpenaz 4.0" loading="lazy">
+                    <figcaption class="galeri-tenda-caption"><span>Model Tenda</span><h3>Arpenaz 4.0</h3></figcaption>
+                </figure>
+            </div>
+
+</div>
+    </section>
+
+    <!-- Paket Tenda Section -->
+    <section id="paket" class="paket-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag-center">Pilihan Terbaik</span>
+                <h2 class="section-title-center" data-language-id="⛺ Pilihan <span class=&quot;text-accent&quot;>Paket Tenda</span>" data-language-en="⛺ <span class=&quot;text-accent&quot;>Tent Package Options</span>">⛺ Pilihan <span class="text-accent">Paket Tenda</span></h2>
+                <p class="section-desc">* Harga belum termasuk tiket / biaya area camp</p>
+            </div>
+
+            <div class="paket-filter" data-animate="fade-up" data-delay="100">
+                <button class="filter-btn active" data-filter="alas-matras" id="filter-alas-matras">🛏️ Alas Matras</button>
+                <button class="filter-btn" data-filter="alas-kasur" id="filter-alas-kasur">🛋️ Alas Kasur</button>
+                <button class="filter-btn" data-filter="matras-lengkap" id="filter-matras-lengkap">🎒 Matras Lengkap</button>
+                <button class="filter-btn" data-filter="kasur-lengkap" id="filter-kasur-lengkap">✨ Kasur Lengkap</button>
+                <button class="filter-btn" data-filter="estetik" id="filter-estetik">🦋 Estetik</button>
+            </div>
+
+            <div class="paket-grid" id="paket-grid">
+                <!-- Paket cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Price List Section -->
+    <section id="pricelist" class="pricelist-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag-center">Harga Lengkap</span>
+                <h2 class="section-title-center" data-language-id="Pilihan Paket &amp; <span class=&quot;text-accent&quot;>Price List Camping</span>" data-language-en="<span class=&quot;text-accent&quot;>Packages &amp; Camping Price List</span>">Pilihan Paket & <span class="text-accent">Price List Camping</span></h2>
+                <p class="section-desc">Silakan cek list benefit fasilitas lengkap yang didapatkan pada setiap tingkatan harga di bawah ini.</p>
+            </div>
+
+            <div class="pricelist-grid" id="pricelist-grid" data-animate="fade-up" data-delay="200">
+                <!-- Price list cards injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservasi Section -->
+    <section id="reservasi" class="reservasi-section">
+        <div class="container">
+            <div class="reservasi-card" data-animate="fade-up">
+                <h2 class="section-title-center" data-language-id="Formulir Data Diri <span class=&quot;text-accent&quot;>Reservasi</span>" data-language-en="<span class=&quot;text-accent&quot;>Camping Booking</span> Form">Formulir Data Diri <span class="text-accent">Reservasi</span></h2>
+                <form id="reservation-form" class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-name">Nama Lengkap</label>
+                            <input type="text" id="res-name" name="name" placeholder="Masukkan nama Anda" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-guests">Jumlah Peserta</label>
+                            <select id="res-guests" name="guests" required>
+                                <option value="">Pilih jumlah</option>
+                                <option value="2">2 Orang</option>
+                                <option value="4">4 Orang</option>
+                                <option value="6">6 Orang</option>
+                                <option value="8">8 Orang</option>
+                                <option value="10">10 Orang</option>
+                                <option value="12">12 Orang</option>
+                                <option value="15+">15+ Orang (Group)</option>
+                                <option value="rombongan">Rombongan / Event</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-date">Tanggal Check-in</label>
+                            <input type="date" id="res-date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-paket">Pilihan Paket</label>
+                            <select id="res-paket" name="paket" required>
+                                <option value="">Pilih paket</option>
+                                <!-- Options populated dynamically by JS from paket tenda data -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-notes">Catatan Tambahan</label>
+                        <textarea id="res-notes" name="notes" placeholder="Request khusus, pertanyaan, dll." rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submit-reservation">
+                        <span>Kirim Reservasi</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="kontak-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag-center">Hubungi Kami</span>
+                <h2 class="section-title-center">Kontak & <span class="text-accent">Lokasi</span></h2>
+            </div>
+            <div class="kontak-grid" data-animate="fade-up" data-delay="200">
+                <a class="kontak-card" href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Ranca%20Upas%2C%20Alam%20Endah%2C%20Ciwidey%2C%20Kabupaten%20Bandung%2C%20Jawa%20Barat%2040973" target="_blank" rel="noopener noreferrer" aria-label="Lihat alamat Ranca Upas di Google Maps">
+                    <div class="kontak-icon">📍</div>
+                    <h4>Alamat</h4>
+                    <p>Jl. Ranca Upas, Alam Endah, Ciwidey, Kabupaten Bandung, Jawa Barat 40973</p>
+                </a>
+                <a class="kontak-card" href="https://wa.me/6282120730123?text=Halo%20Ranca%20Upas%20Beauty%2C%20saya%20ingin%20bertanya%20mengenai%20reservasi." target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp Ranca Upas di 0821 2073 0123">
+                    <div class="kontak-icon">📞</div>
+                    <h4>Telepon / WhatsApp</h4>
+                    <p>0821 2073 0123</p>
+                </a>
+                <div class="kontak-card">
+                    <div class="kontak-icon">🕐</div>
+                    <h4>Jam Operasional</h4>
+                    <p>Setiap Hari<br>24 jam</p>
+                </div>
+                <a class="kontak-card" href="mailto:info@rancaupasbeauty.id?cc=reservasi@rancaupasbeauty.id&amp;subject=Reservasi%20Camping%20Ranca%20Upas&amp;body=Halo%20Ranca%20Upas%20Beauty%2C%0A%0ASaya%20ingin%20bertanya%20mengenai%20reservasi." aria-label="Kirim email ke Ranca Upas Beauty">
+                    <div class="kontak-icon">📧</div>
+                    <h4>Email</h4>
+                    <p>info@rancaupasbeauty.id<br>reservasi@rancaupasbeauty.id</p>
+                </a>
+            </div>
+            <div class="complaint-panel">
+                <h3>Keluhan &amp; Masukan</h3>
+                <p>Sampaikan kendala atau saran Anda kepada tim Ranca Upas.</p>
+                <form id="complaint-form" class="complaint-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="complaint-name">Nama</label>
+                            <input type="text" id="complaint-name" name="name" autocomplete="name" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="complaint-email">Email untuk balasan</label>
+                            <input type="email" id="complaint-email" name="email" autocomplete="email" placeholder="nama@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="complaint-message">Keluhan atau masukan</label>
+                        <textarea id="complaint-message" name="message" rows="5" placeholder="Ceritakan keluhan atau masukan Anda..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary complaint-submit">
+                        <span>Kirim Keluhan</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="peta-lokasi" class="map-section">
+        <div class="container">
+            <div class="map-heading">
+                <span class="section-tag-center">Temukan Kami</span>
+                <h2 class="section-title-center">Peta <span class="text-accent">Lokasi</span></h2>
+            </div>
+            <div class="map-frame">
+                <iframe
+                    title="Peta lokasi Ranca Upas, Ciwidey"
+                    src="https://www.google.com/maps?q=Ranca%20Upas%20Ciwidey%20Bandung&z=15&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/6282120730123?text=Halo%20Ranca%20Upas%20Beauty%2C%20saya%20ingin%20tanya%20tentang%20paket%20camping." class="wa-float" aria-label="Chat WhatsApp" target="_blank" rel="noopener noreferrer">
+        <img src="wa.png" alt="" class="wa-float-logo">
+    </a>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#hero" class="footer-logo">RANCA UPAS <span class="logo-accent">BEAUTY</span></a>
+                        <p class="footer-desc">Destinasi camping & wisata alam terbaik di Ciwidey, Bandung. Pengalaman alam yang tak terlupakan bersama keluarga dan sahabat.</p>
+                        <div class="footer-socials">
+                            <a href="#" class="footer-social" aria-label="Instagram">📷</a>
+                            <a href="#" class="footer-social" aria-label="Facebook">📘</a>
+                            <a href="#" class="footer-social" aria-label="TikTok">🎵</a>
+                            <a href="#" class="footer-social" aria-label="YouTube">▶️</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Navigasi</h4>
+                        <ul class="footer-links">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#tentang">Tentang</a></li>
+                            <li><a href="#aktivitas">Aktivitas</a></li>
+                            <li><a href="#paket">Paket & Harga</a></li>
+                            <li><a href="#kontak">Kontak</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-title">Area Camping</h4>
+                        <ul class="footer-links">
+                            <li><a href="#area-camping">Area Rasamala</a></li>
+                            <li><a href="#area-camping">Area Savana</a></li>
+                            <li><a href="#area-camping">Area Pinus</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Ranca Upas Beauty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <!-- Reservation Success Modal -->
+    <div id="reservation-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h3>Reservasi Terkirim!</h3>
+            <p>Terima kasih! Tim kami akan segera menghubungi Anda untuk konfirmasi reservasi camping Anda.</p>
+            <button class="btn btn-primary" id="modal-close">Tutup</button>
+        </div>
+    </div>
+
+    <div id="image-modal" class="image-modal" aria-label="Preview gambar" aria-hidden="true">
+        <span class="close-modal" aria-label="Close gallery">&times;</span>
+        <img src="" alt="Preview gambar" id="image-modal-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
