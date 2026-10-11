@@ -13,7 +13,7 @@ const packageData = {
             price: 'Rp 150.000', 
             capacity: '4 Orang', 
             note: 'Tingginya kenyamanan untuk rombongan kecil dan keluarga.',
-            photo: 'images/paket tenda rancaupas/tenda reguler/paket tenda 4 orang.jpeg',
+            photo: 'images/paket tenda rancaupas/tenda reguler/kapasitas 4 orang.jpeg',
             features: ['Tenda 4 orang', 'Lebih luas', 'Bahan premium', 'Nyaman untuk 4 orang']
         },
         { 
@@ -29,7 +29,7 @@ const packageData = {
             price: 'Rp 250.000', 
             capacity: '12 Orang', 
             note: 'Paket grup untuk kegiatan besar dan keluarga besar.',
-            photo: 'images/paket tenda rancaupas/tenda reguler/paket tenda 12 orang.jpeg',
+            photo: 'images/paket tenda rancaupas/tenda reguler/kapasitas 12 orang.jpeg',
             features: ['Tenda 12 orang', 'Lebar luas', 'Bahan tahan lama', 'Nyaman untuk 12 orang']
         }
     ],
