@@ -1597,38 +1597,27 @@ ul { list-style: none; }
 }
 
 /* ============ Kontak Section ============ */
-@@ @media (max-width: 480px)
-    .paket-category-nav {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        top: 53px;
-        gap: 8px;
-        margin-bottom: 28px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        overscroll-behavior-x: contain;
-        scroll-snap-type: x proximity;
-        scrollbar-width: thin;
-    }
-
-    .paket-category-nav a {
-        flex: 0 0 auto;
-        min-height: 40px;
-        padding: 8px 12px;
-        font-size: 0.72rem;
-        white-space: nowrap;
-        scroll-snap-align: start;
-    }
-
-    .paket-category-title {
-        scroll-margin-top: 136px;
-    }
-
+.kontak-section {
     padding: var(--section-padding) 0;
     background: var(--color-bg-secondary);
 }
 
+.kontak-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.complaint-panel {
+    max-width: 760px;
+    margin: 48px auto 0;
+    padding-top: 36px;
+    border-top: 1px solid var(--color-border);
+    scroll-margin-top: 110px;
+}
+
+.complaint-panel h3 {
+    font-family: var(--font-heading);
     font-size: 1.35rem;
     color: var(--color-text-primary);
     text-align: center;
@@ -2220,7 +2209,7 @@ ul { list-style: none; }
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-start;
-        top: 62px;
+        top: 53px;
         gap: 8px;
         margin-bottom: 28px;
         overflow-x: auto;
