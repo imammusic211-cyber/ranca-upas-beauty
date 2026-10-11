@@ -774,7 +774,7 @@ function setupComplaintForm() {
 
 document.addEventListener('DOMContentLoaded', () => {
     setupLanguageSwitcher();
-    renderPackages('alas-matras');
+    renderPackages('tenda-reguler');
     renderPriceList();
     populatePackageOptions();
     setupPackageCardSelection();
@@ -789,7 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             document.querySelectorAll('.filter-btn').forEach((btn) => btn.classList.remove('active'));
             button.classList.add('active');
-            renderPackages(button.dataset.filter || 'alas-matras');
+            renderPackages(button.dataset.filter || 'tenda-reguler');
         });
     });
     applyLanguage(currentLanguage);
