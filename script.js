@@ -60,55 +60,55 @@ const packageData = {
         }
     ],
     'paket-matras-reguler': [
-        { 
-            name: 'Paket Matras Reguler 2 Orang', 
-            price: 'Rp 150.000', 
-            capacity: '2 Orang', 
-            note: 'Paket hemat dengan matras berkualitas untuk camping nyaman.',
+        {
+            name: 'Paket Matras Arpenaz 4.0',
+            price: 'Rp 275.000',
+            capacity: '4 Orang',
+            note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
             photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
-            features: ['Tenda 2 orang', 'Matras tebal', 'Mudah dipasang', 'Harga terjangkau']
+            features: ['Tenda Arpenaz 4.0', '4 Matras', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
-        { 
-            name: 'Paket Matras Reguler 4 Orang', 
-            price: 'Rp 220.000', 
-            capacity: '4 Orang', 
-            note: 'Solusi praktis untuk camping bersama keluarga kecil.',
+        {
+            name: 'Paket Matras Mandala',
+            price: 'Rp 250.000',
+            capacity: '4 Orang',
+            note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
             photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
-            features: ['Tenda 4 orang', 'Matras nyaman', 'Cocok keluarga', 'Efisien']
+            features: ['Tenda Mandala', '4 Matras', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
-        { 
-            name: 'Paket Matras Reguler 6 Orang', 
-            price: 'Rp 280.000', 
-            capacity: '6 Orang', 
-            note: 'Paket group dengan matras berkualitas untuk aktivitas seru.',
+        {
+            name: 'Paket Matras Charly',
+            price: 'Rp 325.000',
+            capacity: '6 Orang',
+            note: 'Untuk 6 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
             photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
-            features: ['Tenda 6 orang', 'Matras group', 'Cocok beramai-ramai', 'Kualitas oke']
+            features: ['Tenda Charly', '6 Matras', '6 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         }
     ],
     'paket-matras-lengkap': [
         { 
-            name: 'Paket Matras Lengkap 2 Orang', 
-            price: 'Rp 330.000', 
-            capacity: '2 Orang', 
-            note: 'Paket lengkap dengan matras, bantal, dan selimut untuk camping santai.',
-            photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
-            features: ['Tenda 2 orang', 'Matras + bantal + selimut', 'Sarung pelindung', 'Komplit untuk malam dingin']
-        },
-        { 
-            name: 'Paket Matras Lengkap 4 Orang', 
-            price: 'Rp 420.000', 
+            name: 'Paket Matras Lengkap Arpenaz 4.0', 
+            price: 'Rp 375.000', 
             capacity: '4 Orang', 
-            note: 'Semua kebutuhan tidur bersatu dalam satu paket praktis untuk keluarga.',
+            note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
             photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
-            features: ['Tenda 4 orang', 'Perlengkapan lengkap', 'Cocok untuk keluarga', 'Mudah dibersihkan']
+            features: ['Tenda Arpenaz 4.0', '4 Matras', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor + Gas', 'Bongkar Pasang']
         },
         { 
-            name: 'Paket Matras Lengkap 6 Orang', 
-            price: 'Rp 520.000', 
-            capacity: '6 Orang', 
-            note: 'Untuk Anda yang ingin ketenangan dan kenyamanan bersama group.',
+            name: 'Paket Matras Lengkap Arpenaz 4.1', 
+            price: 'Rp 450.000', 
+            capacity: '4 Orang', 
+            note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
             photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
-            features: ['Tenda 6 orang', 'Paket group lengkap', 'Nyaman beramai-ramai', 'Kualitas premium']
+            features: ['Tenda Arpenaz 4.1', '4 Matras', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor + Gas', 'Bongkar Pasang']
+        },
+        { 
+            name: 'Paket Matras Lengkap Arpenaz 4.2', 
+            price: 'Rp 475.000', 
+            capacity: '4 Orang', 
+            note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
+            photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
+            features: ['Tenda Arpenaz 4.2', '4 Matras', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor + Gas', 'Bongkar Pasang']
         }
     ],
     'paket-kasur-lengkap': [
