@@ -131,7 +131,7 @@ const translations = {
     'Pilihan Terbaik': 'Our Best Options',
     'Paket Tenda': 'Tent Packages',
     '* Harga belum termasuk tiket': '* Prices exclude entrance tickets',
-    '🛏️ Alas Matras': '🛏️ Sleeping Mats',
+    '🏕️ Tenda Reguler': '🏕️ Regular Tent',
     '🛋️ Alas Kasur': '🛋️ Mattress Pads',
     '🎒 Matras Lengkap': '🎒 Complete Sleeping Mat',
     '✨ Kasur Lengkap': '✨ Complete Mattress',
