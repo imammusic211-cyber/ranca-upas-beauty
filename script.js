@@ -518,6 +518,9 @@ function renderPackages(filter = activePackageFilter) {
     const items = packageData[filter] || packageData['tenda-reguler'];
     grid.innerHTML = items.map((item) => `
         <article class="paket-card" data-package="${item.name}" tabindex="0" role="button" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${localizedText('dan lanjut ke formulir reservasi')}">
+            <div class="paket-card-image">
+                <img src="${item.photo}" alt="${localizedText(item.name)}" loading="lazy">
+            </div>
             <div class="paket-card-header">
                 <h3>${localizedText(item.name)}</h3>
             </div>
