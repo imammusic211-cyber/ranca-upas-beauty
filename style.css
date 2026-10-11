@@ -942,7 +942,7 @@ ul { list-style: none; }
 /* ============ Paket Tenda Section ============ */
 .paket-section {
     padding: var(--section-padding) 0;
-    background: linear-gradient(180deg, #f3c55a 0%, #f3c55a 28%, #0d2b4d 28%, #0d2b4d 100%);
+    background: linear-gradient(180deg, #f2c24d 0%, #f2c24d 18%, #0b2c49 18%, #0b2c49 100%);
 }
 
 .paket-filter {
@@ -958,176 +958,172 @@ ul { list-style: none; }
     font-family: var(--font-body);
     font-size: 0.88rem;
     font-weight: 700;
-    color: var(--color-text-primary);
-    background: rgba(255, 255, 255, 0.9);
-    border: 2px solid rgba(13, 43, 77, 0.2);
-    padding: 12px 24px;
-    border-radius: 14px;
+    color: #0d2b4d;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(11, 44, 73, 0.12);
+    padding: 13px 22px;
+    border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .filter-btn:hover {
-    border-color: #f0bf48;
     transform: translateY(-2px);
+    border-color: rgba(15, 55, 88, 0.28);
 }
 
 .filter-btn.active {
-    background: #f0bf48;
-    border-color: #f0bf48;
+    background: linear-gradient(135deg, #f7d97a, #f2c24d);
+    border-color: #f2c24d;
     color: #0d2b4d;
     font-weight: 800;
-    box-shadow: 0 8px 20px rgba(240, 191, 72, 0.35);
+    box-shadow: 0 12px 24px rgba(242, 194, 77, 0.28);
 }
 
 .paket-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
     max-width: 1180px;
     margin: 0 auto;
 }
 
 /* Paket Cards */
 .paket-card {
-    background: rgba(255, 255, 255, 0.96);
-    border: 4px solid #0d2b4d;
-    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(11, 44, 73, 0.08);
+    border-radius: 22px;
     overflow: hidden;
-    transition: all 0.5s var(--ease-out-expo);
-    animation: cardAppear 0.5s var(--ease-out-expo);
-    box-shadow: 0 18px 32px rgba(3, 19, 35, 0.18);
+    transition: all 0.4s ease;
+    animation: cardAppear 0.35s ease;
+    box-shadow: 0 18px 35px rgba(10, 22, 38, 0.14);
 }
 
 .paket-card-inner {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: minmax(220px, 280px) 1fr;
     min-height: 240px;
 }
 
 .paket-card-image {
     overflow: hidden;
-    background: linear-gradient(135deg, #cfd8dc, #e1e4e5);
+    background: linear-gradient(135deg, #edf1f3, #dde3e8);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 18px;
+    padding: 24px;
 }
 
 .paket-card-image img {
     width: 100%;
     height: 100%;
-    max-height: 230px;
+    max-height: 220px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 6px solid #f0bf48;
-    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+    border-radius: 24px;
+    border: 4px solid #f2c24d;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
     transition: transform 0.5s ease;
 }
 
 .paket-card-content {
     display: flex;
     flex-direction: column;
-    background: #f5f5f2;
+    background: #f9f7f2;
 }
 
 .paket-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 36px rgba(3, 19, 35, 0.24);
+    transform: translateY(-4px);
+    box-shadow: 0 22px 42px rgba(10, 22, 38, 0.18);
 }
 
 .paket-card:hover .paket-card-image img {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
 .paket-card:focus-visible {
-    outline: 3px solid #f0bf48;
+    outline: 3px solid #f2c24d;
     outline-offset: 4px;
 }
 
 @keyframes cardAppear {
-    from { opacity: 0; transform: translateY(20px) scale(0.95); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .paket-card-header {
     position: relative;
-    background: #f8f8f4;
-    color: #0d2b4d;
-    text-align: left;
-    padding: 26px 28px 14px;
-    border-bottom: 2px solid rgba(13, 43, 77, 0.08);
+    background: linear-gradient(180deg, #fdfbf5 0%, #f6f3ec 100%);
+    border-bottom: 1px solid rgba(11, 44, 73, 0.08);
+    padding: 22px 28px 12px;
 }
 
 .paket-card-header h3 {
-    font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 2vw, 2.25rem);
-    font-weight: 800;
-    letter-spacing: 0;
-    color: #0d2b4d;
     margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #0d2b4d;
 }
 
 .paket-card-body {
-    padding: 22px 28px 26px;
+    padding: 20px 28px 24px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
 }
 
 .paket-price {
     font-family: var(--font-heading);
     font-size: clamp(1.8rem, 2vw, 2.5rem);
     font-weight: 900;
-    color: #d63a2d;
     line-height: 1;
+    color: #e13b32;
 }
 
 .paket-capacity {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
+    font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
+    color: #5d6776;
 }
 
 .paket-note {
-    font-size: 0.8rem;
-    color: #0d2b4d;
-    background: rgba(13, 43, 77, 0.05);
-    border-left: 4px solid #f0bf48;
-    border-radius: 8px;
+    background: rgba(35, 54, 70, 0.04);
+    border-left: 4px solid #f2c24d;
+    border-radius: 10px;
     padding: 10px 12px;
-    line-height: 1.5;
-    text-align: left;
+    font-size: 0.8rem;
+    color: #1a2a39;
+    line-height: 1.6;
 }
 
 .paket-features {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 6px 0 0;
     display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
-    gap: 8px 16px;
-    text-align: left;
+    grid-template-columns: repeat(2, minmax(135px, 1fr));
+    gap: 8px 12px;
 }
 
 .paket-feature {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 6px 0;
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #2d445d;
     font-weight: 600;
 }
 
 .paket-feature::before {
     content: "•";
-    color: #f0bf48;
+    color: #f2c24d;
     font-size: 1.4rem;
     line-height: 1;
-    flex-shrink: 0;
+    transform: translateY(-1px);
 }
 
 /* ============ Price List Section ============ */
