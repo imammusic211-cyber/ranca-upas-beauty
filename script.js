@@ -35,28 +35,28 @@ const packageData = {
     ],
     'paket-kasur-reguler': [
         { 
-            name: 'Paket Kasur Reguler 2 Orang', 
-            price: 'Rp 210.000', 
-            capacity: '2 Orang', 
-            note: 'Nikmati tidur yang lebih hangat dengan kasur empuk dan nyaman.',
-            photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
-            features: ['Tenda 2 orang', 'Kasur empuk', 'Bantal + selimut', 'Tahan dingin malam']
-        },
-        { 
-            name: 'Paket Kasur Reguler 4 Orang', 
-            price: 'Rp 300.000', 
+            name: 'Paket Kasur Arpenaz 4.0', 
+            price: 'Rp 350.000', 
             capacity: '4 Orang', 
-            note: 'Paket lebih nyaman untuk kebutuhan acara keluarga maupun gathering.',
+            note: 'Paket nyaman dengan tenda Arpenaz 4.0 dan kasur untuk 4 orang.',
             photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
-            features: ['Tenda 4 orang', 'Kasur berkualitas', 'Perlengkapan lengkap', 'Kapasitas lebih luas']
+            features: ['Tenda Arpenaz 4.0', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         { 
-            name: 'Paket Kasur Reguler 6 Orang', 
-            price: 'Rp 380.000', 
-            capacity: '6 Orang', 
-            note: 'Pilihan paling cocok untuk kegiatan outbound dan team building.',
+            name: 'Paket Kasur Mandala', 
+            price: 'Rp 350.000', 
+            capacity: '4 Orang', 
+            note: 'Paket dengan tenda Mandala yang luas dan nyaman untuk 4 orang.',
             photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
-            features: ['Tenda 6 orang', 'Kasur kuat awet', 'Ideal untuk event', 'Kualitas tidur lebih baik']
+            features: ['Tenda Arpenaz 4.0', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
+        },
+        { 
+            name: 'Paket Kasur Arpenaz 4.1', 
+            price: 'Rp 400.000', 
+            capacity: '4 Orang', 
+            note: 'Paket premium dengan tenda Arpenaz 4.1 untuk kenyamanan maksimal.',
+            photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
+            features: ['Tenda Arpenaz 4.1', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         }
     ],
     'paket-matras-reguler': [
