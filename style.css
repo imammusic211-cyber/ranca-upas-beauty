@@ -978,6 +978,99 @@ ul { list-style: none; }
     gap: 26px;
 }
 
+.regular-tent-capacity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.regular-tent-capacity {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(30, 77, 58, 0.12);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 12px 28px rgba(30, 77, 58, 0.08);
+}
+
+.regular-tent-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.regular-tent-content {
+    padding: 16px;
+}
+
+.regular-tent-content h4 {
+    margin: 0;
+    color: #214b32;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+}
+
+.regular-tent-spec {
+    margin: 3px 0 12px;
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+}
+
+.regular-tent-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.regular-tent-option {
+    display: flex;
+    min-width: 0;
+    min-height: 126px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 12px;
+    border: 1px solid rgba(30, 77, 58, 0.16);
+    border-radius: 10px;
+    background: #f7f8f4;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.regular-tent-option:hover {
+    transform: translateY(-2px);
+    border-color: #4f6e51;
+    background: #eef3e9;
+}
+
+.regular-tent-option:focus-visible {
+    outline: 3px solid #4f6e51;
+    outline-offset: 2px;
+}
+
+.regular-tent-tier {
+    color: #214b32;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.regular-tent-price {
+    color: #6c4f3b;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.regular-tent-features {
+    color: var(--color-text-secondary);
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
 /* Paket Cards */
 .paket-card {
     background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(236,231,220,0.98));
@@ -2043,6 +2136,10 @@ ul { list-style: none; }
     }
 
     .paket-card-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .regular-tent-capacity-grid {
         grid-template-columns: 1fr;
     }
 

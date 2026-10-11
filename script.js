@@ -1,38 +1,49 @@
+const regularTentTiers = [
+    { name: 'Reguler', features: ['Tenda', 'Matras', 'Lampu Emergency', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Medium', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Premium', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Rimba', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Kompor', 'Nesting', 'Gas', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] }
+];
+
+const regularTentCapacities = [
+    {
+        capacity: '2 Orang',
+        dimensions: '2X2 Meter',
+        photo: 'images/tenda reguler/kapasitas 2 orang.....jpeg',
+        prices: { Reguler: 'Rp 120.000', Medium: 'Rp 210.000', Premium: 'Rp 260.000', Rimba: 'Rp 320.000' }
+    },
+    {
+        capacity: '4 Orang',
+        dimensions: '2,5X2,5 Meter',
+        photo: 'images/tenda reguler/kapasitas 4 orang.jpeg',
+        prices: { Reguler: 'Rp 200.000', Medium: 'Rp 305.000', Premium: 'Rp 355.000', Rimba: 'Rp 415.000' }
+    },
+    {
+        capacity: '6 Orang',
+        dimensions: '3X2,5 Meter',
+        photo: 'images/tenda reguler/kapasitas 6 orang.jpeg',
+        prices: { Reguler: 'Rp 240.000', Medium: 'Rp 375.000', Premium: 'Rp 475.000', Rimba: 'Rp 535.000' }
+    },
+    {
+        capacity: '12 Orang',
+        dimensions: '6X2,5 Meter',
+        photo: 'images/tenda reguler/kapasitas 12 orang.jpeg',
+        prices: { Reguler: 'Rp 320.000', Medium: 'Rp 565.000', Premium: 'Rp 765.000', Rimba: 'Rp 825.000' }
+    }
+];
+
+const regularTentPackages = regularTentCapacities.flatMap((tent) => regularTentTiers.map((tier) => ({
+    name: `Tenda ${tier.name} ${tent.capacity}`,
+    tier: tier.name,
+    price: tent.prices[tier.name],
+    capacity: tent.capacity,
+    note: `Spesifikasi tenda double layer ukuran ${tent.dimensions}. Bebas pilih lokasi camping di Ranca Upas. Harga per tenda, belum termasuk tiket camping Ranca Upas. Check-in 08.00-20.00 WIB dan check-out maksimal 15.00 WIB.`,
+    photo: tent.photo,
+    features: tier.features
+})));
+
 const packageData = {
-    'tenda-reguler': [
-        { 
-            name: 'Tenda Reguler 2 Orang', 
-            price: 'Rp 120.000', 
-            capacity: '2 Orang', 
-            note: 'Spesifikasi tenda doble layar ukuran 2X2 Meter. Siap untuk kapasitas 2 orang.',
-            photo: 'images/tenda reguler/kapasitas 2 orang.....jpeg',
-            features: ['Tenda', 'Matras', 'Lampu', 'Emergency', 'Jasa Pasang', 'Bongkar Tenda']
-        },
-        { 
-            name: 'Tenda Reguler 4 Orang', 
-            price: 'Rp 210.000', 
-            capacity: '4 Orang', 
-            note: 'Paket tenda untuk camping ringan dengan kapasitas 4 orang.',
-            photo: 'images/tenda reguler/kapasitas 4 orang.jpeg',
-            features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu', 'Emergency', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda']
-        },
-        { 
-            name: 'Tenda Reguler 6 Orang', 
-            price: 'Rp 260.000', 
-            capacity: '6 Orang', 
-            note: 'Paket standar untuk rombongan kecil dan keluarga.',
-            photo: 'images/tenda reguler/kapasitas 6 orang.jpeg',
-            features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu', 'Emergency', 'Kasur Karpet', 'Bantal', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda']
-        },
-        { 
-            name: 'Tenda Reguler 12 Orang', 
-            price: 'Rp 320.000', 
-            capacity: '12 Orang', 
-            note: 'Paket untuk kebutuhan group atau acara camping keluarga besar.',
-            photo: 'images/tenda reguler/kapasitas 12 orang.jpeg',
-            features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu', 'Emergency', 'Kasur Karpet', 'Bantal', 'Kompor', 'Nesting', 'Gas', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda']
-        }
-    ],
+    'tenda-reguler': regularTentPackages,
     'paket-kasur-reguler': [
         { 
             name: 'Paket Kasur Arpenaz 4.0', 
@@ -242,6 +253,11 @@ const translations = {
     'Paket Matras Lengkap': 'Complete Sleeping Mat Package',
     'Paket Kasur Lengkap': 'Complete Mattress Package',
     'Paket Estetik': 'Aesthetic Package',
+    'Reguler': 'Regular',
+    'Medium': 'Medium',
+    'Premium': 'Premium',
+    'Rimba': 'Rimba',
+    'Tenda double layer': 'Double-layer tent',
     '🏕️ Tenda Reguler': '🏕️ Regular Tent',
     '🛋️ Alas Kasur': '🛋️ Mattress Pads',
     '🎒 Matras Lengkap': '🎒 Complete Sleeping Mat',
@@ -347,6 +363,18 @@ const translations = {
     'Tenda Reguler 4 Orang': 'Regular Tent 4 People',
     'Tenda Reguler 6 Orang': 'Regular Tent 6 People',
     'Tenda Reguler 12 Orang': 'Regular Tent 12 People',
+    'Tenda Medium 2 Orang': 'Medium Tent 2 People',
+    'Tenda Medium 4 Orang': 'Medium Tent 4 People',
+    'Tenda Medium 6 Orang': 'Medium Tent 6 People',
+    'Tenda Medium 12 Orang': 'Medium Tent 12 People',
+    'Tenda Premium 2 Orang': 'Premium Tent 2 People',
+    'Tenda Premium 4 Orang': 'Premium Tent 4 People',
+    'Tenda Premium 6 Orang': 'Premium Tent 6 People',
+    'Tenda Premium 12 Orang': 'Premium Tent 12 People',
+    'Tenda Rimba 2 Orang': 'Rimba Tent 2 People',
+    'Tenda Rimba 4 Orang': 'Rimba Tent 4 People',
+    'Tenda Rimba 6 Orang': 'Rimba Tent 6 People',
+    'Tenda Rimba 12 Orang': 'Rimba Tent 12 People',
     'Alas Kasur Cozy': 'Cozy Mattress Pad',
     'Alas Kasur Resort': 'Resort Mattress Pad',
     'Alas Kasur Adventure': 'Adventure Mattress Pad',
@@ -525,8 +553,25 @@ function renderPackages() {
     grid.innerHTML = Object.entries(packageData).map(([category, items]) => `
         <section class="paket-category" aria-labelledby="paket-category-${category}">
             <h3 class="paket-category-title" id="paket-category-${category}">${localizedText(categoryLabels[category])}</h3>
-            <div class="paket-category-grid">
-                ${items.map((item) => `
+            <div class="paket-category-grid ${category === 'tenda-reguler' ? 'regular-tent-capacity-grid' : ''}">
+                ${category === 'tenda-reguler' ? regularTentCapacities.map((tent) => `
+                    <article class="regular-tent-capacity">
+                        <img class="regular-tent-photo" src="${tent.photo}" alt="Tenda kapasitas ${localizedText(tent.capacity)}" loading="lazy">
+                        <div class="regular-tent-content">
+                            <h4>${localizedText('Kapasitas:')} ${localizedText(tent.capacity)}</h4>
+                            <p class="regular-tent-spec">${localizedText('Tenda double layer')} · ${tent.dimensions}</p>
+                            <div class="regular-tent-options">
+                                ${items.filter((item) => item.capacity === tent.capacity).map((item) => `
+                                    <button type="button" class="regular-tent-option" data-package="${item.name}" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${item.price}">
+                                        <span class="regular-tent-tier">${localizedText(item.tier)}</span>
+                                        <span class="regular-tent-price">${item.price}</span>
+                                        <span class="regular-tent-features">${item.features.map((feature) => localizedText(feature)).join(' · ')}</span>
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </article>
+                `).join('') : items.map((item) => `
                     <article class="paket-card" data-package="${item.name}" tabindex="0" role="button" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${localizedText('dan lanjut ke formulir reservasi')}">
                         <div class="paket-card-inner">
                             <div class="paket-card-image">
@@ -576,7 +621,7 @@ function setupPackageCardSelection() {
 
         grid.addEventListener('keydown', (event) => {
             const card = event.target.closest('[data-package]');
-            if (!card || !grid.contains(card) || !['Enter', ' '].includes(event.key)) return;
+            if (!card || !grid.contains(card) || card instanceof HTMLButtonElement || !['Enter', ' '].includes(event.key)) return;
             event.preventDefault();
             selectPackage(card);
         });
