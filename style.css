@@ -192,9 +192,9 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 92px;
-    height: 72px;
-    flex: 0 0 92px;
+    width: 112px;
+    height: 88px;
+    flex: 0 0 112px;
     object-fit: contain;
     filter: drop-shadow(0 6px 14px rgba(19, 61, 51, 0.2));
 }
@@ -202,7 +202,7 @@ ul { list-style: none; }
 .nav-logo-text {
     color: inherit;
     font-family: var(--font-heading);
-    font-size: clamp(1.6rem, 2vw, 2.8rem);
+    font-size: clamp(1.8rem, 2.3vw, 3.2rem);
     font-weight: 800;
     line-height: 1;
     letter-spacing: 0.04em;
