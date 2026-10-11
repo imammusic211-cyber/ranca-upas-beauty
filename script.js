@@ -524,7 +524,7 @@ function renderPackages() {
             <h3 class="paket-category-title" id="paket-category-${category}">${localizedText(categoryLabels[category])}</h3>
             <div class="paket-category-grid">
                 ${items.map((item) => `
-                    <article class="paket-card">
+                    <article class="paket-card" data-package="${item.name}" tabindex="0" role="button" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${localizedText('dan lanjut ke formulir reservasi')}">
                         <div class="paket-card-inner">
                             <div class="paket-card-image">
                                 <img src="${item.photo}" alt="${localizedText(item.name)}" loading="lazy">
@@ -551,7 +551,10 @@ function renderPackages() {
 }
 
 function setupPackageCardSelection() {
-    const grids = [document.getElementById('pricelist-grid')].filter(Boolean);
+    const grids = [
+        document.getElementById('paket-grid'),
+        document.getElementById('pricelist-grid')
+    ].filter(Boolean);
     const reservationSection = document.getElementById('reservasi');
     const packageSelect = document.getElementById('res-paket');
     if (!grids.length || !reservationSection || !packageSelect) return;
