@@ -569,17 +569,6 @@ ul { list-style: none; }
     color: var(--color-primary);
     margin-bottom: 12px;
     position: relative;
-    padding-left: 36px;
-}
-
-.section-tag::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 24px;
-    height: 2px;
-    background: var(--color-primary);
 }
 
 .section-tag-center {
