@@ -405,7 +405,7 @@ function renderPackages(filter = activePackageFilter) {
     if (!grid) return;
 
     activePackageFilter = filter;
-    const items = packageData[filter] || packageData['alas-matras'];
+    const items = packageData[filter] || packageData['tenda-reguler'];
     grid.innerHTML = items.map((item) => `
         <article class="paket-card" data-package="${item.name}" tabindex="0" role="button" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${localizedText('dan lanjut ke formulir reservasi')}">
             <div class="paket-card-header">
