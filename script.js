@@ -1,8 +1,8 @@
 const regularTentTiers = [
-    { name: 'Reguler', summary: 'Pilihan praktis dengan tenda, matras, lampu emergency, serta jasa pasang dan bongkar.', features: ['Tenda', 'Matras', 'Lampu Emergency', 'Jasa Pasang', 'Bongkar Tenda'] },
-    { name: 'Medium', summary: 'Lebih hangat dengan sleeping bag dan api unggun, lengkap dengan matras, lampu, serta jasa pasang-bongkar.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
-    { name: 'Premium', summary: 'Lebih nyaman dengan sleeping bag, kasur karpet, bantal, api unggun, serta lampu dan layanan pasang-bongkar.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
-    { name: 'Rimba', summary: 'Perlengkapan lengkap dengan kasur karpet, bantal, alat masak, sleeping bag, lampu, api unggun, dan layanan pasang-bongkar.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Kompor', 'Nesting', 'Gas', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] }
+    { name: 'Reguler', summary: 'Pilihan praktis dengan tenda, matras, lampu emergency, serta jasa pasang dan bongkar.', summaryEn: 'A practical setup with a tent, sleeping mat, emergency light, and setup service.', features: ['Tenda', 'Matras', 'Lampu Emergency', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Medium', summary: 'Lebih hangat dengan sleeping bag dan api unggun, lengkap dengan matras, lampu, serta jasa pasang-bongkar.', summaryEn: 'Stay warm with a sleeping bag and campfire, plus a sleeping mat, emergency light, and setup service.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Premium', summary: 'Lebih nyaman dengan sleeping bag, kasur karpet, bantal, api unggun, serta lampu dan layanan pasang-bongkar.', summaryEn: 'Enjoy extra comfort with a sleeping bag, carpet mattress, pillow, campfire, emergency light, and setup service.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Rimba', summary: 'Perlengkapan lengkap dengan kasur karpet, bantal, alat masak, sleeping bag, lampu, api unggun, dan layanan pasang-bongkar.', summaryEn: 'A complete camp setup with a carpet mattress, pillow, cooking kit, sleeping bag, emergency light, and campfire.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Kompor', 'Nesting', 'Gas', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] }
 ];
 
 const regularTentCapacities = [
@@ -38,6 +38,7 @@ const regularTentPackages = regularTentCapacities.flatMap((tent) => regularTentT
     price: tent.prices[tier.name],
     capacity: tent.capacity,
     note: `${tier.summary} Tenda double layer ${tent.dimensions}, kapasitas ${tent.capacity}.`,
+    noteEn: `${tier.summaryEn} Double-layer tent, ${tent.dimensions}, for ${tent.capacity.replace(' Orang', ' people')}.`,
     photo: tent.photo,
     features: tier.features
 })));
@@ -173,6 +174,23 @@ const priceListData = [
     { name: 'Medium', price: 'Rp 260.000', accent: 'medium', features: ['Tenda 4 Orang', 'Kasur nyaman', 'Selimut + bantal', 'Akses toilet'] },
     { name: 'Premium', price: 'Rp 420.000', accent: 'premium', features: ['Tenda 6 Orang', 'Fasilitas lengkap', 'Area lebih luas', 'Sambutan tim support'] }
 ];
+
+const packageNotesEn = {
+    'Paket Kasur Arpenaz 4.0': 'Sleep comfortably in an Arpenaz 4.0 tent with two mattresses, four sleeping bags, a lamp, and setup service.',
+    'Paket Kasur Mandala': 'Enjoy a Mandala tent with two mattresses, four sleeping bags, a lamp, and setup service.',
+    'Paket Kasur Arpenaz 4.1': 'An Arpenaz 4.1 tent for four, with two mattresses, four sleeping bags, a lamp, and setup service.',
+    'Paket Matras Arpenaz 4.0': 'An Arpenaz 4.0 tent with four mats, four sleeping bags, a lamp, and setup service. Tickets and campsite fees are not included.',
+    'Paket Matras Mandala': 'A Mandala tent for four with four mats, four sleeping bags, a lamp, and setup service. Tickets and campsite fees are not included.',
+    'Paket Matras Charly': 'A Charly tent for six with six mats, six sleeping bags, a lamp, and setup service. Tickets and campsite fees are not included.',
+    'Paket Matras Lengkap Arpenaz 4.0': 'A ready-to-camp setup with four mats, four sleeping bags, a lamp, table and chairs, flysheet, stove, and gas. Tickets and campsite fees are not included.',
+    'Paket Matras Lengkap Arpenaz 4.1': 'An Arpenaz 4.1 tent with four mats, sleeping bags, table and chairs, flysheet, stove, and gas. Tickets and campsite fees are not included.',
+    'Paket Matras Lengkap Arpenaz 4.2': 'An Arpenaz 4.2 tent with mats, sleeping bags, table and chairs, flysheet, stove, and gas. Tickets and campsite fees are not included.',
+    'Paket Kasur Lengkap Arpenaz 4.0': 'Extra comfort with two mattresses, four sleeping bags, a lamp, table and chairs, flysheet, gas stove, and setup service. Tickets are not included.',
+    'Paket Kasur Lengkap Arpenaz 4.1': 'An Arpenaz 4.1 tent with mattresses and pillows, sleeping bags, a lamp, table and chairs, flysheet, and gas stove. Includes camping tickets for four.',
+    'Paket Kasur Lengkap Arpenaz 4.2': 'An Arpenaz 4.2 tent with mattresses and pillows, sleeping bags, a lamp, table and chairs, flysheet, and gas stove. Includes camping tickets for four.',
+    'Paket Estetik Landwolf / Eclipse': 'Create a stylish campsite with a foam mattress, table and chairs, two lights, a mat, gas stove, and setup service. Tickets and campsite fees are not included.',
+    'Paket Estetik Naturehike V13': 'Enjoy a stylish, comfortable camp with a foam mattress, table and chairs, two lights, a mat, gas stove, and setup service. Tickets and campsite fees are not included.'
+};
 
 const translations = {
     'Beranda': 'Home',
@@ -588,7 +606,7 @@ function renderPackages() {
                                 <div class="paket-card-body">
                                     <div class="paket-price">${item.price}</div>
                                     <div class="paket-capacity">${localizedText('Kapasitas:')} ${localizedText(item.capacity)}</div>
-                                    <div class="paket-note">${localizedText(item.note)}</div>
+                                    <div class="paket-note">${currentLanguage === 'en' ? item.noteEn || packageNotesEn[item.name] || item.note : item.note}</div>
                                     <ul class="paket-features">
                                         ${item.features.map(feature => `<li class="paket-feature">${localizedText(feature)}</li>`).join('')}
                                     </ul>

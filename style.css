@@ -2219,6 +2219,10 @@ ul { list-style: none; }
         scrollbar-width: thin;
     }
 
+    .paket-category-nav::-webkit-scrollbar {
+        display: none;
+    }
+
     .paket-category-title {
         scroll-margin-top: 136px;
     }
