@@ -192,9 +192,9 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 74px;
-    height: 52px;
-    flex: 0 0 74px;
+    width: 110px;
+    height: 78px;
+    flex: 0 0 110px;
     object-fit: contain;
     filter: drop-shadow(0 5px 12px rgba(19, 61, 51, 0.18));
 }
