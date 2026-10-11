@@ -657,12 +657,23 @@ function setupPackageCategoryNavigation() {
     if (!navigation || !packageSection || !categories.length) return;
 
     const links = [...navigation.querySelectorAll('a[href^="#paket-category-"]')];
-    const setActiveCategory = (categoryId) => {
+    let activeCategoryId = null;
+    const setActiveCategory = (categoryId, forceCenter = false) => {
+        const categoryChanged = categoryId !== activeCategoryId;
+        activeCategoryId = categoryId;
         links.forEach((link) => {
             const isActive = link.hash === `#${categoryId}`;
             link.classList.toggle('active', isActive);
-            if (isActive) link.setAttribute('aria-current', 'location');
-            else link.removeAttribute('aria-current');
+            if (!isActive) {
+                link.removeAttribute('aria-current');
+                return;
+            }
+
+            link.setAttribute('aria-current', 'location');
+            if ((categoryChanged || forceCenter) && navigation.scrollWidth > navigation.clientWidth) {
+                const centeredScrollLeft = link.offsetLeft + link.offsetWidth / 2 - navigation.clientWidth / 2;
+                navigation.scrollTo({ left: centeredScrollLeft, behavior: 'smooth' });
+            }
         });
     };
 
@@ -671,6 +682,7 @@ function setupPackageCategoryNavigation() {
         updateScheduled = false;
         const sectionBounds = packageSection.getBoundingClientRect();
         if (sectionBounds.bottom <= 0 || sectionBounds.top >= window.innerHeight) {
+            activeCategoryId = null;
             links.forEach((link) => {
                 link.classList.remove('active');
                 link.removeAttribute('aria-current');
@@ -696,7 +708,7 @@ function setupPackageCategoryNavigation() {
 
     navigation.addEventListener('click', (event) => {
         const link = event.target.closest('a[href^="#paket-category-"]');
-        if (link) setActiveCategory(link.hash.slice(1));
+        if (link) setActiveCategory(link.hash.slice(1), true);
     });
     window.addEventListener('scroll', scheduleUpdate, { passive: true });
     window.addEventListener('resize', scheduleUpdate);
