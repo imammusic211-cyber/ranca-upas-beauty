@@ -192,9 +192,9 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 120px;
-    height: 84px;
-    flex: 0 0 120px;
+    width: 74px;
+    height: 52px;
+    flex: 0 0 74px;
     object-fit: contain;
     filter: drop-shadow(0 5px 12px rgba(19, 61, 51, 0.18));
 }
@@ -374,16 +374,16 @@ ul { list-style: none; }
 }
 
 .hero-logo-mark {
-    width: min(72vw, 760px);
-    height: auto;
+    width: 118px;
+    height: 82px;
     margin: 0 auto 14px;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .hero-logo-mark img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -2001,7 +2001,7 @@ ul { list-style: none; }
 @media (min-width: 1025px) and (max-width: 1280px) {
     .nav-link { padding: 8px 12px; font-size: 0.85rem; }
     .nav-links { gap: 4px; padding: 6px 8px; }
-    .nav-logo-image { width: 110px; height: 78px; flex-basis: 110px; }
+    .nav-logo-image { width: 52px; height: 36px; flex-basis: 52px; }
 }
 
 @media (max-width: 1024px) {
@@ -2091,8 +2091,8 @@ ul { list-style: none; }
     }
 
     .hero-logo-mark {
-        width: min(62vw, 620px);
-        height: auto;
+        width: 100px;
+        height: 69px;
         margin-bottom: 10px;
     }
 
@@ -2134,8 +2134,8 @@ ul { list-style: none; }
     }
 
     .hero-logo-mark {
-        width: min(74vw, 420px);
-        height: auto;
+        width: 88px;
+        height: 61px;
         margin-bottom: 8px;
     }
 
@@ -2182,7 +2182,7 @@ ul { list-style: none; }
         padding: 12px 0;
     }
 
-    .nav-logo-image { width: 96px; height: 68px; flex-basis: 96px; }
+    .nav-logo-image { width: 48px; height: 33px; flex-basis: 48px; }
     .nav-logo-text { font-size: 0.98rem; }
 
     .nav-links {
