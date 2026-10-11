@@ -39,7 +39,7 @@ const packageData = {
             price: 'Rp 350.000', 
             capacity: '4 Orang', 
             note: 'Paket nyaman dengan tenda Arpenaz 4.0 dan kasur untuk 4 orang.',
-            photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
+            photo: 'images/paket tenda rancaupas/apernaz 4.0.jpeg',
             features: ['Tenda Arpenaz 4.0', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         { 
@@ -47,7 +47,7 @@ const packageData = {
             price: 'Rp 350.000', 
             capacity: '4 Orang', 
             note: 'Paket dengan tenda Mandala yang luas dan nyaman untuk 4 orang.',
-            photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
+            photo: 'images/paket tenda rancaupas/mandala.jpeg',
             features: ['Tenda Arpenaz 4.0', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         { 
@@ -55,7 +55,7 @@ const packageData = {
             price: 'Rp 400.000', 
             capacity: '4 Orang', 
             note: 'Paket premium dengan tenda Arpenaz 4.1 untuk kenyamanan maksimal.',
-            photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
+            photo: 'images/paket tenda rancaupas/arvenaz 4.1.jpeg',
             features: ['Tenda Arpenaz 4.1', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         }
     ],
@@ -65,7 +65,7 @@ const packageData = {
             price: 'Rp 275.000',
             capacity: '4 Orang',
             note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
-            photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
+            photo: 'images/paket tenda rancaupas/apernaz 4.0.jpeg',
             features: ['Tenda Arpenaz 4.0', '4 Matras', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         {
@@ -73,7 +73,7 @@ const packageData = {
             price: 'Rp 250.000',
             capacity: '4 Orang',
             note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
-            photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
+            photo: 'images/paket tenda rancaupas/mandala.jpeg',
             features: ['Tenda Mandala', '4 Matras', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         {
@@ -81,7 +81,7 @@ const packageData = {
             price: 'Rp 325.000',
             capacity: '6 Orang',
             note: 'Untuk 6 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
-            photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
+            photo: 'images/paket tenda rancaupas/chally.jpeg',
             features: ['Tenda Charly', '6 Matras', '6 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         }
     ],
@@ -91,7 +91,7 @@ const packageData = {
             price: 'Rp 375.000', 
             capacity: '4 Orang', 
             note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
-            photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
+            photo: 'images/paket tenda rancaupas/apernaz 4.0.jpeg',
             features: ['Tenda Arpenaz 4.0', '4 Matras', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor + Gas', 'Bongkar Pasang']
         },
         { 
@@ -99,7 +99,7 @@ const packageData = {
             price: 'Rp 450.000', 
             capacity: '4 Orang', 
             note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
-            photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
+            photo: 'images/paket tenda rancaupas/arvenaz 4.1.jpeg',
             features: ['Tenda Arpenaz 4.1', '4 Matras', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor + Gas', 'Bongkar Pasang']
         },
         { 
@@ -107,7 +107,7 @@ const packageData = {
             price: 'Rp 475.000', 
             capacity: '4 Orang', 
             note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
-            photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
+            photo: 'images/paket tenda rancaupas/arvenaz 4.2.jpeg',
             features: ['Tenda Arpenaz 4.2', '4 Matras', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor + Gas', 'Bongkar Pasang']
         }
     ],
@@ -117,7 +117,7 @@ const packageData = {
             price: 'Rp 450.000', 
             capacity: '4 Orang', 
             note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
-            photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
+            photo: 'images/paket tenda rancaupas/apernaz 4.0.jpeg',
             features: ['Tenda Arpenaz 4.0 / Mandala', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor Gas', 'Bongkar Pasang']
         },
         { 
@@ -125,7 +125,7 @@ const packageData = {
             price: 'Rp 550.000', 
             capacity: '4 Orang', 
             note: 'Untuk 4 Orang/Tenda. Harga sudah termasuk tiket camp untuk 4 Orang.',
-            photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
+            photo: 'images/paket tenda rancaupas/arvenaz 4.1.jpeg',
             features: ['Tenda Arpenaz 4.1', '2 Kasur Unk 4 Orang + 2 Bantal', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor Gas', 'Bongkar Pasang']
         },
         { 
@@ -133,7 +133,7 @@ const packageData = {
             price: 'Rp 600.000', 
             capacity: '4 Orang', 
             note: 'Untuk 4 Orang/Tenda. Harga sudah termasuk tiket camp untuk 4 Orang.',
-            photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
+            photo: 'images/paket tenda rancaupas/arvenaz 4.2.jpeg',
             features: ['Tenda Arpenaz 4.2', '2 Kasur Unk 4 Orang + 2 Bantal', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor +Gas', 'Bongkar Pasang']
         }
     ],
@@ -143,7 +143,7 @@ const packageData = {
             price: 'Rp 650.000', 
             capacity: '4 Orang', 
             note: 'Harga belum termasuk tiket / biaya area camp. Paket sudah termasuk bongkar pasang. Area camp wilayah Cikole Lembang, Sariater, dan Ciwidey.',
-            photo: 'images/paket tenda rancaupas/PAKET ESTETIK/PAKET ESTETIK.jpeg',
+            photo: 'images/paket tenda rancaupas/landwolf eclipse.jpeg',
             features: ['Kasur Busa', '4 Kursi + 1 Meja', '2 Lampu', 'Matras', 'Kompor + Gas', 'Bongkar Pasang']
         },
         { 
@@ -151,7 +151,7 @@ const packageData = {
             price: 'Rp 750.000', 
             capacity: '4 Orang', 
             note: 'Harga belum termasuk tiket / biaya area camp. Paket sudah termasuk bongkar pasang. Area camp wilayah Cikole Lembang, Sariater, dan Ciwidey.',
-            photo: 'images/paket tenda rancaupas/PAKET ESTETIK/PAKET ESTETIK.jpeg',
+            photo: 'images/paket tenda rancaupas/naturehike v13.jpeg',
             features: ['Kasur Busa', '4 Kursi + 1 Meja', '2 Lampu', 'Matras', 'Kompor + Gas', 'Bongkar Pasang']
         }
     ]
