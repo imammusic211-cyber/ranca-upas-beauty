@@ -113,28 +113,28 @@ const packageData = {
     ],
     'paket-kasur-lengkap': [
         { 
-            name: 'Paket Kasur Lengkap 2 Orang', 
-            price: 'Rp 560.000', 
-            capacity: '2 Orang', 
-            note: 'Pilih paket premium untuk resting time yang lebih maksimal dan mewah.',
-            photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
-            features: ['Tenda premium 2 orang', 'Kasur empuk berkualitas', 'Bantal + selimut tebal', 'Tampilan rapi dan nyaman']
-        },
-        { 
-            name: 'Paket Kasur Lengkap 4 Orang', 
-            price: 'Rp 680.000', 
+            name: 'Paket Kasur Lengkap Arpenaz 4.0', 
+            price: 'Rp 450.000', 
             capacity: '4 Orang', 
-            note: 'Pengalaman tidur paling istimewa di tengah alam dengan fasilitas premium.',
+            note: 'Untuk 4 Orang/Tenda. Harga Belum Termasuk Tiket / Biaya Area Camp.',
             photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
-            features: ['Tenda premium 4 orang', 'Kasur bahan tahan lama', 'Mudah dikemas', 'Nyaman saat malam dingin']
+            features: ['Tenda Arpenaz 4.0 / Mandala', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor Gas', 'Bongkar Pasang']
         },
         { 
-            name: 'Paket Kasur Lengkap 6 Orang', 
-            price: 'Rp 820.000', 
-            capacity: '6 Orang', 
-            note: 'Paket riset premium dengan detail kualitas tinggi untuk event besar.',
+            name: 'Paket Kasur Lengkap Arpenaz 4.1', 
+            price: 'Rp 550.000', 
+            capacity: '4 Orang', 
+            note: 'Untuk 4 Orang/Tenda. Harga sudah termasuk tiket camp untuk 4 Orang.',
             photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
-            features: ['Tenda premium 6 orang', 'Premium material', 'Cocok untuk event besar', 'Maksimalkan rasa nyaman']
+            features: ['Tenda Arpenaz 4.1', '2 Kasur Unk 4 Orang + 2 Bantal', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor Gas', 'Bongkar Pasang']
+        },
+        { 
+            name: 'Paket Kasur Lengkap Arpenaz 4.2', 
+            price: 'Rp 600.000', 
+            capacity: '4 Orang', 
+            note: 'Untuk 4 Orang/Tenda. Harga sudah termasuk tiket camp untuk 4 Orang.',
+            photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
+            features: ['Tenda Arpenaz 4.2', '2 Kasur Unk 4 Orang + 2 Bantal', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor +Gas', 'Bongkar Pasang']
         }
     ],
     'paket-estetik': [
