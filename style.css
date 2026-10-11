@@ -177,52 +177,27 @@ ul { list-style: none; }
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
     flex-shrink: 0;
     transition: color 0.3s ease;
 }
 
-.nav-logo-symbol,
-.nav-logo-wordmark {
+.nav-logo-image {
     display: block;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.nav-logo-symbol {
-    width: 40px;
-    height: 34px;
-}
-
-.nav-logo-wordmark {
-    width: 145px;
-    height: 22px;
-}
-
-.nav-logo-symbol img,
-.nav-logo-wordmark img {
-    position: absolute;
-    left: 0;
-    max-width: none;
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s ease;
-}
-
-.nav-logo-symbol img {
-    top: 0;
     width: 40px;
     height: 40px;
+    flex: 0 0 40px;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: cover;
 }
 
-.nav-logo-wordmark img {
-    top: -125px;
-    width: 145px;
-    height: 145px;
-}
-
-.navbar.scrolled .nav-logo img {
-    filter: none;
+.nav-logo-text {
+    color: inherit;
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1;
 }
 
 .logo-accent {
@@ -391,18 +366,21 @@ ul { list-style: none; }
 }
 
 .hero-logo-mark {
-    width: 88px;
-    height: 74px;
+    width: 104px;
+    height: 104px;
     margin: 0 auto 14px;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .hero-logo-mark img {
     display: block;
-    width: 88px;
-    height: 88px;
-    max-width: none;
-    filter: brightness(0) invert(1) drop-shadow(0 3px 10px rgba(0, 0, 0, 0.24));
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .hero-title {
@@ -1990,8 +1968,7 @@ ul { list-style: none; }
 @media (min-width: 1025px) and (max-width: 1280px) {
     .nav-link { padding: 8px 12px; font-size: 0.85rem; }
     .nav-links { gap: 4px; padding: 6px 8px; }
-    .nav-logo-wordmark { width: 120px; }
-    .nav-logo-wordmark img { width: 120px; height: 120px; top: -101px; }
+    .nav-logo-image { width: 38px; height: 38px; flex-basis: 38px; }
 }
 
 @media (max-width: 1024px) {
@@ -2081,14 +2058,9 @@ ul { list-style: none; }
     }
 
     .hero-logo-mark {
-        width: 70px;
-        height: 58px;
+        width: 82px;
+        height: 82px;
         margin-bottom: 10px;
-    }
-
-    .hero-logo-mark img {
-        width: 70px;
-        height: 70px;
     }
 
     .hero-tagline {
@@ -2129,14 +2101,9 @@ ul { list-style: none; }
     }
 
     .hero-logo-mark {
-        width: 62px;
-        height: 52px;
+        width: 72px;
+        height: 72px;
         margin-bottom: 8px;
-    }
-
-    .hero-logo-mark img {
-        width: 62px;
-        height: 62px;
     }
 
     .title-main {
@@ -2175,29 +2142,8 @@ ul { list-style: none; }
         padding: 12px 0;
     }
 
-    .nav-logo {
-        gap: 8px;
-    }
-
-    .nav-logo-symbol {
-        width: 26px;
-        height: 26px;
-    }
-
-    .nav-logo-wordmark {
-        width: 118px;
-    }
-
-    .nav-logo-wordmark img {
-        width: 118px;
-        height: 118px;
-        top: -99px;
-    }
-
-    .nav-logo-symbol img {
-        width: 26px;
-        height: 26px;
-    }
+    .nav-logo-image { width: 34px; height: 34px; flex-basis: 34px; }
+    .nav-logo-text { font-size: 0.95rem; }
 
     .nav-links {
         top: 58px;
