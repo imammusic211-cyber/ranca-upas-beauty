@@ -1602,7 +1602,7 @@ ul { list-style: none; }
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-start;
-        top: 62px;
+        top: 53px;
         gap: 8px;
         margin-bottom: 28px;
         overflow-x: auto;
