@@ -139,28 +139,20 @@ const packageData = {
     ],
     'paket-estetik': [
         { 
-            name: 'Paket Estetik 2 Orang', 
-            price: 'Rp 420.000', 
-            capacity: '2 Orang', 
-            note: 'Menonjolkan nuansa estetis dan romantis untuk liburan santai dengan dekorasi natural.',
-            photo: 'images/paket tenda rancaupas/PAKET ESTETIK/PAKET ESTETIK.jpeg',
-            features: ['Tenda estetik 2 orang', 'Dekorasi natural', 'Sangat cocok untuk foto', 'Nuansa camp lebih estetik']
-        },
-        { 
-            name: 'Paket Estetik 4 Orang', 
-            price: 'Rp 560.000', 
+            name: 'Paket Estetik Landwolf / Eclipse', 
+            price: 'Rp 650.000', 
             capacity: '4 Orang', 
-            note: 'Desain artistik untuk pengalaman camping yang berkesan dan instagramable.',
+            note: 'Harga belum termasuk tiket / biaya area camp. Paket sudah termasuk bongkar pasang. Area camp wilayah Cikole Lembang, Sariater, dan Ciwidey.',
             photo: 'images/paket tenda rancaupas/PAKET ESTETIK/PAKET ESTETIK.jpeg',
-            features: ['Tenda estetik 4 orang', 'Tema dekorasi menarik', 'Fasilitas tambahan', 'Cocok untuk momen spesial']
+            features: ['Kasur Busa', '4 Kursi + 1 Meja', '2 Lampu', 'Matras', 'Kompor + Gas', 'Bongkar Pasang']
         },
         { 
-            name: 'Paket Estetik 6 Orang', 
-            price: 'Rp 720.000', 
-            capacity: '6 Orang', 
-            note: 'Paket paling populer untuk momen gathering, prewedding, dan photoshoot.',
+            name: 'Paket Estetik Naturehike V13', 
+            price: 'Rp 750.000', 
+            capacity: '4 Orang', 
+            note: 'Harga belum termasuk tiket / biaya area camp. Paket sudah termasuk bongkar pasang. Area camp wilayah Cikole Lembang, Sariater, dan Ciwidey.',
             photo: 'images/paket tenda rancaupas/PAKET ESTETIK/PAKET ESTETIK.jpeg',
-            features: ['Tenda estetik 6 orang', 'Premium look', 'Dipadu dekorasi alam', 'Cocok untuk sesi foto profesional']
+            features: ['Kasur Busa', '4 Kursi + 1 Meja', '2 Lampu', 'Matras', 'Kompor + Gas', 'Bongkar Pasang']
         }
     ]
 };
