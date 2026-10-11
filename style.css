@@ -1004,6 +1004,10 @@ ul { list-style: none; }
     border-color: #1e4d3a;
 }
 
+.paket-category-nav a.active {
+    scroll-snap-align: center;
+}
+
 .paket-category-nav a:focus-visible {
     outline: 3px solid rgba(30, 77, 58, 0.28);
     outline-offset: 2px;
