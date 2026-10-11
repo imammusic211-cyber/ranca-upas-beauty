@@ -37,7 +37,6 @@ const translations = {
     'Tentang': 'About',
     'Aktivitas': 'Activities',
     'Paket Tenda': 'Tent Packages',
-    'Paket Tenda': 'Tent Packages',
     'Kontak': 'Contact',
     'Kami melayani penyewaan perlengkapan camping: tenda, matras, kasur, dan kebutuhan lainnya untuk berkemah lebih nyaman.': 'We provide camping equipment rentals, including tents, sleeping mats, mattresses, and more for a comfortable outdoor stay.',
     'Reservasi Sekarang': 'Book Now',
