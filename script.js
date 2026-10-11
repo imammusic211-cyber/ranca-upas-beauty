@@ -233,6 +233,9 @@ const translations = {
     'Pilihan Terbaik': 'Our Best Options',
     'Paket Tenda': 'Tent Packages',
     '* Harga belum termasuk tiket': '* Prices exclude entrance tickets',
+    'Rincian Paket': 'Package Details',
+    'Paket pilihan Anda': 'Your selected package',
+    'Fasilitas Paket': 'Package includes',
     'Tenda Reguler': 'Regular Tent',
     'Paket Kasur Reguler': 'Regular Mattress Package',
     'Paket Matras Reguler': 'Regular Sleeping Mat Package',
@@ -637,11 +640,57 @@ function populatePackageOptions() {
     const select = document.getElementById('res-paket');
     if (!select) return;
 
+    const selectedPackage = select.value;
     const options = [`<option value=''>${localizedText('Pilih paket')}</option>`];
     [...Object.values(packageData).flat(), ...priceListData].forEach((item) => {
         options.push(`<option value="${item.name}">${localizedText(item.name)}</option>`);
     });
     select.innerHTML = options.join('');
+    if (selectedPackage && options.some((option) => option.includes(`value="${selectedPackage}"`))) {
+        select.value = selectedPackage;
+    }
+    select.dispatchEvent(new Event('change', { bubbles: true }));
+}
+
+function setupSelectedPackageSummary() {
+    const select = document.getElementById('res-paket');
+    const summary = document.getElementById('selected-package-summary');
+    if (!select || !summary) return;
+
+    const allPackages = [...Object.values(packageData).flat(), ...priceListData];
+    const updateSummary = () => {
+        const item = allPackages.find((packageItem) => packageItem.name === select.value);
+        if (!item) {
+            summary.hidden = true;
+            summary.innerHTML = '';
+            return;
+        }
+
+        const image = item.photo
+            ? `<img class="selected-package-photo" src="${item.photo}" alt="${localizedText(item.name)}">`
+            : '<div class="selected-package-placeholder" aria-hidden="true">⛺</div>';
+
+        summary.innerHTML = `
+            <h3 class="selected-package-title">${localizedText('Rincian Paket')}</h3>
+            <div class="selected-package-details">
+                ${image}
+                <div class="selected-package-content">
+                    <p class="selected-package-label">${localizedText('Paket pilihan Anda')}</p>
+                    <h4>${localizedText(item.name)}</h4>
+                    <p class="selected-package-price">${item.price}</p>
+                    ${item.capacity ? `<p class="selected-package-capacity">${localizedText('Kapasitas:')} ${localizedText(item.capacity)}</p>` : ''}
+                    <h5>${localizedText('Fasilitas Paket')}</h5>
+                    <ul class="selected-package-features">
+                        ${item.features.map((feature) => `<li>${localizedText(feature)}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `;
+        summary.hidden = false;
+    };
+
+    select.addEventListener('change', updateSummary);
+    updateSummary();
 }
 
 function setupNavigation() {
@@ -904,6 +953,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPackages();
     renderPriceList();
     populatePackageOptions();
+    setupSelectedPackageSummary();
     setupPackageCardSelection();
     setupPhotoSliders();
     setupNavigation();
