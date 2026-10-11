@@ -184,12 +184,10 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 40px;
-    height: 40px;
-    flex: 0 0 40px;
-    border-radius: 50%;
-    background: #fff;
-    object-fit: cover;
+    width: 48px;
+    height: 34px;
+    flex: 0 0 48px;
+    object-fit: contain;
 }
 
 .nav-logo-text {
@@ -366,14 +364,10 @@ ul { list-style: none; }
 }
 
 .hero-logo-mark {
-    width: 104px;
-    height: 104px;
+    width: 90px;
+    height: 63px;
     margin: 0 auto 14px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.72);
-    border-radius: 14px;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .hero-logo-mark img {
@@ -2058,8 +2052,8 @@ ul { list-style: none; }
     }
 
     .hero-logo-mark {
-        width: 82px;
-        height: 82px;
+        width: 78px;
+        height: 55px;
         margin-bottom: 10px;
     }
 
@@ -2101,8 +2095,8 @@ ul { list-style: none; }
     }
 
     .hero-logo-mark {
-        width: 72px;
-        height: 72px;
+        width: 68px;
+        height: 48px;
         margin-bottom: 8px;
     }
 
@@ -2142,7 +2136,7 @@ ul { list-style: none; }
         padding: 12px 0;
     }
 
-    .nav-logo-image { width: 34px; height: 34px; flex-basis: 34px; }
+    .nav-logo-image { width: 42px; height: 30px; flex-basis: 42px; }
     .nav-logo-text { font-size: 0.95rem; }
 
     .nav-links {
