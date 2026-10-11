@@ -1,8 +1,8 @@
 const regularTentTiers = [
-    { name: 'Reguler', summary: 'Praktis untuk berkemah, sudah termasuk matras, lampu emergency, dan jasa pasang.', features: ['Tenda', 'Matras', 'Lampu Emergency', 'Jasa Pasang', 'Bongkar Tenda'] },
-    { name: 'Medium', summary: 'Lebih hangat dengan sleeping bag dan api unggun, plus lampu emergency dan jasa pasang.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
-    { name: 'Premium', summary: 'Istirahat lebih nyaman dengan sleeping bag, kasur karpet, bantal, dan api unggun.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
-    { name: 'Rimba', summary: 'Perlengkapan terlengkap dengan kasur karpet, bantal, serta kompor, nesting, dan gas.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Kompor', 'Nesting', 'Gas', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] }
+    { name: 'Reguler', summary: 'Pilihan praktis dengan tenda, matras, lampu emergency, serta jasa pasang dan bongkar.', features: ['Tenda', 'Matras', 'Lampu Emergency', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Medium', summary: 'Lebih hangat dengan sleeping bag dan api unggun, lengkap dengan matras, lampu, serta jasa pasang-bongkar.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Premium', summary: 'Lebih nyaman dengan sleeping bag, kasur karpet, bantal, api unggun, serta lampu dan layanan pasang-bongkar.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
+    { name: 'Rimba', summary: 'Perlengkapan lengkap dengan kasur karpet, bantal, alat masak, sleeping bag, lampu, api unggun, dan layanan pasang-bongkar.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Kasur Karpet', 'Bantal', 'Kompor', 'Nesting', 'Gas', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] }
 ];
 
 const regularTentCapacities = [
@@ -59,7 +59,7 @@ const packageData = {
             capacity: '4 Orang', 
             note: 'Nikmati tenda Mandala dengan 2 kasur, 4 sleeping bag, lampu, dan layanan bongkar pasang.',
             photo: 'images/paket tenda rancaupas/mandala.jpeg',
-            features: ['Tenda Arpenaz 4.0', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
+            features: ['Tenda Mandala', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         { 
             name: 'Paket Kasur Arpenaz 4.1', 
@@ -151,7 +151,7 @@ const packageData = {
     'paket-estetik': [
         { 
             name: 'Paket Estetik Landwolf / Eclipse', 
-            price: 'Rp 650.000', 
+            price: 'Rp 700.000', 
             capacity: '4 Orang', 
             note: 'Suasana estetik dengan kasur busa, meja-kursi, 2 lampu, matras, kompor gas, dan bongkar pasang. Tiket dan area camp belum termasuk.',
             photo: 'images/paket tenda rancaupas/landwolf eclipse.jpeg',
@@ -159,7 +159,7 @@ const packageData = {
         },
         { 
             name: 'Paket Estetik Naturehike V13', 
-            price: 'Rp 750.000', 
+            price: 'Rp 800.000', 
             capacity: '4 Orang', 
             note: 'Camping nyaman dan estetik dengan kasur busa, meja-kursi, 2 lampu, matras, kompor gas, dan bongkar pasang. Tiket dan area camp belum termasuk.',
             photo: 'images/paket tenda rancaupas/naturehike v13.jpeg',
