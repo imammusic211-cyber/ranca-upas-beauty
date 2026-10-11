@@ -163,7 +163,7 @@ const translations = {
     'Chat WhatsApp': 'Chat on WhatsApp',
     'Destinasi camping & wisata alam terbaik di Ciwidey, Bandung. Pengalaman alam yang tak terlupakan bersama keluarga dan sahabat.': 'A camping and nature getaway in Ciwidey, Bandung. Make unforgettable memories with family and friends.',
     'Navigasi': 'Navigation',
-    'Paket & Harga': 'Packages & Prices',
+    'Paket Tenda': 'Tent Packages',
     'Area Camping': 'Camping Areas',
     'Area Rasamala': 'Rasamala Area',
     'Area Savana': 'Savana Area',
