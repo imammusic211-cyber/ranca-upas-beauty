@@ -1,8 +1,37 @@
 const packageData = {
-    'alas-matras': [
-        { name: 'Alas Matras Premium', price: 'Rp 100.000', capacity: '2 Orang', note: 'Cocok untuk pengalaman camping ringan dengan tidur lebih nyaman.', photo: 'https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80', features: ['Matras tebal 2 cm', 'Bahan anti lembab', 'Portabel & mudah dibawa'] },
-        { name: 'Alas Matras Deluxe', price: 'Rp 150.000', capacity: '4 Orang', note: 'Tingginya kenyamanan untuk rombongan kecil dan keluarga.', photo: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80', features: ['Lapisan lembut premium', 'Nyaman untuk malam dingin', 'Desain praktis'] },
-        { name: 'Alas Matras Family', price: 'Rp 180.000', capacity: '6 Orang', note: 'Ideal untuk trip bersama keluarga dan teman dekat.', photo: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80', features: ['Ukuran lebih luas', 'Ramah untuk semua usia', 'Dukungan tidur maksimal'] }
+    'tenda reguler': [
+        { 
+            name: 'Tenda Reguler 2 Orang', 
+            price: 'Rp 100.000', 
+            capacity: '2 Orang', 
+            note: 'Cocok untuk pengalaman camping ringan dengan tenda lebih nyaman.',
+            photo: 'images/paket tenda rancaupas/tenda reguler/paket tenda 2 orang.jpeg',
+            features: ['Tenda 2 orang', 'Bahan tahan hujan', 'Mudah dipasang', 'Nyaman untuk 2 orang']
+        },
+        { 
+            name: 'Tenda Reguler 4 Orang', 
+            price: 'Rp 150.000', 
+            capacity: '4 Orang', 
+            note: 'Tingginya kenyamanan untuk rombongan kecil dan keluarga.',
+            photo: 'images/paket tenda rancaupas/tenda reguler/paket tenda 4 orang.jpeg',
+            features: ['Tenda 4 orang', 'Lebih luas', 'Bahan premium', 'Nyaman untuk 4 orang']
+        },
+        { 
+            name: 'Tenda Reguler 6 Orang', 
+            price: 'Rp 180.000', 
+            capacity: '6 Orang', 
+            note: 'Ideal untuk trip bersama keluarga dan teman dekat.',
+            photo: 'images/paket tenda rancaupas/tenda reguler/paket tenda 6 orang.jpeg',
+            features: ['Tenda 6 orang', 'Lebih luas', 'Bahan anti lembab', 'Nyaman untuk 6 orang']
+        },
+        { 
+            name: 'Tenda Reguler 12 Orang', 
+            price: 'Rp 250.000', 
+            capacity: '12 Orang', 
+            note: 'Paket grup untuk kegiatan besar dan keluarga besar.',
+            photo: 'images/paket tenda rancaupas/tenda reguler/paket tenda 12 orang.jpeg',
+            features: ['Tenda 12 orang', 'Lebar luas', 'Bahan tahan lama', 'Nyaman untuk 12 orang']
+        }
     ],
     'alas-kasur': [
         { name: 'Alas Kasur Cozy', price: 'Rp 210.000', capacity: '2 Orang', note: 'Nikmati tidur yang lebih hangat serta penyangga nyaman.', photo: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=900&q=80', features: ['Bahan empuk lembut', 'Tahan dingin malam hari', 'Sesuai untuk tenda premium'] },
