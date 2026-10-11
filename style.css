@@ -192,17 +192,17 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 112px;
-    height: 88px;
-    flex: 0 0 112px;
+    width: 74px;
+    height: 52px;
+    flex: 0 0 74px;
     object-fit: contain;
-    filter: drop-shadow(0 6px 14px rgba(19, 61, 51, 0.2));
+    filter: drop-shadow(0 5px 12px rgba(19, 61, 51, 0.18));
 }
 
 .nav-logo-text {
     color: inherit;
     font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 2.3vw, 3.2rem);
+    font-size: clamp(1.25rem, 1.8vw, 2.1rem);
     font-weight: 800;
     line-height: 1;
     letter-spacing: 0.04em;
