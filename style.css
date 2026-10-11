@@ -129,11 +129,11 @@ ul { list-style: none; }
 /* Home state: keep the nav readable over the bright photo */
 .navbar:not(.scrolled) .nav-logo,
 .navbar:not(.scrolled) .nav-link {
-    color: #f6fff7;
+    color: #e9f6f2;
 }
 
 .navbar:not(.scrolled) .nav-logo-text {
-    color: #fff8e8;
+    color: #0a6b5e;
 }
 
 .navbar:not(.scrolled) .hamburger-line {
@@ -185,25 +185,27 @@ ul { list-style: none; }
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     flex-shrink: 0;
     transition: color 0.3s ease;
 }
 
 .nav-logo-image {
     display: block;
-    width: 58px;
-    height: 40px;
-    flex: 0 0 58px;
+    width: 74px;
+    height: 52px;
+    flex: 0 0 74px;
     object-fit: contain;
+    filter: drop-shadow(0 5px 12px rgba(19, 61, 51, 0.18));
 }
 
 .nav-logo-text {
     color: inherit;
     font-family: var(--font-heading);
-    font-size: 1.14rem;
+    font-size: clamp(1.25rem, 1.8vw, 2.1rem);
     font-weight: 800;
     line-height: 1;
+    letter-spacing: 0.04em;
 }
 
 .logo-accent {

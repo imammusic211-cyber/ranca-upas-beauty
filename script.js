@@ -1097,6 +1097,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPackageCardSelection();
     setupPackageCategoryNavigation();
     setupPhotoSliders();
+    setupTentGalleryPhotoChoices();
     setupNavigation();
     setupAnimations();
     setupBackToTop();
