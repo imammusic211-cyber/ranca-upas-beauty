@@ -160,7 +160,7 @@ const packageData = {
         },
         { 
             name: 'Paket Estetik Naturehike V13', 
-            price: 'Rp 800.000', 
+            price: 'Rp 850.000', 
             capacity: '4 Orang', 
             note: 'Camping nyaman dan estetik dengan kasur busa, meja-kursi, 2 lampu, matras, kompor gas, dan bongkar pasang. Tiket dan area camp belum termasuk.',
             photo: 'images/paket tenda rancaupas/naturehike v13.jpeg',
@@ -665,14 +665,17 @@ function setupPackageCategoryNavigation() {
         links.forEach((link, index) => {
             const isActive = link.hash === `#${categoryId}`;
             link.classList.toggle('active', isActive);
+            const title = document.querySelector(link.hash);
             if (!isActive) {
                 link.removeAttribute('aria-current');
                 link.style.removeProperty('--category-active-color');
+                title?.style.removeProperty('--category-active-color');
                 return;
             }
 
             link.setAttribute('aria-current', 'location');
             link.style.setProperty('--category-active-color', activeColors[index % activeColors.length]);
+            title?.style.setProperty('--category-active-color', activeColors[index % activeColors.length]);
             if ((categoryChanged || forceCenter) && navigation.scrollWidth > navigation.clientWidth) {
                 const centeredScrollLeft = link.offsetLeft + link.offsetWidth / 2 - navigation.clientWidth / 2;
                 navigation.scrollTo({ left: centeredScrollLeft, behavior: 'smooth' });
