@@ -1,5 +1,5 @@
 const packageData = {
-    'tenda reguler': [
+        'tenda-reguler': [
         { 
             name: 'Tenda Reguler 2 Orang', 
             price: 'Rp 100.000', 
@@ -232,9 +232,10 @@ const translations = {
     'Foto kapasitas 12 orang sebelumnya': 'Previous twelve-person tent photo',
     'Foto kapasitas 12 orang berikutnya': 'Next twelve-person tent photo',
     'Tenda Mandala': 'Mandala Tent',
-    'Alas Matras Premium': 'Premium Sleeping Mat',
-    'Alas Matras Deluxe': 'Deluxe Sleeping Mat',
-    'Alas Matras Family': 'Family Sleeping Mat',
+    'Tenda Reguler 2 Orang': 'Regular Tent 2 People',
+    'Tenda Reguler 4 Orang': 'Regular Tent 4 People',
+    'Tenda Reguler 6 Orang': 'Regular Tent 6 People',
+    'Tenda Reguler 12 Orang': 'Regular Tent 12 People',
     'Alas Kasur Cozy': 'Cozy Mattress Pad',
     'Alas Kasur Resort': 'Resort Mattress Pad',
     'Alas Kasur Adventure': 'Adventure Mattress Pad',
@@ -317,7 +318,7 @@ const reverseTranslations = Object.fromEntries(
     Object.entries(translations).map(([indonesian, english]) => [english, indonesian])
 );
 let currentLanguage = 'id';
-let activePackageFilter = 'alas-matras';
+let activePackageFilter = 'tenda-reguler';
 
 function localizedText(text, language = currentLanguage) {
     if (language === 'en') return translations[text] || text;
