@@ -942,7 +942,7 @@ ul { list-style: none; }
 /* ============ Paket Tenda Section ============ */
 .paket-section {
     padding: var(--section-padding) 0;
-    background: var(--color-bg-primary);
+    background: linear-gradient(180deg, #f3c55a 0%, #f3c55a 28%, #0d2b4d 28%, #0d2b4d 100%);
 }
 
 .paket-filter {
@@ -957,69 +957,92 @@ ul { list-style: none; }
 .filter-btn {
     font-family: var(--font-body);
     font-size: 0.88rem;
-    font-weight: 500;
-    color: var(--color-text-secondary);
-    background: white;
-    border: 2px solid var(--color-border);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(13, 43, 77, 0.2);
     padding: 12px 24px;
-    border-radius: 50px;
+    border-radius: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .filter-btn:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    border-color: #f0bf48;
+    transform: translateY(-2px);
 }
 
 .filter-btn.active {
-    background: var(--gradient-primary);
-    border-color: var(--color-primary);
-    color: white;
-    font-weight: 600;
-    box-shadow: var(--shadow-green);
+    background: #f0bf48;
+    border-color: #f0bf48;
+    color: #0d2b4d;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(240, 191, 72, 0.35);
 }
 
 .paket-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1180px;
+    margin: 0 auto;
 }
 
 /* Paket Cards */
 .paket-card {
-    background: white;
-    border: 2px solid var(--color-border);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 4px solid #0d2b4d;
+    border-radius: 18px;
     overflow: hidden;
     transition: all 0.5s var(--ease-out-expo);
     animation: cardAppear 0.5s var(--ease-out-expo);
+    box-shadow: 0 18px 32px rgba(3, 19, 35, 0.18);
+}
+
+.paket-card-inner {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 240px;
 }
 
 .paket-card-image {
-    height: 200px;
     overflow: hidden;
+    background: linear-gradient(135deg, #cfd8dc, #e1e4e5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
 }
 
 .paket-card-image img {
     width: 100%;
     height: 100%;
+    max-height: 230px;
     object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #f0bf48;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.12);
     transition: transform 0.5s ease;
+}
+
+.paket-card-content {
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f2;
 }
 
 .paket-card:hover {
     transform: translateY(-6px);
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-card-hover);
+    box-shadow: 0 20px 36px rgba(3, 19, 35, 0.24);
 }
 
 .paket-card:hover .paket-card-image img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .paket-card:focus-visible {
-    outline: 3px solid var(--color-accent-warm);
+    outline: 3px solid #f0bf48;
     outline-offset: 4px;
 }
 
@@ -1030,79 +1053,80 @@ ul { list-style: none; }
 
 .paket-card-header {
     position: relative;
-    background: linear-gradient(135deg, #edf4eb 0%, #f7f8f2 100%);
-    color: var(--color-primary-dark);
-    text-align: center;
-    padding: 24px 20px 22px;
-    border-bottom: 1px solid rgba(27, 94, 32, 0.12);
+    background: #f8f8f4;
+    color: #0d2b4d;
+    text-align: left;
+    padding: 26px 28px 14px;
+    border-bottom: 2px solid rgba(13, 43, 77, 0.08);
 }
 
 .paket-card-header h3 {
     font-family: var(--font-heading);
-    font-size: 1.12rem;
-    font-weight: 700;
+    font-size: clamp(1.5rem, 2vw, 2.25rem);
+    font-weight: 800;
     letter-spacing: 0;
-}
-
-.paket-card-header::before {
-    content: "";
-    display: block;
-    width: 34px;
-    height: 3px;
-    margin: 0 auto 12px;
-    border-radius: 999px;
-    background: #b79a58;
+    color: #0d2b4d;
+    margin: 0;
 }
 
 .paket-card-body {
-    padding: 32px 28px;
-    text-align: center;
+    padding: 22px 28px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .paket-price {
     font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 4px;
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
+    font-weight: 900;
+    color: #d63a2d;
+    line-height: 1;
 }
 
 .paket-capacity {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     color: var(--color-text-muted);
-    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .paket-note {
-    font-size: 0.78rem;
-    color: var(--color-primary-dark);
-    background: rgba(27, 94, 32, 0.08);
-    border: 1px solid var(--color-border-green);
+    font-size: 0.8rem;
+    color: #0d2b4d;
+    background: rgba(13, 43, 77, 0.05);
+    border-left: 4px solid #f0bf48;
     border-radius: 8px;
-    padding: 10px 14px;
-    margin-bottom: 20px;
+    padding: 10px 12px;
     line-height: 1.5;
     text-align: left;
 }
 
 .paket-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 8px 16px;
     text-align: left;
-    margin-bottom: 24px;
 }
 
 .paket-feature {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
-    padding: 8px 0;
+    padding: 6px 0;
     font-size: 0.9rem;
     color: var(--color-text-secondary);
+    font-weight: 600;
 }
 
 .paket-feature::before {
-    content: "\2713";
-    color: var(--color-primary);
-    font-weight: 700;
+    content: "•";
+    color: #f0bf48;
+    font-size: 1.4rem;
+    line-height: 1;
     flex-shrink: 0;
 }
 

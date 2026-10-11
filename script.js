@@ -2,35 +2,35 @@ const packageData = {
     'tenda-reguler': [
         { 
             name: 'Tenda Reguler 2 Orang', 
-            price: 'Rp 100.000', 
+            price: 'Rp 120.000', 
             capacity: '2 Orang', 
-            note: 'Cocok untuk pengalaman camping ringan dengan tenda lebih nyaman.',
+            note: 'Spesifikasi tenda doble layar ukuran 2X2 Meter. Siap untuk kapasitas 2 orang.',
             photo: 'images/tenda reguler/kapasitas 2 orang.....jpeg',
-            features: ['Tenda 2 orang', 'Bahan tahan hujan', 'Mudah dipasang', 'Nyaman untuk 2 orang']
+            features: ['Tenda', 'Matras', 'Lampu', 'Emergency', 'Jasa Pasang', 'Bongkar Tenda']
         },
         { 
             name: 'Tenda Reguler 4 Orang', 
-            price: 'Rp 150.000', 
+            price: 'Rp 210.000', 
             capacity: '4 Orang', 
-            note: 'Tingginya kenyamanan untuk rombongan kecil dan keluarga.',
+            note: 'Paket tenda untuk camping ringan dengan kapasitas 4 orang.',
             photo: 'images/tenda reguler/kapasitas 4 orang.jpeg',
-            features: ['Tenda 4 orang', 'Lebih luas', 'Bahan premium', 'Nyaman untuk 4 orang']
+            features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu', 'Emergency', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda']
         },
         { 
             name: 'Tenda Reguler 6 Orang', 
-            price: 'Rp 180.000', 
+            price: 'Rp 260.000', 
             capacity: '6 Orang', 
-            note: 'Ideal untuk trip bersama keluarga dan teman dekat.',
+            note: 'Paket standar untuk rombongan kecil dan keluarga.',
             photo: 'images/tenda reguler/kapasitas 6 orang.jpeg',
-            features: ['Tenda 6 orang', 'Lebih luas', 'Bahan anti lembab', 'Nyaman untuk 6 orang']
+            features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu', 'Emergency', 'Kasur Karpet', 'Bantal', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda']
         },
         { 
             name: 'Tenda Reguler 12 Orang', 
-            price: 'Rp 250.000', 
+            price: 'Rp 320.000', 
             capacity: '12 Orang', 
-            note: 'Paket grup untuk kegiatan besar dan keluarga besar.',
+            note: 'Paket untuk kebutuhan group atau acara camping keluarga besar.',
             photo: 'images/tenda reguler/kapasitas 12 orang.jpeg',
-            features: ['Tenda 12 orang', 'Lebar luas', 'Bahan tahan lama', 'Nyaman untuk 12 orang']
+            features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu', 'Emergency', 'Kasur Karpet', 'Bantal', 'Kompor', 'Nesting', 'Gas', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda']
         }
     ],
     'paket-kasur-reguler': [
@@ -510,19 +510,23 @@ function renderPackages(filter = activePackageFilter) {
     const items = packageData[filter] || packageData['tenda-reguler'];
     grid.innerHTML = items.map((item) => `
         <article class="paket-card" data-package="${item.name}" tabindex="0" role="button" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${localizedText('dan lanjut ke formulir reservasi')}">
-            <div class="paket-card-image">
-                <img src="${item.photo}" alt="${localizedText(item.name)}" loading="lazy">
-            </div>
-            <div class="paket-card-header">
-                <h3>${localizedText(item.name)}</h3>
-            </div>
-            <div class="paket-card-body">
-                <div class="paket-price">${item.price}</div>
-                <div class="paket-capacity">${localizedText('Kapasitas:')} ${localizedText(item.capacity)}</div>
-                <div class="paket-note">${localizedText(item.note)}</div>
-                <ul class="paket-features">
-                    ${item.features.map(feature => `<li class="paket-feature">${localizedText(feature)}</li>`).join('')}
-                </ul>
+            <div class="paket-card-inner">
+                <div class="paket-card-image">
+                    <img src="${item.photo}" alt="${localizedText(item.name)}" loading="lazy">
+                </div>
+                <div class="paket-card-content">
+                    <div class="paket-card-header">
+                        <h3>${localizedText(item.name)}</h3>
+                    </div>
+                    <div class="paket-card-body">
+                        <div class="paket-price">${item.price}</div>
+                        <div class="paket-capacity">${localizedText('Kapasitas:')} ${localizedText(item.capacity)}</div>
+                        <div class="paket-note">${localizedText(item.note)}</div>
+                        <ul class="paket-features">
+                            ${item.features.map(feature => `<li class="paket-feature">${localizedText(feature)}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </article>
     `).join('');
