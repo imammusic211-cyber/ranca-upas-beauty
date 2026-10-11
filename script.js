@@ -562,11 +562,11 @@ function renderPackages() {
                             <p class="regular-tent-spec">${localizedText('Tenda double layer')} · ${tent.dimensions}</p>
                             <div class="regular-tent-options">
                                 ${items.filter((item) => item.capacity === tent.capacity).map((item) => `
-                                    <div class="regular-tent-option">
-                                        <button type="button" class="regular-tent-choice" data-package="${item.name}" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${item.price}">
+                                    <div class="regular-tent-option" data-package="${item.name}" tabindex="0" role="button" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${item.price}">
+                                        <div class="regular-tent-choice">
                                             <span class="regular-tent-tier">${localizedText(item.tier)}</span>
                                             <span class="regular-tent-price">${item.price}</span>
-                                        </button>
+                                        </div>
                                         <ul class="regular-tent-features">
                                             ${item.features.map((feature) => `<li>${localizedText(feature)}</li>`).join('')}
                                         </ul>
