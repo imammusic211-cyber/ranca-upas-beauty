@@ -657,19 +657,22 @@ function setupPackageCategoryNavigation() {
     if (!navigation || !packageSection || !categories.length) return;
 
     const links = [...navigation.querySelectorAll('a[href^="#paket-category-"]')];
+    const activeColors = ['#1e4d3a', '#285d66', '#784b2a', '#294c66', '#565f1d', '#713f46'];
     let activeCategoryId = null;
     const setActiveCategory = (categoryId, forceCenter = false) => {
         const categoryChanged = categoryId !== activeCategoryId;
         activeCategoryId = categoryId;
-        links.forEach((link) => {
+        links.forEach((link, index) => {
             const isActive = link.hash === `#${categoryId}`;
             link.classList.toggle('active', isActive);
             if (!isActive) {
                 link.removeAttribute('aria-current');
+                link.style.removeProperty('--category-active-color');
                 return;
             }
 
             link.setAttribute('aria-current', 'location');
+            link.style.setProperty('--category-active-color', activeColors[index % activeColors.length]);
             if ((categoryChanged || forceCenter) && navigation.scrollWidth > navigation.clientWidth) {
                 const centeredScrollLeft = link.offsetLeft + link.offsetWidth / 2 - navigation.clientWidth / 2;
                 navigation.scrollTo({ left: centeredScrollLeft, behavior: 'smooth' });

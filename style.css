@@ -996,8 +996,7 @@ ul { list-style: none; }
 }
 
 .paket-category-nav a:hover,
-.paket-category-nav a:focus-visible,
-.paket-category-nav a.active {
+.paket-category-nav a:focus-visible {
     transform: translateY(-1px);
     background: #1e4d3a;
     color: #fff;
@@ -1005,6 +1004,10 @@ ul { list-style: none; }
 }
 
 .paket-category-nav a.active {
+    transform: translateY(-1px);
+    background: var(--category-active-color, #1e4d3a);
+    color: #fff;
+    border-color: var(--category-active-color, #1e4d3a);
     scroll-snap-align: center;
 }
 
