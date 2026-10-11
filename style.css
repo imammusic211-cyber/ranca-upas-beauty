@@ -996,10 +996,12 @@ ul { list-style: none; }
 }
 
 .paket-category-nav a:hover,
-.paket-category-nav a:focus-visible {
+.paket-category-nav a:focus-visible,
+.paket-category-nav a.active {
     transform: translateY(-1px);
     background: #1e4d3a;
     color: #fff;
+    border-color: #1e4d3a;
 }
 
 .paket-category-nav a:focus-visible {
@@ -2216,7 +2218,7 @@ ul { list-style: none; }
         overflow-y: hidden;
         overscroll-behavior-x: contain;
         scroll-snap-type: x proximity;
-        scrollbar-width: thin;
+        scrollbar-width: none;
     }
 
     .paket-category-nav::-webkit-scrollbar {

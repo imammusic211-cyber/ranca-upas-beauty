@@ -650,6 +650,61 @@ function setupPackageCardSelection() {
     });
 }
 
+function setupPackageCategoryNavigation() {
+    const navigation = document.querySelector('.paket-category-nav');
+    const packageSection = document.getElementById('paket');
+    const categories = [...document.querySelectorAll('.paket-category')];
+    if (!navigation || !packageSection || !categories.length) return;
+
+    const links = [...navigation.querySelectorAll('a[href^="#paket-category-"]')];
+    const setActiveCategory = (categoryId) => {
+        links.forEach((link) => {
+            const isActive = link.hash === `#${categoryId}`;
+            link.classList.toggle('active', isActive);
+            if (isActive) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+    };
+
+    let updateScheduled = false;
+    const updateActiveCategory = () => {
+        updateScheduled = false;
+        const sectionBounds = packageSection.getBoundingClientRect();
+        if (sectionBounds.bottom <= 0 || sectionBounds.top >= window.innerHeight) {
+            links.forEach((link) => {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            });
+            return;
+        }
+
+        const activationLine = navigation.getBoundingClientRect().bottom + 20;
+        let activeCategory = categories[0];
+        categories.forEach((category) => {
+            if (category.querySelector('.paket-category-title').getBoundingClientRect().top <= activationLine) {
+                activeCategory = category;
+            }
+        });
+        setActiveCategory(activeCategory.querySelector('.paket-category-title').id);
+    };
+
+    const scheduleUpdate = () => {
+        if (updateScheduled) return;
+        updateScheduled = true;
+        window.requestAnimationFrame(updateActiveCategory);
+    };
+
+    navigation.addEventListener('click', (event) => {
+        const link = event.target.closest('a[href^="#paket-category-"]');
+        if (link) setActiveCategory(link.hash.slice(1));
+    });
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('hashchange', scheduleUpdate);
+    window.addEventListener('pageshow', scheduleUpdate);
+    scheduleUpdate();
+}
+
 function setupPhotoSliders() {
     document.querySelectorAll('[data-photo-gallery]').forEach((gallery) => {
         const card = gallery.closest('.area-card, .galeri-tenda-item');
@@ -1022,6 +1077,7 @@ document.addEventListener('DOMContentLoaded', () => {
     populatePackageOptions();
     setupSelectedPackageSummary();
     setupPackageCardSelection();
+    setupPackageCategoryNavigation();
     setupPhotoSliders();
     setupNavigation();
     setupAnimations();
