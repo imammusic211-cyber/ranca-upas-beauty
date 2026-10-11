@@ -233,6 +233,12 @@ const translations = {
     'Pilihan Terbaik': 'Our Best Options',
     'Paket Tenda': 'Tent Packages',
     '* Harga belum termasuk tiket': '* Prices exclude entrance tickets',
+    'Tenda Reguler': 'Regular Tent',
+    'Paket Kasur Reguler': 'Regular Mattress Package',
+    'Paket Matras Reguler': 'Regular Sleeping Mat Package',
+    'Paket Matras Lengkap': 'Complete Sleeping Mat Package',
+    'Paket Kasur Lengkap': 'Complete Mattress Package',
+    'Paket Estetik': 'Aesthetic Package',
     '🏕️ Tenda Reguler': '🏕️ Regular Tent',
     '🛋️ Alas Kasur': '🛋️ Mattress Pads',
     '🎒 Matras Lengkap': '🎒 Complete Sleeping Mat',
@@ -420,8 +426,6 @@ const reverseTranslations = Object.fromEntries(
     Object.entries(translations).map(([indonesian, english]) => [english, indonesian])
 );
 let currentLanguage = 'id';
-let activePackageFilter = 'tenda-reguler';
-
 function localizedText(text, language = currentLanguage) {
     if (language === 'en') return translations[text] || text;
     return reverseTranslations[text] || text;
@@ -495,48 +499,59 @@ function setupLanguageSwitcher() {
             document.getElementById('nav-links')?.classList.remove('open');
             document.getElementById('nav-toggle')?.classList.remove('active');
             applyLanguage(language);
-            renderPackages(activePackageFilter);
+            renderPackages();
             renderPriceList();
             populatePackageOptions();
         });
     });
 }
 
-function renderPackages(filter = activePackageFilter) {
+function renderPackages() {
     const grid = document.getElementById('paket-grid');
     if (!grid) return;
 
-    activePackageFilter = filter;
-    const items = packageData[filter] || packageData['tenda-reguler'];
-    grid.innerHTML = items.map((item) => `
-        <article class="paket-card" data-package="${item.name}" tabindex="0" role="button" aria-label="${localizedText('Pilih')} ${localizedText(item.name)} ${localizedText('dan lanjut ke formulir reservasi')}">
-            <div class="paket-card-inner">
-                <div class="paket-card-image">
-                    <img src="${item.photo}" alt="${localizedText(item.name)}" loading="lazy">
-                </div>
-                <div class="paket-card-content">
-                    <div class="paket-card-header">
-                        <h3>${localizedText(item.name)}</h3>
-                    </div>
-                    <div class="paket-card-body">
-                        <div class="paket-price">${item.price}</div>
-                        <div class="paket-capacity">${localizedText('Kapasitas:')} ${localizedText(item.capacity)}</div>
-                        <div class="paket-note">${localizedText(item.note)}</div>
-                        <ul class="paket-features">
-                            ${item.features.map(feature => `<li class="paket-feature">${localizedText(feature)}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
+    const categoryLabels = {
+        'tenda-reguler': 'Tenda Reguler',
+        'paket-kasur-reguler': 'Paket Kasur Reguler',
+        'paket-matras-reguler': 'Paket Matras Reguler',
+        'paket-matras-lengkap': 'Paket Matras Lengkap',
+        'paket-kasur-lengkap': 'Paket Kasur Lengkap',
+        'paket-estetik': 'Paket Estetik'
+    };
+
+    grid.innerHTML = Object.entries(packageData).map(([category, items]) => `
+        <section class="paket-category" aria-labelledby="paket-category-${category}">
+            <h3 class="paket-category-title" id="paket-category-${category}">${localizedText(categoryLabels[category])}</h3>
+            <div class="paket-category-grid">
+                ${items.map((item) => `
+                    <article class="paket-card">
+                        <div class="paket-card-inner">
+                            <div class="paket-card-image">
+                                <img src="${item.photo}" alt="${localizedText(item.name)}" loading="lazy">
+                            </div>
+                            <div class="paket-card-content">
+                                <div class="paket-card-header">
+                                    <h3>${localizedText(item.name)}</h3>
+                                </div>
+                                <div class="paket-card-body">
+                                    <div class="paket-price">${item.price}</div>
+                                    <div class="paket-capacity">${localizedText('Kapasitas:')} ${localizedText(item.capacity)}</div>
+                                    <div class="paket-note">${localizedText(item.note)}</div>
+                                    <ul class="paket-features">
+                                        ${item.features.map(feature => `<li class="paket-feature">${localizedText(feature)}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                `).join('')}
             </div>
-        </article>
+        </section>
     `).join('');
 }
 
 function setupPackageCardSelection() {
-    const grids = [
-        document.getElementById('paket-grid'),
-        document.getElementById('pricelist-grid')
-    ].filter(Boolean);
+    const grids = [document.getElementById('pricelist-grid')].filter(Boolean);
     const reservationSection = document.getElementById('reservasi');
     const packageSelect = document.getElementById('res-paket');
     if (!grids.length || !reservationSection || !packageSelect) return;
@@ -883,7 +898,7 @@ function setupComplaintForm() {
 
 document.addEventListener('DOMContentLoaded', () => {
     setupLanguageSwitcher();
-    renderPackages('tenda-reguler');
+    renderPackages();
     renderPriceList();
     populatePackageOptions();
     setupPackageCardSelection();
@@ -894,12 +909,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setupGalleryLightbox();
     setupReservationForm();
     setupComplaintForm();
-    document.querySelectorAll('.filter-btn').forEach((button) => {
-        button.addEventListener('click', () => {
-            document.querySelectorAll('.filter-btn').forEach((btn) => btn.classList.remove('active'));
-            button.classList.add('active');
-            renderPackages(button.dataset.filter || 'tenda-reguler');
-        });
-    });
     applyLanguage(currentLanguage);
 });
