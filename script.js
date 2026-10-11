@@ -5,7 +5,7 @@ const packageData = {
             price: 'Rp 100.000', 
             capacity: '2 Orang', 
             note: 'Cocok untuk pengalaman camping ringan dengan tenda lebih nyaman.',
-            photo: 'images/paket tenda rancaupas/tenda reguler/paket tenda 2 orang.jpeg',
+            photo: 'images/paket tenda rancaupas/tenda reguler/kapasitas 2 orang.....jpeg',
             features: ['Tenda 2 orang', 'Bahan tahan hujan', 'Mudah dipasang', 'Nyaman untuk 2 orang']
         },
         { 
