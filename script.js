@@ -1,11 +1,11 @@
 const packageData = {
-        'tenda-reguler': [
+    'tenda-reguler': [
         { 
             name: 'Tenda Reguler 2 Orang', 
             price: 'Rp 100.000', 
             capacity: '2 Orang', 
             note: 'Cocok untuk pengalaman camping ringan dengan tenda lebih nyaman.',
-            photo: 'images/paket tenda rancaupas/tenda reguler/kapasitas 2 orang.....jpeg',
+            photo: 'images/tenda reguler/kapasitas 2 orang.....jpeg',
             features: ['Tenda 2 orang', 'Bahan tahan hujan', 'Mudah dipasang', 'Nyaman untuk 2 orang']
         },
         { 
@@ -13,7 +13,7 @@ const packageData = {
             price: 'Rp 150.000', 
             capacity: '4 Orang', 
             note: 'Tingginya kenyamanan untuk rombongan kecil dan keluarga.',
-            photo: 'images/paket tenda rancaupas/tenda reguler/kapasitas 4 orang.jpeg',
+            photo: 'images/tenda reguler/kapasitas 4 orang.jpeg',
             features: ['Tenda 4 orang', 'Lebih luas', 'Bahan premium', 'Nyaman untuk 4 orang']
         },
         { 
@@ -21,7 +21,7 @@ const packageData = {
             price: 'Rp 180.000', 
             capacity: '6 Orang', 
             note: 'Ideal untuk trip bersama keluarga dan teman dekat.',
-            photo: 'images/paket tenda rancaupas/tenda reguler/paket tenda 6 orang.jpeg',
+            photo: 'images/tenda reguler/kapasitas 6 orang.jpeg',
             features: ['Tenda 6 orang', 'Lebih luas', 'Bahan anti lembab', 'Nyaman untuk 6 orang']
         },
         { 
@@ -29,29 +29,139 @@ const packageData = {
             price: 'Rp 250.000', 
             capacity: '12 Orang', 
             note: 'Paket grup untuk kegiatan besar dan keluarga besar.',
-            photo: 'images/paket tenda rancaupas/tenda reguler/kapasitas 12 orang.jpeg',
+            photo: 'images/tenda reguler/kapasitas 12 orang.jpeg',
             features: ['Tenda 12 orang', 'Lebar luas', 'Bahan tahan lama', 'Nyaman untuk 12 orang']
         }
     ],
-    'alas-kasur': [
-        { name: 'Alas Kasur Cozy', price: 'Rp 210.000', capacity: '2 Orang', note: 'Nikmati tidur yang lebih hangat serta penyangga nyaman.', photo: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=900&q=80', features: ['Bahan empuk lembut', 'Tahan dingin malam hari', 'Sesuai untuk tenda premium'] },
-        { name: 'Alas Kasur Resort', price: 'Rp 260.000', capacity: '4 Orang', note: 'Paket lebih nyaman untuk kebutuhan acara keluarga maupun gathering.', photo: 'https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80', features: ['Desain premium', 'Kapasitas lebih luas', 'Tebal dan stabil'] },
-        { name: 'Alas Kasur Adventure', price: 'Rp 300.000', capacity: '6 Orang', note: 'Pilihan paling cocok untuk kegiatan outbound dan team building.', photo: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80', features: ['Bahan kuat dan awet', 'Ideal untuk event', 'Kualitas tidur lebih baik'] }
+    'paket-kasur-reguler': [
+        { 
+            name: 'Paket Kasur Reguler 2 Orang', 
+            price: 'Rp 210.000', 
+            capacity: '2 Orang', 
+            note: 'Nikmati tidur yang lebih hangat dengan kasur empuk dan nyaman.',
+            photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
+            features: ['Tenda 2 orang', 'Kasur empuk', 'Bantal + selimut', 'Tahan dingin malam']
+        },
+        { 
+            name: 'Paket Kasur Reguler 4 Orang', 
+            price: 'Rp 300.000', 
+            capacity: '4 Orang', 
+            note: 'Paket lebih nyaman untuk kebutuhan acara keluarga maupun gathering.',
+            photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
+            features: ['Tenda 4 orang', 'Kasur berkualitas', 'Perlengkapan lengkap', 'Kapasitas lebih luas']
+        },
+        { 
+            name: 'Paket Kasur Reguler 6 Orang', 
+            price: 'Rp 380.000', 
+            capacity: '6 Orang', 
+            note: 'Pilihan paling cocok untuk kegiatan outbound dan team building.',
+            photo: 'images/paket tenda rancaupas/PAKET KASUR REGULER/PAKET KASUR REGULER.jpeg',
+            features: ['Tenda 6 orang', 'Kasur kuat awet', 'Ideal untuk event', 'Kualitas tidur lebih baik']
+        }
     ],
-    'matras-lengkap': [
-        { name: 'Matras Lengkap Mini', price: 'Rp 330.000', capacity: '2 Orang', note: 'Paket lengkap untuk kebutuhan camping santai dan nyaman.', photo: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80', features: ['Matras + selimut', 'Tersedia sarung pelindung', 'Komplit untuk malam dingin'] },
-        { name: 'Matras Lengkap Comfort', price: 'Rp 420.000', capacity: '4 Orang', note: 'Semua kebutuhan tidur bersatu dalam satu paket praktis.', photo: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80', features: ['Komposisi nyaman', 'Cocok untuk keluarga', 'Mudah dibersihkan'] },
-        { name: 'Matras Lengkap Group', price: 'Rp 520.000', capacity: '6 Orang', note: 'Bagi Anda yang ingin ketenangan dan kenyamanan bersama group.', photo: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80', features: ['Paket group', 'Nyaman untuk beramai-ramai', 'Kualitas premium'] }
+    'paket-matras-reguler': [
+        { 
+            name: 'Paket Matras Reguler 2 Orang', 
+            price: 'Rp 150.000', 
+            capacity: '2 Orang', 
+            note: 'Paket hemat dengan matras berkualitas untuk camping nyaman.',
+            photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
+            features: ['Tenda 2 orang', 'Matras tebal', 'Mudah dipasang', 'Harga terjangkau']
+        },
+        { 
+            name: 'Paket Matras Reguler 4 Orang', 
+            price: 'Rp 220.000', 
+            capacity: '4 Orang', 
+            note: 'Solusi praktis untuk camping bersama keluarga kecil.',
+            photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
+            features: ['Tenda 4 orang', 'Matras nyaman', 'Cocok keluarga', 'Efisien']
+        },
+        { 
+            name: 'Paket Matras Reguler 6 Orang', 
+            price: 'Rp 280.000', 
+            capacity: '6 Orang', 
+            note: 'Paket group dengan matras berkualitas untuk aktivitas seru.',
+            photo: 'images/paket tenda rancaupas/PAKET MATRAS REGULER/PAKET MATRAS REGULER.jpeg',
+            features: ['Tenda 6 orang', 'Matras group', 'Cocok beramai-ramai', 'Kualitas oke']
+        }
     ],
-    'kasur-lengkap': [
-        { name: 'Kasur Lengkap Regal', price: 'Rp 560.000', capacity: '2 Orang', note: 'Pilih paket premium untuk resting time yang lebih maksimal.', photo: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=900&q=80', features: ['Kasur premium', 'Bantal & selimut', 'Tampilan rapi dan nyaman'] },
-        { name: 'Kasur Lengkap Zenith', price: 'Rp 680.000', capacity: '4 Orang', note: 'Pengalaman tidur paling istimewa di tengah alam.', photo: 'https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=900&q=80', features: ['Bahan tahan lama', 'Mudah dikemas', 'Nyaman saat malam dingin'] },
-        { name: 'Kasur Lengkap Elite', price: 'Rp 820.000', capacity: '6 Orang', note: 'Paket riset premium dengan detail kualitas tinggi.', photo: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80', features: ['Premium material', 'Cocok untuk event besar', 'Maksimalkan rasa nyaman'] }
+    'paket-matras-lengkap': [
+        { 
+            name: 'Paket Matras Lengkap 2 Orang', 
+            price: 'Rp 330.000', 
+            capacity: '2 Orang', 
+            note: 'Paket lengkap dengan matras, bantal, dan selimut untuk camping santai.',
+            photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
+            features: ['Tenda 2 orang', 'Matras + bantal + selimut', 'Sarung pelindung', 'Komplit untuk malam dingin']
+        },
+        { 
+            name: 'Paket Matras Lengkap 4 Orang', 
+            price: 'Rp 420.000', 
+            capacity: '4 Orang', 
+            note: 'Semua kebutuhan tidur bersatu dalam satu paket praktis untuk keluarga.',
+            photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
+            features: ['Tenda 4 orang', 'Perlengkapan lengkap', 'Cocok untuk keluarga', 'Mudah dibersihkan']
+        },
+        { 
+            name: 'Paket Matras Lengkap 6 Orang', 
+            price: 'Rp 520.000', 
+            capacity: '6 Orang', 
+            note: 'Untuk Anda yang ingin ketenangan dan kenyamanan bersama group.',
+            photo: 'images/paket tenda rancaupas/PAKET MATRAS LENGKAP/PAKET MATRAS LENGKAP.jpeg',
+            features: ['Tenda 6 orang', 'Paket group lengkap', 'Nyaman beramai-ramai', 'Kualitas premium']
+        }
     ],
-    estetik: [
-        { name: 'Estetik Nature', price: 'Rp 420.000', capacity: '2 Orang', note: 'Menonjolkan nuansa estetis dan romantis untuk liburan santai.', photo: 'https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=900&q=80', features: ['Dekorasi natural', 'Sangat cocok untuk foto', 'Nuansa camp lebih estetik'] },
-        { name: 'Estetik Sunset', price: 'Rp 560.000', capacity: '4 Orang', note: 'Desain artistik untuk pengalaman camping yang berkesan.', photo: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80', features: ['Tema sunset', 'fasilitas tambahan', 'Cocok untuk momen spesial'] },
-        { name: 'Estetik Premium', price: 'Rp 720.000', capacity: '6 Orang', note: 'Paket paling populer untuk momen gathering dan prewedding.', photo: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80', features: ['Premium look', 'Dipadu dekorasi alam', 'Cocok untuk sesi foto'] }
+    'paket-kasur-lengkap': [
+        { 
+            name: 'Paket Kasur Lengkap 2 Orang', 
+            price: 'Rp 560.000', 
+            capacity: '2 Orang', 
+            note: 'Pilih paket premium untuk resting time yang lebih maksimal dan mewah.',
+            photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
+            features: ['Tenda premium 2 orang', 'Kasur empuk berkualitas', 'Bantal + selimut tebal', 'Tampilan rapi dan nyaman']
+        },
+        { 
+            name: 'Paket Kasur Lengkap 4 Orang', 
+            price: 'Rp 680.000', 
+            capacity: '4 Orang', 
+            note: 'Pengalaman tidur paling istimewa di tengah alam dengan fasilitas premium.',
+            photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
+            features: ['Tenda premium 4 orang', 'Kasur bahan tahan lama', 'Mudah dikemas', 'Nyaman saat malam dingin']
+        },
+        { 
+            name: 'Paket Kasur Lengkap 6 Orang', 
+            price: 'Rp 820.000', 
+            capacity: '6 Orang', 
+            note: 'Paket riset premium dengan detail kualitas tinggi untuk event besar.',
+            photo: 'images/paket tenda rancaupas/PAKET KASUR LENGKAP/PAKET KASUR LENGKAP.jpeg',
+            features: ['Tenda premium 6 orang', 'Premium material', 'Cocok untuk event besar', 'Maksimalkan rasa nyaman']
+        }
+    ],
+    'paket-estetik': [
+        { 
+            name: 'Paket Estetik 2 Orang', 
+            price: 'Rp 420.000', 
+            capacity: '2 Orang', 
+            note: 'Menonjolkan nuansa estetis dan romantis untuk liburan santai dengan dekorasi natural.',
+            photo: 'images/paket tenda rancaupas/PAKET ESTETIK/PAKET ESTETIK.jpeg',
+            features: ['Tenda estetik 2 orang', 'Dekorasi natural', 'Sangat cocok untuk foto', 'Nuansa camp lebih estetik']
+        },
+        { 
+            name: 'Paket Estetik 4 Orang', 
+            price: 'Rp 560.000', 
+            capacity: '4 Orang', 
+            note: 'Desain artistik untuk pengalaman camping yang berkesan dan instagramable.',
+            photo: 'images/paket tenda rancaupas/PAKET ESTETIK/PAKET ESTETIK.jpeg',
+            features: ['Tenda estetik 4 orang', 'Tema dekorasi menarik', 'Fasilitas tambahan', 'Cocok untuk momen spesial']
+        },
+        { 
+            name: 'Paket Estetik 6 Orang', 
+            price: 'Rp 720.000', 
+            capacity: '6 Orang', 
+            note: 'Paket paling populer untuk momen gathering, prewedding, dan photoshoot.',
+            photo: 'images/paket tenda rancaupas/PAKET ESTETIK/PAKET ESTETIK.jpeg',
+            features: ['Tenda estetik 6 orang', 'Premium look', 'Dipadu dekorasi alam', 'Cocok untuk sesi foto profesional']
+        }
     ]
 };
 
