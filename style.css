@@ -132,6 +132,10 @@ ul { list-style: none; }
     color: #f6fff7;
 }
 
+.navbar:not(.scrolled) .nav-logo-text {
+    color: #fff8e8;
+}
+
 .navbar:not(.scrolled) .hamburger-line {
     background: #f6fff7;
 }
@@ -161,6 +165,10 @@ ul { list-style: none; }
     background: transparent;
 }
 
+.navbar.scrolled .nav-logo-text {
+    color: #a96508;
+}
+
 .navbar.scrolled .hamburger-line {
     background: #214b32;
 }
@@ -184,16 +192,16 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 48px;
-    height: 34px;
-    flex: 0 0 48px;
+    width: 58px;
+    height: 40px;
+    flex: 0 0 58px;
     object-fit: contain;
 }
 
 .nav-logo-text {
     color: inherit;
     font-family: var(--font-heading);
-    font-size: 1.08rem;
+    font-size: 1.14rem;
     font-weight: 800;
     line-height: 1;
 }
@@ -364,8 +372,8 @@ ul { list-style: none; }
 }
 
 .hero-logo-mark {
-    width: 90px;
-    height: 63px;
+    width: 118px;
+    height: 82px;
     margin: 0 auto 14px;
     overflow: hidden;
 }
@@ -390,6 +398,17 @@ ul { list-style: none; }
     letter-spacing: 0;
     line-height: 1.04;
     text-shadow: 0 4px 24px rgba(0,0,0,0.22);
+}
+
+.hero-brand-title {
+    display: grid;
+    justify-items: center;
+    gap: 2px;
+}
+
+.hero-brand-accent {
+    color: #f7bd36;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.42);
 }
 
 .title-accent-italic {
@@ -1962,7 +1981,7 @@ ul { list-style: none; }
 @media (min-width: 1025px) and (max-width: 1280px) {
     .nav-link { padding: 8px 12px; font-size: 0.85rem; }
     .nav-links { gap: 4px; padding: 6px 8px; }
-    .nav-logo-image { width: 38px; height: 38px; flex-basis: 38px; }
+    .nav-logo-image { width: 52px; height: 36px; flex-basis: 52px; }
 }
 
 @media (max-width: 1024px) {
@@ -2052,8 +2071,8 @@ ul { list-style: none; }
     }
 
     .hero-logo-mark {
-        width: 78px;
-        height: 55px;
+        width: 100px;
+        height: 69px;
         margin-bottom: 10px;
     }
 
@@ -2095,8 +2114,8 @@ ul { list-style: none; }
     }
 
     .hero-logo-mark {
-        width: 68px;
-        height: 48px;
+        width: 88px;
+        height: 61px;
         margin-bottom: 8px;
     }
 
@@ -2136,8 +2155,8 @@ ul { list-style: none; }
         padding: 12px 0;
     }
 
-    .nav-logo-image { width: 42px; height: 30px; flex-basis: 42px; }
-    .nav-logo-text { font-size: 0.95rem; }
+    .nav-logo-image { width: 48px; height: 33px; flex-basis: 48px; }
+    .nav-logo-text { font-size: 0.98rem; }
 
     .nav-links {
         top: 58px;
