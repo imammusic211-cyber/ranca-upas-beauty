@@ -24,6 +24,16 @@ while ($true) {
         }
 
         if ($changes) {
+            $cssVersion = (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot "style.css") -Algorithm SHA256 -ErrorAction Stop).Hash.Substring(0, 12).ToLowerInvariant()
+            $scriptVersion = (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot "script.js") -Algorithm SHA256 -ErrorAction Stop).Hash.Substring(0, 12).ToLowerInvariant()
+            $indexPath = Join-Path $PSScriptRoot "index.html"
+            $indexContent = [System.IO.File]::ReadAllText($indexPath)
+            $versionedIndex = [regex]::Replace($indexContent, 'href="style\.css(?:\?[^\"]*)?"', "href=`"style.css?v=$cssVersion`"")
+            $versionedIndex = [regex]::Replace($versionedIndex, 'src="script\.js(?:\?[^\"]*)?"', "src=`"script.js?v=$scriptVersion`"")
+            if ($versionedIndex -ne $indexContent) {
+                [System.IO.File]::WriteAllText($indexPath, $versionedIndex, [System.Text.UTF8Encoding]::new($false))
+            }
+
             $output = git add -A 2>&1
             if ($LASTEXITCODE -ne 0) {
                 throw "git add gagal: $($output -join "`n")"
