@@ -59,7 +59,7 @@ const packageData = {
             price: 'Rp 350.000', 
             capacity: '4 Orang', 
             note: 'Nikmati tenda Mandala dengan 2 kasur, 4 sleeping bag, lampu, dan layanan bongkar pasang.',
-            photo: 'images/paket%20tenda%20rancaupas/mandala.jpeg',
+            photo: 'images/paket%20tenda%20rancaupas/mandala%20kasur%20.jpeg',
             features: ['Tenda Mandala', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         { 
