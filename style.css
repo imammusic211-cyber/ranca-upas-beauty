@@ -192,9 +192,9 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 130px;
-    height: 90px;
-    flex: 0 0 130px;
+    width: 90px;
+    height: 62px;
+    flex: 0 0 90px;
     object-fit: contain;
     filter: drop-shadow(0 5px 12px rgba(19, 61, 51, 0.18));
 }
@@ -569,6 +569,7 @@ ul { list-style: none; }
     color: var(--color-primary);
     margin-bottom: 12px;
     position: relative;
+    padding-left: 0 !important;
 }
 
 .section-tag-center {
@@ -960,7 +961,7 @@ ul { list-style: none; }
 
 .paket-category-nav {
     position: sticky;
-    top: 70px;
+    top: 94px;
     z-index: 50;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1022,7 +1023,7 @@ ul { list-style: none; }
     font-size: clamp(1.65rem, 2.6vw, 2rem);
     font-weight: 700;
     text-align: center;
-    scroll-margin-top: 146px;
+    scroll-margin-top: 168px;
 }
 
 .paket-category-grid {
@@ -1988,10 +1989,24 @@ ul { list-style: none; }
 @media (min-width: 1025px) and (max-width: 1280px) {
     .nav-link { padding: 8px 12px; font-size: 0.85rem; }
     .nav-links { gap: 4px; padding: 6px 8px; }
-    .nav-logo-image { width: 116px; height: 80px; flex-basis: 116px; }
+    .nav-logo-image { width: 82px; height: 56px; flex-basis: 82px; }
 }
 
 @media (max-width: 1024px) {
+    .nav-container {
+        gap: 12px;
+    }
+
+    .nav-logo {
+        max-width: 72px;
+    }
+
+    .nav-logo-image {
+        width: 72px;
+        height: 50px;
+        flex-basis: 72px;
+    }
+
     .nav-links {
         position: fixed;
         top: 64px;
@@ -2169,7 +2184,11 @@ ul { list-style: none; }
         padding: 12px 0;
     }
 
-    .nav-logo-image { width: 100px; height: 70px; flex-basis: 100px; }
+    .nav-logo {
+        max-width: 76px;
+    }
+
+    .nav-logo-image { width: 76px; height: 52px; flex-basis: 76px; }
     .nav-logo-text { font-size: 0.98rem; }
 
     .nav-links {
@@ -2191,7 +2210,7 @@ ul { list-style: none; }
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-start;
-        top: 53px;
+        top: 78px;
         gap: 8px;
         margin-bottom: 28px;
         overflow-x: auto;
@@ -2201,12 +2220,17 @@ ul { list-style: none; }
         scrollbar-width: none;
     }
 
+    .paket-category-nav a {
+        position: relative;
+        z-index: 1;
+    }
+
     .paket-category-nav::-webkit-scrollbar {
         display: none;
     }
 
     .paket-category-title {
-        scroll-margin-top: 120px;
+        scroll-margin-top: 128px;
     }
 
     .paket-category-nav a {
