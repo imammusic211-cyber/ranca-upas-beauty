@@ -93,7 +93,7 @@ const packageData = {
             price: 'Rp 325.000',
             capacity: '6 Orang',
             note: 'Tenda Charly untuk 6 orang dengan 6 matras, 6 sleeping bag, lampu, dan bongkar pasang. Tiket dan area camp belum termasuk.',
-            photo: 'images/paket%20tenda%20rancaupas/chally.jpeg',
+            photo: 'images/paket%20tenda%20rancaupas/tenda%20chally.jpeg',
             features: ['Tenda Charly', '6 Matras', '6 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         }
     ],
