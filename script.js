@@ -51,7 +51,7 @@ const packageData = {
             price: 'Rp 350.000', 
             capacity: '4 Orang', 
             note: 'Tidur lebih nyaman dengan tenda Arpenaz 4.0, 2 kasur, 4 sleeping bag, lampu, dan layanan bongkar pasang.',
-            photo: 'images/paket%20tenda%20rancaupas/apernaz%204.0.jpeg',
+            photo: 'images/paket%20tenda%20rancaupas/apernaz%204.0%20kasur%20reguler.jpg',
             features: ['Tenda Arpenaz 4.0', '2 Kasur Unk 4 Orang', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         { 
