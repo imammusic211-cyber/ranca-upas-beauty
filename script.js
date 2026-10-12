@@ -85,7 +85,7 @@ const packageData = {
             price: 'Rp 250.000',
             capacity: '4 Orang',
             note: 'Tenda Mandala untuk 4 orang, dilengkapi 4 matras, 4 sleeping bag, lampu, dan bongkar pasang. Tiket dan area camp belum termasuk.',
-            photo: 'images/paket%20tenda%20rancaupas/mandala.jpeg',
+            photo: 'images/paket%20tenda%20rancaupas/mandala%20matras.jpeg',
             features: ['Tenda Mandala', '4 Matras', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         {
