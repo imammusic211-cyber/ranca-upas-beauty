@@ -6,18 +6,55 @@ Write-Host "Edit file -> save -> otomatis push" -ForegroundColor Yellow
 Write-Host "Tekan Ctrl+C untuk berhenti" -ForegroundColor Yellow
 Write-Host ""
 
-$last = ""
+$upstreamOutput = git rev-parse --abbrev-ref --symbolic-full-name '@{u}' 2>&1
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "Auto-deploy gagal: branch ini belum memiliki upstream Git." -ForegroundColor Red
+    Write-Host ($upstreamOutput -join "`n") -ForegroundColor Red
+    exit 1
+}
+$upstream = ($upstreamOutput -join "").Trim()
+Write-Host "Branch tujuan: $upstream" -ForegroundColor Cyan
+
 while ($true) {
     Start-Sleep -Seconds 3
-    $st = git status --porcelain 2>$null
-    if ($st) {
-        $h = $st -join "`n"
-        if ($h -ne $last) {
-            $last = $h
-            git add -A 2>$null
-            git commit -m "auto: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" 2>$null
-            git push origin main 2>$null
-            Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Pushed!" -ForegroundColor Green
+    try {
+        $changes = git status --porcelain 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            throw "git status gagal: $($changes -join "`n")"
         }
+
+        if ($changes) {
+            $output = git add -A 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                throw "git add gagal: $($output -join "`n")"
+            }
+
+            git diff --cached --quiet
+            if ($LASTEXITCODE -eq 1) {
+                $output = git commit -m "auto: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" 2>&1
+                if ($LASTEXITCODE -ne 0) {
+                    throw "git commit gagal: $($output -join "`n")"
+                }
+                Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Commit dibuat." -ForegroundColor Yellow
+            } elseif ($LASTEXITCODE -ne 0) {
+                throw "git diff gagal memeriksa perubahan staged."
+            }
+        }
+
+        $aheadOutput = git rev-list --count "$upstream..HEAD" 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            throw "Gagal memeriksa commit yang belum terkirim: $($aheadOutput -join "`n")"
+        }
+
+        if ([int]($aheadOutput -join "") -gt 0) {
+            $output = git push 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                throw "git push gagal: $($output -join "`n")"
+            }
+            Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Push berhasil ke $upstream." -ForegroundColor Green
+        }
+    } catch {
+        Write-Host "[$(Get-Date -Format 'HH:mm:ss')] $($_.Exception.Message)" -ForegroundColor Red
+        Start-Sleep -Seconds 12
     }
 }

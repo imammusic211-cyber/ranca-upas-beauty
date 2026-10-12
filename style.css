@@ -994,6 +994,15 @@ ul { list-style: none; }
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
+.paket-category-nav a:nth-child(n + 2) {
+    align-self: center;
+    justify-self: center;
+    width: fit-content;
+    min-height: 38px;
+    padding: 7px 10px;
+    font-size: 0.76rem;
+}
+
 .paket-category-nav a:hover,
 .paket-category-nav a:focus-visible {
     transform: translateY(-1px);
@@ -1817,7 +1826,8 @@ ul { list-style: none; }
 .back-to-top {
     position: fixed;
     bottom: 32px;
-    right: 32px;
+    right: auto;
+    left: 32px;
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -2242,8 +2252,20 @@ ul { list-style: none; }
         scroll-snap-align: start;
     }
 
+    .paket-category-nav a:nth-child(n + 2) {
+        min-height: 34px;
+        padding: 5px 8px;
+        font-size: 0.64rem;
+    }
+
     .paket-card-inner {
         grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .paket-category-grid:not(.regular-tent-capacity-grid) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .regular-tent-capacity-grid {
@@ -2251,33 +2273,68 @@ ul { list-style: none; }
     }
 
     .paket-card-image {
-        padding: 16px 16px 0;
+        padding: 8px 8px 0;
+    }
+
+    .paket-card-image::before {
+        inset: 6px;
+        border-radius: 12px;
     }
 
     .paket-card-image img {
-        min-height: 220px;
-        border-radius: 18px;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+        border-width: 2px;
+        border-radius: 12px;
+    }
+
+    .paket-card {
+        border-radius: 16px;
     }
 
     .paket-card-header {
-        padding: 20px 18px 12px;
+        padding: 12px 10px 8px;
     }
 
     .paket-card-header h3 {
-        font-size: 1.38rem;
+        font-size: 1rem;
+        line-height: 1.2;
     }
 
     .paket-card-body {
-        padding: 0 18px 20px;
+        padding: 0 10px 12px;
+        gap: 7px;
     }
 
     .paket-price {
-        font-size: 2.1rem;
+        font-size: 1.15rem;
+    }
+
+    .paket-capacity {
+        font-size: 0.68rem;
+        letter-spacing: 0.02em;
+    }
+
+    .paket-note {
+        padding: 8px 9px;
+        border-left-width: 3px;
+        border-radius: 8px;
+        font-size: 0.68rem;
+        line-height: 1.45;
     }
 
     .paket-features {
         grid-template-columns: 1fr;
-        gap: 6px;
+        gap: 5px;
+        margin-top: 4px;
+    }
+
+    .paket-feature {
+        align-items: flex-start;
+        gap: 4px;
+        font-size: 0.68rem;
+        line-height: 1.35;
     }
 
     .wa-float {
