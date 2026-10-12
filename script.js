@@ -77,7 +77,7 @@ const packageData = {
             price: 'Rp 275.000',
             capacity: '4 Orang',
             note: 'Tenda Arpenaz 4.0 dengan 4 matras, 4 sleeping bag, lampu, dan layanan bongkar pasang. Tiket dan area camp belum termasuk.',
-            photo: 'images/paket%20tenda%20rancaupas/apernaz%204.0.jpeg',
+            photo: 'images/paket%20tenda%20rancaupas/apernaz%204.0%20matras%20reguler.jpg',
             features: ['Tenda Arpenaz 4.0', '4 Matras', '4 Sleeping Bag', 'Lampu', 'Bongkar Pasang']
         },
         {
