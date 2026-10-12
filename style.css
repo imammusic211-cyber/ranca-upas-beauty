@@ -1440,8 +1440,11 @@ ul { list-style: none; }
 
 .selected-package-summary {
     margin-top: 32px;
+    margin-bottom: 40px;
     padding-top: 26px;
+    padding-bottom: 32px;
     border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .selected-package-title {
