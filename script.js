@@ -137,7 +137,7 @@ const packageData = {
             price: 'Rp 550.000', 
             capacity: '4 Orang', 
             note: 'Tenda Arpenaz 4.1 dengan kasur dan bantal, sleeping bag, lampu, meja-kursi, flysheet, serta kompor gas. Termasuk tiket camp 4 orang.',
-            photo: 'images/paket%20tenda%20rancaupas/arvenaz%204.1.jpeg',
+            photo: 'images/paket%20tenda%20rancaupas/aprenaz%204.0%20kasur%20lengkap.jpg',
             features: ['Tenda Arpenaz 4.1', '2 Kasur Unk 4 Orang + 2 Bantal', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor Gas', 'Bongkar Pasang']
         },
         { 
