@@ -103,7 +103,7 @@ const packageData = {
             price: 'Rp 375.000', 
             capacity: '4 Orang', 
             note: 'Paket siap camping dengan 4 matras, 4 sleeping bag, lampu, meja-kursi, flysheet, kompor, dan gas. Tiket dan area camp belum termasuk.',
-            photo: 'images/paket%20tenda%20rancaupas/apernaz%204.0.jpeg',
+            photo: 'images/paket%20tenda%20rancaupas/aprenaz%204.0%20matras.jpg',
             features: ['Tenda Arpenaz 4.0', '4 Matras', '4 Sleeping Bag', 'Lampu', '4 Kursi + 1 Meja', 'Flysheet 3x4', 'Kompor + Gas', 'Bongkar Pasang']
         },
         { 
