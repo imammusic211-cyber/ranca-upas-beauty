@@ -1,3 +1,4 @@
+    const galleryItems = document.querySelectorAll('.galeri-item img, .galeri-tenda-main-photo, .gallery-link img, .aktivitas-card img, [data-area-photo], .area-photo-grid img, .area-map img');
 const regularTentTiers = [
     { name: 'Reguler', summary: 'Pilihan praktis dengan tenda, matras, lampu emergency, serta jasa pasang dan bongkar.', summaryEn: 'A practical setup with a tent, sleeping mat, emergency light, and setup service.', features: ['Tenda', 'Matras', 'Lampu Emergency', 'Jasa Pasang', 'Bongkar Tenda'] },
     { name: 'Medium', summary: 'Lebih hangat dengan sleeping bag dan api unggun, lengkap dengan matras, lampu, serta jasa pasang-bongkar.', summaryEn: 'Stay warm with a sleeping bag and campfire, plus a sleeping mat, emergency light, and setup service.', features: ['Tenda', 'Matras', 'Sleeping Bag', 'Lampu Emergency', 'Api Unggun', 'Jasa Pasang', 'Bongkar Tenda'] },
@@ -949,16 +950,40 @@ function setupGalleryLightbox() {
     };
 
     galleryItems.forEach((image) => {
-        image.addEventListener('click', () => {
-            const card = image.closest('.area-card, .galeri-tenda-item, figure, .aktivitas-card');
-            const templates = card ? card.querySelectorAll('template[data-photo-src]') : [];
-            photos = [{ src: image.currentSrc || image.src, alt: image.alt }];
-            templates.forEach((photo) => photos.push({ src: photo.dataset.photoSrc, alt: photo.dataset.photoAlt || '' }));
-            currentIndex = 0;
+        const isAreaImage = image.matches('.area-photo-grid img, .area-map img');
+        if (isAreaImage) {
+            image.tabIndex = 0;
+            image.setAttribute('role', 'button');
+            image.setAttribute('aria-haspopup', 'dialog');
+        }
+
+        const openPhoto = () => {
+            const areaGallery = image.closest('.area-photo-grid');
+            if (areaGallery) {
+                const areaImages = [...areaGallery.querySelectorAll('img')];
+                photos = areaImages.map((photo) => ({ src: photo.currentSrc || photo.src, alt: photo.alt }));
+                currentIndex = areaImages.indexOf(image);
+            } else {
+                const card = image.closest('.area-card, .galeri-tenda-item, figure, .aktivitas-card');
+                const templates = card ? card.querySelectorAll('template[data-photo-src]') : [];
+                photos = [{ src: image.currentSrc || image.src, alt: image.alt }];
+                templates.forEach((photo) => photos.push({ src: photo.dataset.photoSrc, alt: photo.dataset.photoAlt || '' }));
+                currentIndex = 0;
+            }
             showPhoto(0);
             modal.classList.add('active');
             modal.setAttribute('aria-hidden', 'false');
-        });
+            if (areaGallery) showPhoto(currentIndex);
+        };
+
+        image.addEventListener('click', openPhoto);
+        if (isAreaImage) {
+            image.addEventListener('keydown', (event) => {
+                if (event.key !== 'Enter' && event.key !== ' ') return;
+                event.preventDefault();
+                openPhoto();
+            });
+        }
     });
 
     prevButton?.addEventListener('click', (event) => { event.stopPropagation(); showPhoto(currentIndex - 1); });

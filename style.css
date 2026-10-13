@@ -2413,7 +2413,9 @@ ul { list-style: none; }
 .galeri-tenda-main-photo,
 .aktivitas-card img,
 .galeri-item img,
-.gallery-link img {
+.gallery-link img,
+.area-photo-grid img,
+.area-map img {
     cursor: pointer;
 }
 
