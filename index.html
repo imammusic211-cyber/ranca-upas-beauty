@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=339586694291">
+    <link rel="stylesheet" href="style.css?v=96c84c7dfff2">
 </head>
 <body>
     <!-- Navigation -->
     <nav id="main-nav" class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo" id="nav-logo" aria-label="Ranca Upas, kembali ke beranda">
-                <img class="nav-logo-image" src="images/logo/Rancaupas-Logo-Hijau.png" alt="Logo Ranca Upas">
+                <img class="nav-logo-image" src="images/logo/rancaupas-logo-hijau.png" alt="Logo Ranca Upas">
             </a>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
@@ -96,60 +96,39 @@
             </div>
             <div class="area-grid" data-animate="fade-up" data-delay="200">
                 <div class="area-card">
-                    <div class="area-image">
-                       <div class="area-placeholder">
-    <img src="images/area-camping/galery3.jpg.jpeg" alt="Area camping Rasamala" class="placeholder-photo" data-area-photo>
-</div>
-                        <div class="area-overlay">
-                            <h3>RASAMALA</h3>
-                            <p>Area camping teduh di bawah pohon Rasamala</p>
-                            <a href="#paket" class="btn btn-small">Lihat Paket</a>
-                        </div>
-                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto Rasamala">
-                            <template data-photo-src="images/area-camping/galery3.jpg.jpeg" data-photo-alt="Pemandangan area Rasamala dari atas"></template>
-                            <template data-photo-src="images/area-camping/savana.jpg" data-photo-alt="Deretan tenda di area camping Rasamala"></template>
-                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto Rasamala sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 03</span>
-                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto Rasamala berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-                        </div>
+                    <div class="area-photo-grid">
+                        <img src="images/area-camping/rasmala%20a1.jpeg" alt="Tenda-tenda di bawah pepohonan Rasamala dengan cahaya pagi menembus kabut">
+                        <img src="images/area-camping/rasmala%20a2.jpg" alt="Papan Campsite Rasamala di antara tenda saat pagi berkabut">
+                        <img src="images/area-camping/rasmala%20a3.jpg" alt="Pemandangan udara area perkemahan Rasamala yang dikelilingi pepohonan">
+                    </div>
+                    <div class="area-card-content">
+                        <h3>RASAMALA</h3>
+                        <p>Berkemah di bawah rindangnya pohon Rasamala, ditemani udara sejuk dan cahaya pagi yang menembus kabut.</p>
+                        <a href="#paket" class="btn btn-small">Lihat Paket</a>
                     </div>
                 </div>
                 <div class="area-card">
-                    <div class="area-image">
-                        <div class="area-placeholder">
-    <img src="images/area-camping/foto-savana.jpg.jpeg" alt="Area camping Savana" class="placeholder-photo" data-area-photo>
-</div>
-                        <div class="area-overlay">
-                            <h3>SAVANA</h3>
-                            <p>Padang rumput luas dengan pemandangan gunung</p>
-                            <a href="#paket" class="btn btn-small">Lihat Paket</a>
-                        </div>
-                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto Savana">
-                            <template data-photo-src="images/area-camping/savana%20bagus.jpg" data-photo-alt="Pemandangan lapang dan tenda di Savana"></template>
-                            <template data-photo-src="images/hero/foto-hero2.png" data-photo-alt="Suasana camping di area Savana"></template>
-                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto Savana sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 03</span>
-                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto Savana berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-                        </div>
+                    <div class="area-photo-grid">
+                        <img src="images/area-camping/savana%20a1.jpeg" alt="Deretan tenda di lapangan Savana dengan latar pegunungan dan langit cerah">
+                        <img src="images/area-camping/savana%20a2.jpeg" alt="Papan Campsite Savana di lapangan terbuka berlatar perbukitan">
+                        <img src="images/area-camping/savana%20a3.jpg" alt="Langit senja di atas hamparan Savana dan pepohonan perbukitan">
+                    </div>
+                    <div class="area-card-content">
+                        <h3>SAVANA</h3>
+                        <p>Nikmati lapangan luas, panorama pegunungan, dan langit terbuka yang indah dari pagi hingga senja.</p>
+                        <a href="#paket" class="btn btn-small">Lihat Paket</a>
                     </div>
                 </div>
                 <div class="area-card">
-                    <div class="area-image">
-                        <div class="area-placeholder">
-    <img src="images/area-camping/foto-puspa.jpg.jpeg" alt="Area camping Pinus" class="placeholder-photo" data-area-photo>
-</div>
-                        <div class="area-overlay">
-                            <h3>PINUS</h3>
-                            <p>Camping di tengah hutan pinus yang menyejukkan</p>
-                            <a href="#paket" class="btn btn-small">Lihat Paket</a>
-                        </div>
-                        <div class="photo-slide-controls" data-photo-gallery role="group" aria-label="Foto Pinus">
-                            <template data-photo-src="images/area-camping/savana%202.jpg" data-photo-alt="Tenda di antara pepohonan Pinus"></template>
-                            <template data-photo-src="images/area-camping/foto-api.jpg.jpeg" data-photo-alt="Suasana malam dan api unggun di area camping"></template>
-                            <button type="button" class="photo-slide-arrow" data-photo-step="-1" aria-label="Foto Pinus sebelumnya" title="Foto sebelumnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-                            <span class="photo-slide-counter" data-photo-counter aria-live="polite">01 / 03</span>
-                            <button type="button" class="photo-slide-arrow" data-photo-step="1" aria-label="Foto Pinus berikutnya" title="Foto berikutnya"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-                        </div>
+                    <div class="area-photo-grid">
+                        <img src="images/area-camping/pinus%20a1.jpg" alt="Tenda oranye di antara rimbun pepohonan hutan Pinus">
+                        <img src="images/area-camping/pinus%20a2.jpg" alt="Tenda dome dan pondok di tepi danau dengan pantulan perbukitan">
+                        <img src="images/area-camping/pinus%20a3.jpg" alt="Deretan tenda di bawah tegakan Pinus saat suasana senja">
+                    </div>
+                    <div class="area-card-content">
+                        <h3>PINUS</h3>
+                        <p>Bermalam di bawah tegakan pinus, dengan udara hutan yang sejuk dan lanskap alam yang menenangkan.</p>
+                        <a href="#paket" class="btn btn-small">Lihat Paket</a>
                     </div>
                 </div>
             </div>
@@ -166,19 +145,19 @@
             <div class="aktivitas-grid" data-animate="fade-up" data-delay="200">
                 <div class="aktivitas-card">
                     <div class="aktivitas-image">
-    <img src="images/hero/foto-tentang.jpg.jpeg" alt="Penangkaran Rusa" class="placeholder-photo">
+        <img src="images/aktivitas/foto-rusa.png" alt="Penangkaran Rusa" class="placeholder-photo">
 </div>
                     <div class="aktivitas-label">PENANGKARAN RUSA</div>
                 </div>
                 <div class="aktivitas-card">
                     <div class="aktivitas-image">
-    <img src="images/aktivitas/foto-berenang.jpg.jpeg" alt="Penangkaran Rusa" class="placeholder-photo">
+        <img src="images/aktivitas/foto-berenang.jpg" alt="BERENANG" class="placeholder-photo">
 </div>
                     <div class="aktivitas-label">BERENANG</div>
                 </div>
                 <div class="aktivitas-card">
                     <div class="aktivitas-image">
-    <img src="images/area-camping/foto-api.jpg.jpeg" alt="Penangkaran Rusa" class="placeholder-photo">
+        <img src="images/area-camping/foto-api.jpg" alt="API UNGGUN" class="placeholder-photo">
 </div>
                     <div class="aktivitas-label">API UNGGUN</div>
                 </div>
@@ -417,7 +396,7 @@
         <span class="image-modal-counter" id="image-modal-counter"></span>
     </div>
 
-    <script src="script.js?v=2a38e220896d"></script>
+    <script src="script.js?v=59c564fd8a02"></script>
 </body>
 </html>
 
