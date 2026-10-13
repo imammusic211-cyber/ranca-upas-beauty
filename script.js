@@ -929,7 +929,7 @@ function setupGalleryLightbox() {
     const closeButton = document.querySelector('.close-modal');
     if (!modal || !modalImg || !closeButton) return;
 
-    const galleryItems = document.querySelectorAll('.galeri-item img, .galeri-tenda-main-photo, .gallery-link img, .aktivitas-card img, [data-area-photo]');
+    const galleryItems = document.querySelectorAll('.galeri-item img, .galeri-tenda-main-photo, .gallery-link img, .aktivitas-card img, [data-area-photo], .area-photo-grid img, .area-map img');
     const prevButton = document.querySelector('.image-modal-prev');
     const nextButton = document.querySelector('.image-modal-next');
     const counter = document.getElementById('image-modal-counter');
