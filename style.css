@@ -752,7 +752,8 @@ ul { list-style: none; }
     height: 100%;
     min-width: 0;
     aspect-ratio: 3 / 2;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--color-bg-secondary);
 }
 
 .area-photo-grid:not(.area-photo-grid-pair) img:first-child {
