@@ -208,6 +208,7 @@ const translations = {
     'Area Kami': 'Our Campsites',
     'Pilihan': 'Explore',
     'Area Camping': 'Camping Areas',
+    'Denah lokasi wisata dan area camping Ranca Upas': 'Map of the Ranca Upas tourist and camping areas',
     'Berkemah di bawah rindangnya pohon Rasamala, ditemani udara sejuk dan cahaya pagi yang menembus kabut.': 'Camp beneath shady Rasamala trees, with cool air and morning light filtering through the mist.',
     'Tenda-tenda di bawah pepohonan Rasamala dengan cahaya pagi menembus kabut': 'Tents beneath Rasamala trees as morning light filters through the mist',
     'Papan Campsite Rasamala di antara tenda saat pagi berkabut': 'The Rasamala campsite sign among tents on a misty morning',

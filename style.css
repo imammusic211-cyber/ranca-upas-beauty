@@ -714,6 +714,19 @@ ul { list-style: none; }
     gap: 24px;
 }
 
+.area-map {
+    margin: 0 auto 32px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+}
+
+.area-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .area-card {
     border-radius: 16px;
     overflow: hidden;
