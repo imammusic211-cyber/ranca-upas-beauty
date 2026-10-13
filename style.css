@@ -2117,6 +2117,11 @@ ul { list-style: none; }
         letter-spacing: 0.5px;
     }
     .area-grid { gap: 14px; }
+    .area-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc((100% - 14px) / 2);
+    }
     .area-photo-grid { gap: 6px; padding: 6px; }
     .area-photo-grid:not(.area-photo-grid-pair) img:first-child { aspect-ratio: 4 / 3; }
     .area-card-content { gap: 8px; padding: 12px 12px 16px; }
