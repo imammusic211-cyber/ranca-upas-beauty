@@ -2419,6 +2419,11 @@ ul { list-style: none; }
     cursor: pointer;
 }
 
+.area-photo-grid img,
+.area-map img {
+    cursor: zoom-in;
+}
+
 .image-modal.active {
     opacity: 1;
     visibility: visible;
