@@ -755,6 +755,10 @@ ul { list-style: none; }
     object-fit: cover;
 }
 
+.area-photo-grid img.area-photo-tents {
+    object-position: center bottom;
+}
+
 .area-photo-grid:not(.area-photo-grid-pair) img:first-child {
     grid-column: 1 / -1;
     aspect-ratio: 16 / 9;
