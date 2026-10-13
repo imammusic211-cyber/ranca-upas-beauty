@@ -2045,7 +2045,7 @@ ul { list-style: none; }
         bottom: 18px;
     }
 
-    .area-grid { grid-template-columns: 1fr; }
+    .area-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .aktivitas-grid { grid-template-columns: repeat(2, 1fr); }
     .paket-grid { grid-template-columns: 1fr; }
     .pricelist-grid { grid-template-columns: 1fr 1fr; }
@@ -2109,7 +2109,7 @@ ul { list-style: none; }
         display: none;
     }
 
-    .aktivitas-grid { grid-template-columns: 1fr; }
+    .aktivitas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .pricelist-grid { grid-template-columns: 1fr; }
 
     .navbar {
