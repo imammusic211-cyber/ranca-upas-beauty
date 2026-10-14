@@ -2162,6 +2162,23 @@ video::-webkit-media-controls-enclosure {
         white-space: nowrap;
     }
 
+    .hero-cta {
+        margin-top: 16px;
+    }
+
+    #hero-reserve-btn {
+        min-height: 44px;
+        gap: 7px;
+        padding: 11px 20px;
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+    }
+
+    #hero-reserve-btn .btn-arrow {
+        width: 15px;
+        height: 15px;
+    }
+
     .hero-content {
         padding: 0 16px;
     }
