@@ -1183,33 +1183,69 @@ function setupActivityVideoPlayback() {
     const videos = Array.from(document.querySelectorAll('.aktivitas-card video'));
     if (!videos.length) return;
 
+    const loadVideoSource = (video) => {
+        const source = video.querySelector('source[data-src]');
+        if (!source) return;
+
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+        video.load();
+    };
+
+    const playWhenVisible = (video) => {
+        if (document.visibilityState !== 'visible') {
+            video.pause();
+            return;
+        }
+
+        const bounds = video.getBoundingClientRect();
+        const visibleWidth = Math.max(0, Math.min(bounds.right, window.innerWidth) - Math.max(bounds.left, 0));
+        const visibleHeight = Math.max(0, Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0));
+        const visibleArea = visibleWidth * visibleHeight;
+        const totalArea = bounds.width * bounds.height;
+
+        if (totalArea > 0 && visibleArea / totalArea >= 0.35) {
+            loadVideoSource(video);
+            video.play().catch(() => {});
+        } else {
+            video.pause();
+        }
+    };
+
     if (!('IntersectionObserver' in window)) {
-        videos.forEach((video) => video.play().catch(() => {}));
+        const updatePlayback = () => videos.forEach(playWhenVisible);
+        window.addEventListener('scroll', updatePlayback, { passive: true });
+        window.addEventListener('resize', updatePlayback);
+        document.addEventListener('visibilitychange', updatePlayback);
+        updatePlayback();
         return;
     }
 
-    const observer = new IntersectionObserver((entries) => {
+    const loadObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            loadVideoSource(entry.target);
+            loadObserver.unobserve(entry.target);
+        });
+    }, { rootMargin: '180px 0px' });
+
+    const playbackObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                if (document.visibilityState === 'visible') {
-                    entry.target.play().catch(() => {});
-                }
+                playWhenVisible(entry.target);
             } else {
                 entry.target.pause();
             }
         });
     }, { threshold: 0.35 });
 
-    videos.forEach((video) => observer.observe(video));
+    videos.forEach((video) => {
+        loadObserver.observe(video);
+        playbackObserver.observe(video);
+    });
+
     document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState !== 'visible') return;
-        videos.forEach((video) => {
-            const bounds = video.getBoundingClientRect();
-            const visibleHeight = Math.max(0, Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0));
-            if (bounds.height > 0 && visibleHeight / bounds.height >= 0.35) {
-                video.play().catch(() => {});
-            }
-        });
+        videos.forEach(playWhenVisible);
     });
 }
 
