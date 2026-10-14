@@ -428,13 +428,13 @@ ul { list-style: none; }
     font-size: clamp(2.7rem, 5vw, 5.5rem);
     line-height: 0.96;
     letter-spacing: -0.06em;
-    color: #18392D;
-    text-shadow: 0 1px 1px rgba(248, 250, 244, 0.8), 0 5px 18px rgba(248, 250, 244, 0.48);
+    color: #FFFFFF;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.82), 0 8px 24px rgba(0, 0, 0, 0.72);
 }
 
 .hero-title span {
     display: block;
-    color: #315B46;
+    color: #FFFFFF;
     letter-spacing: -0.04em;
 }
 
