@@ -1188,16 +1188,13 @@ function setupActivityVideoPlayback() {
         return;
     }
 
-    const visibleVideos = new Set();
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                visibleVideos.add(entry.target);
                 if (document.visibilityState === 'visible') {
                     entry.target.play().catch(() => {});
                 }
             } else {
-                visibleVideos.delete(entry.target);
                 entry.target.pause();
             }
         });
@@ -1206,7 +1203,13 @@ function setupActivityVideoPlayback() {
     videos.forEach((video) => observer.observe(video));
     document.addEventListener('visibilitychange', () => {
         if (document.visibilityState !== 'visible') return;
-        visibleVideos.forEach((video) => video.play().catch(() => {}));
+        videos.forEach((video) => {
+            const bounds = video.getBoundingClientRect();
+            const visibleHeight = Math.max(0, Math.min(bounds.bottom, window.innerHeight) - Math.max(bounds.top, 0));
+            if (bounds.height > 0 && visibleHeight / bounds.height >= 0.35) {
+                video.play().catch(() => {});
+            }
+        });
     });
 }
 
