@@ -1144,8 +1144,15 @@ function setupHeroVideoLoop() {
     let activeIndex = 0;
     let transitionStarted = false;
 
+    const playActiveVideo = () => {
+        if (document.visibilityState === 'visible') {
+            videos[activeIndex].play().catch(() => {});
+        }
+    };
+
     videos[1].pause();
-    videos[0].play().catch(() => {});
+    playActiveVideo();
+    document.addEventListener('visibilitychange', playActiveVideo);
 
     videos.forEach((video, index) => {
         video.addEventListener('timeupdate', () => {
@@ -1181,17 +1188,26 @@ function setupActivityVideoPlayback() {
         return;
     }
 
+    const visibleVideos = new Set();
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.play().catch(() => {});
+                visibleVideos.add(entry.target);
+                if (document.visibilityState === 'visible') {
+                    entry.target.play().catch(() => {});
+                }
             } else {
+                visibleVideos.delete(entry.target);
                 entry.target.pause();
             }
         });
     }, { threshold: 0.35 });
 
     videos.forEach((video) => observer.observe(video));
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState !== 'visible') return;
+        visibleVideos.forEach((video) => video.play().catch(() => {}));
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
