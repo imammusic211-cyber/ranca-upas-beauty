@@ -2144,6 +2144,24 @@ video::-webkit-media-controls-enclosure {
         padding-top: 20px;
     }
 
+    .hero-title {
+        font-size: clamp(1.55rem, 7.5vw, 2rem);
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+    }
+
+    .hero-title span {
+        letter-spacing: -0.03em;
+        white-space: nowrap;
+    }
+
+    .hero-kicker {
+        margin-top: 14px;
+        font-size: 0.56rem;
+        letter-spacing: 0.06em;
+        white-space: nowrap;
+    }
+
     .hero-content {
         padding: 0 16px;
     }
