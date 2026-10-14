@@ -136,6 +136,10 @@ ul { list-style: none; }
     color: #0a6b5e;
 }
 
+.navbar:not(.scrolled) .nav-logo-image {
+    filter: brightness(0) invert(1) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.48));
+}
+
 .navbar:not(.scrolled) .hamburger-line {
     background: #f6fff7;
 }
@@ -167,6 +171,10 @@ ul { list-style: none; }
 
 .navbar.scrolled .nav-logo-text {
     color: #a96508;
+}
+
+.navbar.scrolled .nav-logo-image {
+    filter: contrast(1.14) saturate(1.12) drop-shadow(0 2px 5px rgba(19, 61, 51, 0.22));
 }
 
 .navbar.scrolled .hamburger-line {
