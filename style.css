@@ -434,11 +434,11 @@ ul { list-style: none; }
 
 .hero-title .hero-title-lead {
     display: block;
-    color: #805B35;
+    color: #356F50;
     font-style: normal;
     font-weight: 600;
     letter-spacing: -0.06em;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.78), 0 5px 14px rgba(255, 255, 255, 0.52);
+    text-shadow: none;
 }
 
 .hero-title .hero-title-brand {
