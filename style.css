@@ -894,10 +894,15 @@ ul { list-style: none; }
     object-position: center;
     background: transparent;
     pointer-events: none;
-    transform: scale(1.02);
-    filter: saturate(1.08) contrast(1.04) brightness(1.01);
+    transform: scale(1.01);
+    filter: saturate(1.05) contrast(1.02) brightness(1.0);
     border-radius: 24px 24px 0 0;
 }
+
+.aktivitas-card:nth-child(1) .aktivitas-image video { object-position: center 38%; }
+.aktivitas-card:nth-child(2) .aktivitas-image video { object-position: center 52%; }
+.aktivitas-card:nth-child(3) .aktivitas-image video { object-position: center 60%; }
+.aktivitas-card:nth-child(4) .aktivitas-image video { object-position: center 50%; }
 
 video::-webkit-media-controls,
 video::-webkit-media-controls-panel,
