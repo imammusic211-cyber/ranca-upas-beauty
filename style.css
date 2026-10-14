@@ -417,7 +417,7 @@ ul { list-style: none; }
     font-size: 0.72rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(244, 219, 170, 0.95);
+    color: #E3C58E;
     font-weight: 600;
     text-shadow: 0 2px 16px rgba(0, 0, 0, 0.56);
 }
@@ -428,13 +428,13 @@ ul { list-style: none; }
     font-size: clamp(2.7rem, 5vw, 5.5rem);
     line-height: 0.96;
     letter-spacing: -0.06em;
-    color: #ffffff;
+    color: #F6F7F0;
     text-shadow: 0 12px 30px rgba(0, 0, 0, 0.30);
 }
 
 .hero-title span {
     display: block;
-    color: #f2d7a2;
+    color: #C7D6BE;
     letter-spacing: -0.04em;
 }
 
