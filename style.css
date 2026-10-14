@@ -847,10 +847,13 @@ ul { list-style: none; }
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
+    align-items: start;
 }
 
 .aktivitas-card {
     min-width: 0;
+    display: flex;
+    flex-direction: column;
     border-radius: 24px;
     overflow: hidden;
     background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,247,242,0.96));
@@ -866,8 +869,9 @@ ul { list-style: none; }
 }
 
 .aktivitas-image {
-    height: clamp(240px, 24vw, 320px);
-    aspect-ratio: 4 / 3;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
     background: linear-gradient(135deg, rgba(222, 236, 214, 0.9), rgba(164, 180, 151, 0.75));
     display: flex;
     align-items: center;
@@ -898,6 +902,11 @@ ul { list-style: none; }
     filter: saturate(1.05) contrast(1.02) brightness(1.0);
     border-radius: 24px 24px 0 0;
 }
+
+.aktivitas-card:nth-child(1) .aktivitas-image { aspect-ratio: 9 / 13; }
+.aktivitas-card:nth-child(2) .aktivitas-image { aspect-ratio: 9 / 13; }
+.aktivitas-card:nth-child(3) .aktivitas-image { aspect-ratio: 9 / 13; }
+.aktivitas-card:nth-child(4) .aktivitas-image { aspect-ratio: 9 / 13; }
 
 .aktivitas-card:nth-child(1) .aktivitas-image video { object-position: center 38%; }
 .aktivitas-card:nth-child(2) .aktivitas-image video { object-position: center 52%; }
@@ -2213,8 +2222,7 @@ video::-webkit-media-controls-enclosure {
         border-radius: 20px;
     }
     .aktivitas-image {
-        height: clamp(250px, 56vw, 360px);
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 9 / 12;
         border-radius: 20px 20px 0 0;
         background: linear-gradient(135deg, rgba(210,226,198,0.9), rgba(169,186,157,0.78));
     }
