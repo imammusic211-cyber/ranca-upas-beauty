@@ -432,7 +432,16 @@ ul { list-style: none; }
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.82), 0 8px 24px rgba(0, 0, 0, 0.72);
 }
 
-.hero-title span {
+.hero-title .hero-title-lead {
+    display: block;
+    color: #805B35;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -0.06em;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.78), 0 5px 14px rgba(255, 255, 255, 0.52);
+}
+
+.hero-title .hero-title-brand {
     display: block;
     color: #315B46;
     font-style: italic;
@@ -2153,7 +2162,7 @@ video::-webkit-media-controls-enclosure {
         letter-spacing: -0.04em;
     }
 
-    .hero-title span {
+    .hero-title .hero-title-brand {
         letter-spacing: -0.03em;
         white-space: nowrap;
     }
