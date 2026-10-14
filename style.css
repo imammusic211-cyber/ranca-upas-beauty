@@ -834,7 +834,7 @@ ul { list-style: none; }
     grid-column: 2 / -1;
 }
 
-.price-guide-card-body:not(:has(.price-guide-table-head)) .price-guide-row {
+.price-guide-list .price-guide-row {
     grid-template-columns: minmax(0, 1fr) auto;
 }
 
@@ -843,6 +843,10 @@ ul { list-style: none; }
     padding: 0 20px 18px;
     color: #758176;
     font-size: 0.76rem;
+}
+
+@media (max-width: 700px) {
+    .price-guide-grid { grid-template-columns: 1fr; }
 }
 
 .area-section {
