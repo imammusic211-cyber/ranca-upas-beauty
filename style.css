@@ -360,14 +360,14 @@ ul { list-style: none; }
     overflow: hidden;
     background:
         linear-gradient(180deg, rgba(12, 18, 14, 0.28), rgba(12, 18, 14, 0.58)),
-        url('images/logo/rancaupas.jpg') center center / cover no-repeat;
+        #1D3028;
 }
 
 .hero-video-stage {
     position: absolute;
     inset: 0;
     overflow: hidden;
-    background: url('images/logo/rancaupas.jpg') center / cover no-repeat;
+    background: #1D3028;
 }
 
 .hero-video-layer {
