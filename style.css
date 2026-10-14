@@ -867,6 +867,7 @@ ul { list-style: none; }
 
 .aktivitas-image {
     height: clamp(240px, 24vw, 320px);
+    aspect-ratio: 4 / 3;
     background: linear-gradient(135deg, rgba(222, 236, 214, 0.9), rgba(164, 180, 151, 0.75));
     display: flex;
     align-items: center;
@@ -889,11 +890,11 @@ ul { list-style: none; }
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
     background: transparent;
     pointer-events: none;
-    transform: scale(1.08);
+    transform: scale(1.04);
     filter: saturate(1.12) contrast(1.08) brightness(1.02);
     border-radius: 24px 24px 0 0;
 }
@@ -2208,11 +2209,12 @@ video::-webkit-media-controls-enclosure {
     }
     .aktivitas-image {
         height: clamp(250px, 56vw, 360px);
+        aspect-ratio: 4 / 3;
         border-radius: 20px 20px 0 0;
         background: linear-gradient(135deg, rgba(210,226,198,0.9), rgba(169,186,157,0.78));
     }
     .aktivitas-image video {
-        transform: scale(1.12);
+        transform: scale(1.08);
         border-radius: 20px 20px 0 0;
     }
     .aktivitas-label {
