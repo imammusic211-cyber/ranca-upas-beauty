@@ -882,7 +882,7 @@ ul { list-style: none; }
     pointer-events: none;
 }
 
-.aktivitas-card:nth-child(3) .aktivitas-image::after {
+.aktivitas-card:nth-child(4) .aktivitas-image::after {
     background: transparent;
 }
 
@@ -905,11 +905,12 @@ ul { list-style: none; }
 .aktivitas-card:nth-child(4) .aktivitas-image { aspect-ratio: 9 / 13; }
 .aktivitas-card:nth-child(5) .aktivitas-image { aspect-ratio: 9 / 13; }
 .aktivitas-card:nth-child(6) .aktivitas-image { aspect-ratio: 9 / 13; }
+.aktivitas-card:nth-child(7) .aktivitas-image { aspect-ratio: 9 / 13; }
 
-.aktivitas-card:nth-child(1) .aktivitas-image video { object-position: center 38%; }
-.aktivitas-card:nth-child(2) .aktivitas-image video { object-position: center 52%; }
-.aktivitas-card:nth-child(3) .aktivitas-image video { object-position: center 60%; }
-.aktivitas-card:nth-child(4) .aktivitas-image video { object-position: center 50%; }
+.aktivitas-card:nth-child(2) .aktivitas-image video { object-position: center 38%; }
+.aktivitas-card:nth-child(3) .aktivitas-image video { object-position: center 52%; }
+.aktivitas-card:nth-child(4) .aktivitas-image video { object-position: center 60%; }
+.aktivitas-card:nth-child(5) .aktivitas-image video { object-position: center 50%; }
 
 video::-webkit-media-controls,
 video::-webkit-media-controls-panel,
@@ -917,23 +918,23 @@ video::-webkit-media-controls-enclosure {
     display: none !important;
 }
 
-.aktivitas-card:nth-child(2) .aktivitas-image {
+.aktivitas-card:nth-child(3) .aktivitas-image {
     background: linear-gradient(145deg, #D7E9E4, #8FB9AA);
 }
 
-.aktivitas-card:nth-child(3) .aktivitas-image {
+.aktivitas-card:nth-child(4) .aktivitas-image {
     background: linear-gradient(145deg, #EFE1CE, #C98F68);
 }
 
-.aktivitas-card:nth-child(4) .aktivitas-image {
+.aktivitas-card:nth-child(5) .aktivitas-image {
     background: linear-gradient(145deg, #E1EBDD, #91AA80);
 }
 
-.aktivitas-card:nth-child(5) .aktivitas-image {
+.aktivitas-card:nth-child(6) .aktivitas-image {
     background: linear-gradient(145deg, #E5E8DC, #A4AF88);
 }
 
-.aktivitas-card:nth-child(6) .aktivitas-image {
+.aktivitas-card:nth-child(7) .aktivitas-image {
     background: linear-gradient(145deg, #D8E9E5, #8AAFA5);
 }
 
