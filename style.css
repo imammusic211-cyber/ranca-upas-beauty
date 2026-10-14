@@ -845,11 +845,12 @@ ul { list-style: none; }
 
 .aktivitas-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
 }
 
 .aktivitas-card {
+    min-width: 0;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-card);

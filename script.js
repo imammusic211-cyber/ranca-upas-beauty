@@ -256,9 +256,11 @@ const translations = {
     'Beri makan rusa di area penangkaran dan amati satwa ini dari dekat di tengah alam Ranca Upas.': 'Feed the deer in the sanctuary and observe them up close in the natural surroundings of Ranca Upas.',
     'Nikmati kolam renang air hangat dan seluncurannya, dikelilingi udara sejuk serta pepohonan pegunungan.': 'Enjoy the warm-water pool and its slides, surrounded by cool highland air and mountain trees.',
     'Berkumpul di sekitar api unggun dekat tenda, menghangatkan malam sambil menikmati suasana camping bersama.': 'Gather around a campfire beside the tents, share the warmth, and enjoy Ranca Upas after dark.',
+    'Jelajahi jalur alam pegunungan di ketinggian sekitar 1.700 meter di atas permukaan laut (mdpl), dengan udara sejuk dan pemandangan hutan lindung.': 'Explore mountain trails at around 1,700 meters above sea level, with cool air and views of protected forest.',
     'Video penangkaran rusa': 'Deer sanctuary video',
     'Video kolam renang air hangat': 'Warm-water pool video',
     'Video api unggun': 'Campfire video',
+    'Video hiking di Ranca Upas': 'Hiking video at Ranca Upas',
     'Lihat Lebih Dekat': 'Take A Closer Look',
     'Galeri': 'Gallery',
     'Foto Tenda': 'Tent Photos',
@@ -1170,8 +1172,31 @@ function setupHeroVideoLoop() {
     });
 }
 
+function setupActivityVideoPlayback() {
+    const videos = Array.from(document.querySelectorAll('.aktivitas-card video'));
+    if (!videos.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        videos.forEach((video) => video.play().catch(() => {}));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.play().catch(() => {});
+            } else {
+                entry.target.pause();
+            }
+        });
+    }, { threshold: 0.35 });
+
+    videos.forEach((video) => observer.observe(video));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     setupHeroVideoLoop();
+    setupActivityVideoPlayback();
     setupLanguageSwitcher();
     renderPackages();
     renderPriceList();
