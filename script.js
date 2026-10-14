@@ -1165,16 +1165,19 @@ function setupHeroVideoLoop() {
             const incomingVideo = videos[incomingIndex];
 
             incomingVideo.currentTime = 0;
-            incomingVideo.play().catch(() => {});
-            incomingVideo.classList.add('is-active');
+            incomingVideo.play().then(() => {
+                incomingVideo.classList.add('is-active');
 
-            window.setTimeout(() => {
-                outgoingVideo.pause();
-                outgoingVideo.currentTime = 0;
-                outgoingVideo.classList.remove('is-active');
-                activeIndex = incomingIndex;
+                window.setTimeout(() => {
+                    outgoingVideo.pause();
+                    outgoingVideo.currentTime = 0;
+                    outgoingVideo.classList.remove('is-active');
+                    activeIndex = incomingIndex;
+                    transitionStarted = false;
+                }, crossfadeDuration);
+            }).catch(() => {
                 transitionStarted = false;
-            }, crossfadeDuration);
+            });
         });
     });
 }
