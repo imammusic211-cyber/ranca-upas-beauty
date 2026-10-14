@@ -427,7 +427,7 @@ ul { list-style: none; }
     text-transform: uppercase;
     color: #1D3028;
     font-weight: 600;
-    text-shadow: 0 1px 10px rgba(248, 250, 244, 0.88);
+    text-shadow: none;
 }
 
 .hero-title {
