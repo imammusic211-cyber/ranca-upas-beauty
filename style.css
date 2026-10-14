@@ -2214,7 +2214,7 @@ video::-webkit-media-controls-enclosure {
         background: linear-gradient(135deg, rgba(210,226,198,0.9), rgba(169,186,157,0.78));
     }
     .aktivitas-image video {
-        transform: scale(1.04);
+        transform: scale(1.02);
         border-radius: 20px 20px 0 0;
     }
     .aktivitas-label {
