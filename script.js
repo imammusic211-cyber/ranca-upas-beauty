@@ -1223,11 +1223,11 @@ function setupActivityVideoPlayback() {
 
     const loadObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
+            if (!entry.isIntersecting || entry.intersectionRatio < 0.35) return;
             loadVideoSource(entry.target);
             loadObserver.unobserve(entry.target);
         });
-    }, { rootMargin: '180px 0px' });
+    }, { rootMargin: '80px 0px', threshold: 0.35 });
 
     const playbackObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
