@@ -365,9 +365,9 @@ ul { list-style: none; }
 .hero-video-layer {
     position: absolute;
     inset: 0;
-    left: -8%;
+    left: -11%;
     right: auto;
-    width: 116%;
+    width: 122%;
     height: 100%;
     object-fit: cover;
     object-position: center;
