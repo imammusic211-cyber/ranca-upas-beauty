@@ -200,9 +200,9 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 90px;
-    height: 62px;
-    flex: 0 0 90px;
+    width: 100px;
+    height: 69px;
+    flex: 0 0 100px;
     object-fit: contain;
     filter: drop-shadow(0 5px 12px rgba(19, 61, 51, 0.18));
 }
@@ -2142,7 +2142,7 @@ video::-webkit-media-controls-enclosure {
 @media (min-width: 1025px) and (max-width: 1280px) {
     .nav-link { padding: 8px 12px; font-size: 0.85rem; }
     .nav-links { gap: 4px; padding: 6px 8px; }
-    .nav-logo-image { width: 82px; height: 56px; flex-basis: 82px; }
+    .nav-logo-image { width: 90px; height: 62px; flex-basis: 90px; }
 }
 
 @media (max-width: 1024px) {
@@ -2151,13 +2151,13 @@ video::-webkit-media-controls-enclosure {
     }
 
     .nav-logo {
-        max-width: 72px;
+        max-width: 78px;
     }
 
     .nav-logo-image {
-        width: 72px;
-        height: 50px;
-        flex-basis: 72px;
+        width: 78px;
+        height: 54px;
+        flex-basis: 78px;
     }
 
     .nav-links {
@@ -2391,10 +2391,10 @@ video::-webkit-media-controls-enclosure {
     }
 
     .nav-logo {
-        max-width: 76px;
+        max-width: 82px;
     }
 
-    .nav-logo-image { width: 76px; height: 52px; flex-basis: 76px; }
+    .nav-logo-image { width: 82px; height: 56px; flex-basis: 82px; }
     .nav-logo-text { font-size: 0.98rem; }
 
     .nav-links {
