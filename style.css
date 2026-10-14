@@ -738,6 +738,113 @@ ul { list-style: none; }
 }
 
 /* ============ Area Camping Section ============ */
+.price-guide-section {
+    padding: var(--section-padding) 0;
+    background: linear-gradient(180deg, #f4f7f1 0%, #eaf1e6 100%);
+}
+
+.price-guide-section .section-header {
+    margin-bottom: 32px;
+}
+
+.price-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.price-guide-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(39, 74, 45, 0.12);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(30, 55, 34, 0.08);
+}
+
+.price-guide-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    color: #fff;
+    background: #244c35;
+}
+
+.price-guide-number {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 50%;
+    color: #f2c879;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.price-guide-card-header h3 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.price-guide-card-body {
+    padding: 8px 20px 14px;
+}
+
+.price-guide-table-head,
+.price-guide-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(80px, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 10px;
+    padding: 11px 0;
+    border-bottom: 1px solid #e8ede7;
+}
+
+.price-guide-table-head {
+    color: #758176;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price-guide-row:last-child {
+    border-bottom: 0;
+}
+
+.price-guide-row span {
+    min-width: 0;
+    color: #48554a;
+    font-size: 0.84rem;
+    line-height: 1.4;
+}
+
+.price-guide-row strong {
+    color: #244c35;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    text-align: right;
+}
+
+.price-guide-row .price-guide-span {
+    grid-column: 2 / -1;
+}
+
+.price-guide-card-body:not(:has(.price-guide-table-head)) .price-guide-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.price-guide-note {
+    margin: 0;
+    padding: 0 20px 18px;
+    color: #758176;
+    font-size: 0.76rem;
+}
+
 .area-section {
     padding: var(--section-padding) 0;
     background: var(--color-bg-secondary);
