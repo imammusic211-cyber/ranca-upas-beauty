@@ -9,25 +9,25 @@ const regularTentCapacities = [
     {
         capacity: '2 Orang',
         dimensions: '2X2 Meter',
-        photo: 'images/paket%20tenda%20rancaupas/tenda%20reguler/kapasitas-2-orang.jpg',
+        photo: 'images/paket%20tenda%20rancaupas/kapasitas-2-orang.jpg',
         prices: { Reguler: 'Rp 120.000', Medium: 'Rp 210.000', Premium: 'Rp 260.000', Rimba: 'Rp 320.000' }
     },
     {
         capacity: '4 Orang',
         dimensions: '2,5X2,5 Meter',
-        photo: 'images/paket%20tenda%20rancaupas/tenda%20reguler/kapasitas-4-orang.jpg',
+        photo: 'images/paket%20tenda%20rancaupas/kapasitas-4-orang.jpg',
         prices: { Reguler: 'Rp 200.000', Medium: 'Rp 305.000', Premium: 'Rp 355.000', Rimba: 'Rp 415.000' }
     },
     {
         capacity: '6 Orang',
         dimensions: '3X2,5 Meter',
-        photo: 'images/paket%20tenda%20rancaupas/tenda%20reguler/kapasitas-6-orang.jpg',
+        photo: 'images/paket%20tenda%20rancaupas/kapasitas-6-orang.jpg',
         prices: { Reguler: 'Rp 240.000', Medium: 'Rp 375.000', Premium: 'Rp 475.000', Rimba: 'Rp 535.000' }
     },
     {
         capacity: '12 Orang',
         dimensions: '6X2,5 Meter',
-        photo: 'images/paket%20tenda%20rancaupas/tenda%20reguler/kapasitas-12-orang.jpg',
+        photo: 'images/paket%20tenda%20rancaupas/kapasitas-12-orang.jpg',
         prices: { Reguler: 'Rp 320.000', Medium: 'Rp 565.000', Premium: 'Rp 765.000', Rimba: 'Rp 825.000' }
     }
 ];
@@ -1123,7 +1123,44 @@ function setupComplaintForm() {
     });
 }
 
+function setupHeroVideoLoop() {
+    const videos = Array.from(document.querySelectorAll('.hero-video-layer'));
+    if (videos.length < 2) return;
+
+    const crossfadeDuration = 900;
+    let activeIndex = 0;
+    let transitionStarted = false;
+
+    videos[1].pause();
+    videos[0].play().catch(() => {});
+
+    videos.forEach((video, index) => {
+        video.addEventListener('timeupdate', () => {
+            if (index !== activeIndex || transitionStarted || !Number.isFinite(video.duration)) return;
+            if (video.duration - video.currentTime > crossfadeDuration / 1000 + 0.15) return;
+
+            transitionStarted = true;
+            const incomingIndex = 1 - activeIndex;
+            const outgoingVideo = videos[activeIndex];
+            const incomingVideo = videos[incomingIndex];
+
+            incomingVideo.currentTime = 0;
+            incomingVideo.play().catch(() => {});
+            incomingVideo.classList.add('is-active');
+
+            window.setTimeout(() => {
+                outgoingVideo.pause();
+                outgoingVideo.currentTime = 0;
+                outgoingVideo.classList.remove('is-active');
+                activeIndex = incomingIndex;
+                transitionStarted = false;
+            }, crossfadeDuration);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    setupHeroVideoLoop();
     setupLanguageSwitcher();
     renderPackages();
     renderPriceList();
