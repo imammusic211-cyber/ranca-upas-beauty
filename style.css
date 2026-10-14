@@ -2270,7 +2270,7 @@ video::-webkit-media-controls-enclosure {
     }
 
     .paket-section {
-        background: linear-gradient(180deg, #a7b892 0, #a7b892 240px, #efe8dc 240px, #efe8dc 100%);
+        background: linear-gradient(180deg, #DDE7D8 0, #DDE7D8 240px, var(--color-bg-secondary) 240px, var(--color-bg-secondary) 100%);
         padding-top: 72px;
     }
 
