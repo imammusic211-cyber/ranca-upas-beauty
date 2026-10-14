@@ -904,6 +904,7 @@ ul { list-style: none; }
 .aktivitas-card:nth-child(3) .aktivitas-image { aspect-ratio: 9 / 13; }
 .aktivitas-card:nth-child(4) .aktivitas-image { aspect-ratio: 9 / 13; }
 .aktivitas-card:nth-child(5) .aktivitas-image { aspect-ratio: 9 / 13; }
+.aktivitas-card:nth-child(6) .aktivitas-image { aspect-ratio: 9 / 13; }
 
 .aktivitas-card:nth-child(1) .aktivitas-image video { object-position: center 38%; }
 .aktivitas-card:nth-child(2) .aktivitas-image video { object-position: center 52%; }
