@@ -864,23 +864,26 @@ ul { list-style: none; }
 }
 
 .aktivitas-image {
-    height: 220px;
-    background: linear-gradient(145deg, #FFF8E1, #FFE082);
+    height: clamp(220px, 22vw, 300px);
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     transition: background 0.4s ease;
+    border-radius: 16px 16px 0 0;
 }
 
 .aktivitas-image video {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
-    background: #000;
+    background: transparent;
     pointer-events: none;
+    transform: scale(1.04);
+    filter: saturate(1.08) contrast(1.04);
 }
 
 video::-webkit-media-controls,
@@ -2188,6 +2191,16 @@ video::-webkit-media-controls-enclosure {
 
     .area-grid { grid-template-columns: 1fr; }
     .aktivitas-grid { grid-template-columns: 1fr; }
+    .aktivitas-card {
+        border-radius: 18px;
+    }
+    .aktivitas-image {
+        height: clamp(240px, 54vw, 330px);
+        border-radius: 18px 18px 0 0;
+    }
+    .aktivitas-image video {
+        transform: scale(1.08);
+    }
     .aktivitas-label {
         padding: 12px 6px;
         font-size: 0.7rem;
