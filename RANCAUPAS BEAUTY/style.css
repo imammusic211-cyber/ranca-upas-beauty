@@ -1976,6 +1976,13 @@ video::-webkit-media-controls-enclosure {
     padding-left: 6px;
 }
 
+.footer-contact-note {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
 .footer-hours li {
     display: flex;
     justify-content: space-between;
