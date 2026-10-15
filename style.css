@@ -1349,6 +1349,30 @@ video::-webkit-media-controls-enclosure {
     transition: transform 0.45s ease;
 }
 
+.paket-category-grid:not(.regular-tent-capacity-grid) .paket-card-inner {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+}
+
+.paket-category-grid:not(.regular-tent-capacity-grid) .paket-card-image {
+    aspect-ratio: 16 / 9;
+    padding: 14px;
+}
+
+.paket-category-grid:not(.regular-tent-capacity-grid) .paket-card-image img {
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+    border: 0;
+    border-radius: 14px;
+    box-shadow: none;
+}
+
+.paket-category-grid:not(.regular-tent-capacity-grid) .paket-card:hover .paket-card-image img {
+    transform: none;
+}
+
 .paket-card-content {
     display: flex;
     flex-direction: column;
@@ -2472,6 +2496,11 @@ video::-webkit-media-controls-enclosure {
 
     .paket-card-image {
         padding: 8px 8px 0;
+    }
+
+    .paket-category-grid:not(.regular-tent-capacity-grid) .paket-card-image {
+        aspect-ratio: 4 / 3;
+        padding: 8px;
     }
 
     .paket-card-image::before {
