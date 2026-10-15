@@ -133,7 +133,11 @@ ul { list-style: none; }
 }
 
 .navbar:not(.scrolled) .nav-logo-text {
-    color: #244c26;
+    color: #0a6b5e;
+}
+
+.navbar:not(.scrolled) .nav-logo-image {
+    filter: brightness(0) invert(1) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.48));
 }
 
 .navbar:not(.scrolled) .hamburger-line {
@@ -166,7 +170,11 @@ ul { list-style: none; }
 }
 
 .navbar.scrolled .nav-logo-text {
-    color: #244c26;
+    color: #a96508;
+}
+
+.navbar.scrolled .nav-logo-image {
+    filter: contrast(1.14) saturate(1.12) drop-shadow(0 2px 5px rgba(19, 61, 51, 0.22));
 }
 
 .navbar.scrolled .hamburger-line {
@@ -192,21 +200,20 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 70px;
-    height: 88px;
-    flex: 0 0 70px;
+    width: 100px;
+    height: 69px;
+    flex: 0 0 100px;
     object-fit: contain;
-    mix-blend-mode: multiply;
+    filter: drop-shadow(0 5px 12px rgba(19, 61, 51, 0.18));
 }
 
 .nav-logo-text {
-    color: #244c26;
+    color: inherit;
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 1.8vw, 2.1rem);
     font-weight: 800;
     line-height: 1;
-    letter-spacing: 0;
-    white-space: nowrap;
+    letter-spacing: 0.04em;
 }
 
 .logo-accent {
@@ -2135,8 +2142,7 @@ video::-webkit-media-controls-enclosure {
 @media (min-width: 1025px) and (max-width: 1280px) {
     .nav-link { padding: 8px 12px; font-size: 0.85rem; }
     .nav-links { gap: 4px; padding: 6px 8px; }
-    .nav-logo-image { width: 66px; height: 82px; flex-basis: 66px; }
-    .nav-logo-text { font-size: 1.3rem; }
+    .nav-logo-image { width: 90px; height: 62px; flex-basis: 90px; }
 }
 
 @media (max-width: 1024px) {
@@ -2145,16 +2151,14 @@ video::-webkit-media-controls-enclosure {
     }
 
     .nav-logo {
-        max-width: none;
+        max-width: 78px;
     }
 
     .nav-logo-image {
-        width: 64px;
-        height: 80px;
-        flex-basis: 64px;
+        width: 78px;
+        height: 54px;
+        flex-basis: 78px;
     }
-
-    .nav-logo-text { font-size: 1.05rem; }
 
     .nav-links {
         position: fixed;
@@ -2387,11 +2391,11 @@ video::-webkit-media-controls-enclosure {
     }
 
     .nav-logo {
-        max-width: none;
+        max-width: 82px;
     }
 
-    .nav-logo-image { width: 62px; height: 78px; flex-basis: 62px; }
-    .nav-logo-text { font-size: 0.95rem; }
+    .nav-logo-image { width: 82px; height: 56px; flex-basis: 82px; }
+    .nav-logo-text { font-size: 0.98rem; }
 
     .nav-links {
         top: 58px;
