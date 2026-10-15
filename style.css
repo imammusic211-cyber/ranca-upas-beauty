@@ -1106,7 +1106,7 @@ video::-webkit-media-controls-enclosure {
     top: 94px;
     z-index: 50;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     max-width: 1200px;
     margin: 0 auto 36px;
@@ -1121,21 +1121,28 @@ video::-webkit-media-controls-enclosure {
 
 .paket-category-nav a {
     display: flex;
-    width: fit-content;
-    min-height: 38px;
+    min-height: 44px;
     align-items: center;
     justify-content: center;
-    justify-self: center;
-    padding: 7px 10px;
+    padding: 9px 12px;
     border: 1px solid rgba(30, 77, 58, 0.14);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.76);
     color: #214b32;
-    font-size: 0.76rem;
+    font-size: 0.82rem;
     font-weight: 700;
     line-height: 1.25;
     text-align: center;
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.paket-category-nav a:nth-child(n + 2) {
+    align-self: center;
+    justify-self: center;
+    width: fit-content;
+    min-height: 38px;
+    padding: 7px 10px;
+    font-size: 0.76rem;
 }
 
 .paket-category-nav a:hover,
