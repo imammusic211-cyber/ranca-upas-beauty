@@ -137,7 +137,7 @@ ul { list-style: none; }
 }
 
 .navbar:not(.scrolled) .nav-logo-image {
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.48));
+    filter: brightness(0) invert(1) drop-shadow(0 2px 5px rgba(0, 0, 0, 0.48));
 }
 
 .navbar:not(.scrolled) .hamburger-line {
