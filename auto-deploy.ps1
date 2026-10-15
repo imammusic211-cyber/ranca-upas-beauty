@@ -1,4 +1,13 @@
-Set-Location "C:\Users\Administrator\Documents\ranca upas"
+$repoRoot = $PSScriptRoot
+$siteRoot = Join-Path $repoRoot "RANCAUPAS BEAUTY"
+if (-not (Test-Path (Join-Path $siteRoot "index.html"))) {
+    $siteRoot = $repoRoot
+}
+if (-not (Test-Path (Join-Path $siteRoot "index.html"))) {
+    Write-Host "Auto-deploy gagal: index.html tidak ditemukan di root atau folder RANCAUPAS BEAUTY." -ForegroundColor Red
+    exit 1
+}
+Set-Location $repoRoot
 $Host.UI.RawUI.WindowTitle = "Auto-Deploy Ranca Upas"
 Write-Host "Auto-deploy aktif!" -ForegroundColor Green
 Write-Host "Link: https://imammusic211-cyber.github.io/ranca-upas-beauty/" -ForegroundColor Cyan
@@ -24,9 +33,9 @@ while ($true) {
         }
 
         if ($changes) {
-            $cssVersion = (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot "style.css") -Algorithm SHA256 -ErrorAction Stop).Hash.Substring(0, 12).ToLowerInvariant()
-            $scriptVersion = (Get-FileHash -LiteralPath (Join-Path $PSScriptRoot "script.js") -Algorithm SHA256 -ErrorAction Stop).Hash.Substring(0, 12).ToLowerInvariant()
-            $indexPath = Join-Path $PSScriptRoot "index.html"
+            $cssVersion = (Get-FileHash -LiteralPath (Join-Path $siteRoot "style.css") -Algorithm SHA256 -ErrorAction Stop).Hash.Substring(0, 12).ToLowerInvariant()
+            $scriptVersion = (Get-FileHash -LiteralPath (Join-Path $siteRoot "script.js") -Algorithm SHA256 -ErrorAction Stop).Hash.Substring(0, 12).ToLowerInvariant()
+            $indexPath = Join-Path $siteRoot "index.html"
             $indexContent = [System.IO.File]::ReadAllText($indexPath)
             $versionedIndex = [regex]::Replace($indexContent, 'href="style\.css(?:\?[^\"]*)?"', "href=`"style.css?v=$cssVersion`"")
             $versionedIndex = [regex]::Replace($versionedIndex, 'src="script\.js(?:\?[^\"]*)?"', "src=`"script.js?v=$scriptVersion`"")
