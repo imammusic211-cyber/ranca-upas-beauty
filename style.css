@@ -1355,8 +1355,13 @@ video::-webkit-media-controls-enclosure {
 }
 
 .paket-category-grid:not(.regular-tent-capacity-grid) .paket-card-image {
-    aspect-ratio: 16 / 9;
-    padding: 14px;
+    aspect-ratio: 4 / 3;
+    padding: 12px;
+    background: #edf1e9;
+}
+
+.paket-category-grid:not(.regular-tent-capacity-grid) .paket-card-image::before {
+    display: none;
 }
 
 .paket-category-grid:not(.regular-tent-capacity-grid) .paket-card-image img {
