@@ -133,7 +133,7 @@ ul { list-style: none; }
 }
 
 .navbar:not(.scrolled) .nav-logo-text {
-    color: #0a6b5e;
+    color: #f2f7e9;
 }
 
 .navbar:not(.scrolled) .nav-logo-image {
@@ -170,7 +170,7 @@ ul { list-style: none; }
 }
 
 .navbar.scrolled .nav-logo-text {
-    color: #a96508;
+    color: #173b20;
 }
 
 .navbar.scrolled .nav-logo-image {
@@ -210,10 +210,11 @@ ul { list-style: none; }
 .nav-logo-text {
     color: inherit;
     font-family: var(--font-heading);
-    font-size: clamp(1.25rem, 1.8vw, 2.1rem);
+    font-size: 1.15rem;
     font-weight: 800;
     line-height: 1;
     letter-spacing: 0.04em;
+    white-space: nowrap;
 }
 
 .logo-accent {
@@ -2151,7 +2152,7 @@ video::-webkit-media-controls-enclosure {
     }
 
     .nav-logo {
-        max-width: 78px;
+        max-width: none;
     }
 
     .nav-logo-image {
@@ -2391,11 +2392,11 @@ video::-webkit-media-controls-enclosure {
     }
 
     .nav-logo {
-        max-width: 82px;
+        max-width: none;
     }
 
     .nav-logo-image { width: 82px; height: 56px; flex-basis: 82px; }
-    .nav-logo-text { font-size: 0.98rem; }
+    .nav-logo-text { font-size: 0.9rem; }
 
     .nav-links {
         top: 58px;
