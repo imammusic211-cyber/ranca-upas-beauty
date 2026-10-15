@@ -193,7 +193,7 @@ ul { list-style: none; }
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0;
     flex-shrink: 0;
     transition: color 0.3s ease;
 }
