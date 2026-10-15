@@ -129,7 +129,7 @@ ul { list-style: none; }
 /* Keep the brand and navigation green in both navbar states. */
 .navbar:not(.scrolled) .nav-logo,
 .navbar:not(.scrolled) .nav-link {
-    color: #0f5b2d;
+    color: #e9f6f2;
 }
 
 .navbar:not(.scrolled) .nav-logo-text {
@@ -158,7 +158,7 @@ ul { list-style: none; }
 }
 
 .navbar:not(.scrolled) .nav-link.active {
-    color: #0f5b2d;
+    color: #354033;
     background: rgba(238, 234, 218, 0.78);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.26), 0 3px 10px rgba(31, 35, 29, 0.12);
 }
