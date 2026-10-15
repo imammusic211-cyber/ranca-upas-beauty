@@ -192,9 +192,9 @@ ul { list-style: none; }
 
 .nav-logo-image {
     display: block;
-    width: 64px;
-    height: 80px;
-    flex: 0 0 64px;
+    width: 70px;
+    height: 88px;
+    flex: 0 0 70px;
     object-fit: contain;
     mix-blend-mode: multiply;
 }
@@ -2135,7 +2135,7 @@ video::-webkit-media-controls-enclosure {
 @media (min-width: 1025px) and (max-width: 1280px) {
     .nav-link { padding: 8px 12px; font-size: 0.85rem; }
     .nav-links { gap: 4px; padding: 6px 8px; }
-    .nav-logo-image { width: 60px; height: 75px; flex-basis: 60px; }
+    .nav-logo-image { width: 66px; height: 82px; flex-basis: 66px; }
     .nav-logo-text { font-size: 1.3rem; }
 }
 
@@ -2149,9 +2149,9 @@ video::-webkit-media-controls-enclosure {
     }
 
     .nav-logo-image {
-        width: 58px;
-        height: 72px;
-        flex-basis: 58px;
+        width: 64px;
+        height: 80px;
+        flex-basis: 64px;
     }
 
     .nav-logo-text { font-size: 1.05rem; }
@@ -2390,7 +2390,7 @@ video::-webkit-media-controls-enclosure {
         max-width: none;
     }
 
-    .nav-logo-image { width: 56px; height: 70px; flex-basis: 56px; }
+    .nav-logo-image { width: 62px; height: 78px; flex-basis: 62px; }
     .nav-logo-text { font-size: 0.95rem; }
 
     .nav-links {
